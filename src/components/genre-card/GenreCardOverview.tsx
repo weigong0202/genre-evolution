@@ -54,7 +54,7 @@ export function GenreCardOverview({
         </p>
       </div>
 
-      {/* Spotify Player - After description */}
+      {/* Spotify Player - Single track preview */}
       {spotifyTrackId && (
         <div className="mb-3">
           <iframe

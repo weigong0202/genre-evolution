@@ -92,10 +92,11 @@ export function useAudioEngine() {
     if (currentSourceRef.current && currentGainRef.current) {
       try {
         const oldGain = currentGainRef.current
+        const oldSource = currentSourceRef.current // Capture reference before it changes
         oldGain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.1)
         setTimeout(() => {
           try {
-            currentSourceRef.current?.stop()
+            oldSource.stop() // Stop the captured old source, not the current one
           } catch (e) {
             // Already stopped
           }
@@ -135,8 +136,8 @@ export function useAudioEngine() {
     const maxStart = Math.max(0, Math.min(buffer.duration - 5, 20))
     const startTime = Math.random() * maxStart
 
-    // Play for up to 4 seconds
-    const playDuration = Math.min(4, buffer.duration - startTime)
+    // Play for up to 6 seconds
+    const playDuration = Math.min(6, buffer.duration - startTime)
 
     // Schedule fade out
     gainNode.gain.setValueAtTime(config.volume, ctx.currentTime + playDuration - 0.3)

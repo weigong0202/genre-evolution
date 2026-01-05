@@ -1,8 +1,32 @@
+export interface ArtistAlbum {
+  title: string
+  year: number
+  spotifyUrl?: string
+  albumArt?: string
+}
+
+export interface ArtistSong {
+  title: string
+  year?: number
+  spotifyUrl?: string
+}
+
 export interface Artist {
   id: string
   name: string
   years: string
   significance: string
+  // Extended fields for rich artist modal
+  imageUrl?: string
+  origin?: string                    // "Memphis, Tennessee"
+  tagline?: string                   // "The King of Rock and Roll"
+  bio?: string                       // 2-3 sentence biography
+  genres?: string[]                  // ['rock-and-roll', 'gospel']
+  essentialAlbums?: ArtistAlbum[]    // 2-3 albums
+  iconicSongs?: ArtistSong[]         // 3-5 songs
+  influencedBy?: string[]            // Artist IDs or names
+  influenced?: string[]              // Artist IDs or names
+  spotifyArtistId?: string           // For Spotify embed
 }
 
 export interface Album {
@@ -40,8 +64,9 @@ export interface GenreDetails {
   signatureTracks: string[]
   startHere: string
 
-  // Spotify embed for background music
-  spotifyTrackId?: string  // Spotify track ID for representative song
+  // Spotify embeds
+  spotifyTrackId?: string     // Single track for quick preview
+  spotifyPlaylistId?: string  // Playlist for deeper exploration
 }
 
 export interface Genre {

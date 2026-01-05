@@ -25,6 +25,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['I Walk the Line', 'Jolene', 'Your Cheatin\' Heart', 'Ring of Fire'],
     startHere: '"I Walk the Line" by Johnny Cash',
     spotifyTrackId: '7hxZF4jETnE5Q75rKQnMjE', // I Walk the Line - Johnny Cash
+    spotifyPlaylistId: '37i9dQZF1DWZBCPUIUs2iR', // Country's Greatest Hits
   },
 
   'delta-blues': {
@@ -51,6 +52,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Cross Road Blues', 'Hoochie Coochie Man', 'The Thrill Is Gone', 'Smokestack Lightning'],
     startHere: '"Cross Road Blues" by Robert Johnson',
     spotifyTrackId: '1TrGdXSgiBm8W68D2K1COG', // Cross Road Blues - Robert Johnson
+    spotifyPlaylistId: '37i9dQZF1DWSTHVqvNCwNq', // Delta Blues
   },
 
   'jazz': {
@@ -77,6 +79,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['So What', 'Take Five', 'My Favorite Things', 'Round Midnight'],
     startHere: '"So What" by Miles Davis',
     spotifyTrackId: '4vLYewWIvqHfKtJDk8c8tq', // So What - Miles Davis
+    spotifyPlaylistId: '37i9dQZF1DXbITWG1ZJKYt', // Jazz Classics
   },
 
   'gospel': {
@@ -103,6 +106,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Move On Up a Little Higher', 'Precious Lord', 'Oh Happy Day', 'Amazing Grace'],
     startHere: '"Oh Happy Day" by Edwin Hawkins Singers',
     spotifyTrackId: '6457txvZVSIFBff9RGpn3b', // Oh Happy Day - Edwin Hawkins Singers
+    spotifyPlaylistId: '37i9dQZF1DX7OIddoQVdRt', // Gospel Hits
   },
 
   'rb': {
@@ -129,6 +133,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['What\'s Going On', 'Superstition', 'I Got You', 'Respect'],
     startHere: '"What\'s Going On" by Marvin Gaye',
     spotifyTrackId: '34b3a3Pz9Jlz0092LMyNAB', // What's Going On - Marvin Gaye
+    spotifyPlaylistId: '37i9dQZF1DX04mASjTsvf0', // R&B Classics
   },
 
   'rock-and-roll': {
@@ -155,6 +160,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Johnny B. Goode', 'Jailhouse Rock', 'A Hard Day\'s Night', 'Satisfaction'],
     startHere: '"Johnny B. Goode" by Chuck Berry',
     spotifyTrackId: '2QfiRTz5Yc8DdShCxG1tB2', // Johnny B. Goode - Chuck Berry
+    spotifyPlaylistId: '37i9dQZF1DWXRqgorJj26U', // Rock Classics
   },
 
   'soul': {
@@ -181,6 +187,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Respect', 'Try a Little Tenderness', 'Let\'s Stay Together', 'A Change Is Gonna Come'],
     startHere: '"Respect" by Aretha Franklin',
     spotifyTrackId: '7s25THrKz86DM225dOYwnr', // Respect - Aretha Franklin
+    spotifyPlaylistId: '37i9dQZF1DWULEW2RfoSCi', // 70s Soul Classics
   },
 
   'reggae': {
@@ -207,6 +214,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['No Woman No Cry', 'Get Up Stand Up', 'The Harder They Come', 'Pressure Drop'],
     startHere: '"No Woman No Cry" by Bob Marley',
     spotifyTrackId: '2ftXrFRLlI9ULnwzde2hJK', // No Woman No Cry - Bob Marley
+    spotifyPlaylistId: '37i9dQZF1DXbSbnqxMTGx9', // Reggae Classics
   },
 
   'punk': {
@@ -233,6 +241,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Blitzkrieg Bop', 'Anarchy in the U.K.', 'London Calling', 'God Save the Queen'],
     startHere: '"Blitzkrieg Bop" by Ramones',
     spotifyTrackId: '4KcH1ZRV2W1q7Flq0QqC76', // Blitzkrieg Bop - Ramones
+    spotifyPlaylistId: '37i9dQZF1DX3LDIBRoaCDQ', // Classic Punk
   },
 
   'funk': {
@@ -259,6 +268,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Give Up the Funk', 'Super Freak', 'Flash Light', 'Get Up Offa That Thing'],
     startHere: '"Give Up the Funk" by Parliament',
     spotifyTrackId: '4XRkQloZFcRrCONN7ZQ49Y', // Give Up the Funk - Parliament
+    spotifyPlaylistId: '37i9dQZF1DWWvhKV4FBciw', // Funk & Soul Classics
   },
 
   'electronic': {
@@ -285,6 +295,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Trans-Europe Express', 'The Robots', 'Blue Monday', 'Enjoy the Silence'],
     startHere: '"Blue Monday" by New Order',
     spotifyTrackId: '0O9OPv8X9O3zXLmckWcUtO', // Blue Monday - New Order
+    spotifyPlaylistId: '37i9dQZF1DX8AliSIsGeKd', // Electronic Rising
   },
 
   'disco': {
@@ -311,6 +322,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Stayin\' Alive', 'I Will Survive', 'Le Freak', 'I Feel Love'],
     startHere: '"Stayin\' Alive" by Bee Gees',
     spotifyTrackId: '1h2xVEoJORqrg71HocgqXd', // Stayin' Alive - Bee Gees
+    spotifyPlaylistId: '1Fy5p1KbV1XBE16GKF9jOS', // Disco Classics
   },
 
   'hip-hop': {
@@ -337,6 +349,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['The Message', 'Fight the Power', 'N.Y. State of Mind', 'Nuthin\' But a G Thang'],
     startHere: '"N.Y. State of Mind" by Nas',
     spotifyTrackId: '0trHOzAhNpGCsGBEu7dOJo', // N.Y. State of Mind - Nas
+    spotifyPlaylistId: '37i9dQZF1DX186v583rmzp', // I Love My '90s Hip-Hop
   },
 
   'house': {
@@ -363,6 +376,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Move Your Body', 'Your Love', 'Can You Feel It', 'Strings of Life'],
     startHere: '"Your Love" by Frankie Knuckles',
     spotifyTrackId: '6tvtFyEdNpeurBkT2zNMEL', // Your Love - Frankie Knuckles
+    spotifyPlaylistId: '37i9dQZF1DWTU3Zl0elDUa', // 90s House Classics
   },
 
   'techno': {
@@ -389,6 +403,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Strings of Life', 'Big Fun', 'Good Life', 'The Bells'],
     startHere: '"Strings of Life" by Derrick May',
     spotifyTrackId: '7N3FfUFMud1rjI6Vgw71mm', // Strings of Life - Derrick May
+    spotifyPlaylistId: '37i9dQZF1DX6J5NfMJS675', // TECHNO BUNKER
   },
 
   'indie': {
@@ -415,6 +430,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Where Is My Mind?', 'Karma Police', 'Wake Up', 'This Charming Man'],
     startHere: '"Where Is My Mind?" by Pixies',
     spotifyTrackId: '0KzAbK6nItSqNh8q70tb0K', // Where Is My Mind? - Pixies
+    spotifyPlaylistId: '37i9dQZF1DWWEcRhUVtL8n', // Indie Pop
   },
 
   'grunge': {
@@ -441,6 +457,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Smells Like Teen Spirit', 'Alive', 'Black Hole Sun', 'Man in the Box'],
     startHere: '"Smells Like Teen Spirit" by Nirvana',
     spotifyTrackId: '4CeeEOM32jQcH3eN9Q2dGj', // Smells Like Teen Spirit - Nirvana
+    spotifyPlaylistId: '37i9dQZF1DXbTxeAdrVG2l', // All Out 90s
   },
 
   'ambient': {
@@ -467,6 +484,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['1/1', 'Xtal', 'Roygbiv', 'Svefn-g-englar'],
     startHere: '"An Ending (Ascent)" by Brian Eno',
     spotifyTrackId: '1vgSaC0BPlL6LEm4Xsx59J', // An Ending (Ascent) - Brian Eno
+    spotifyPlaylistId: '37i9dQZF1DX3Ogo9pFvBkY', // Ambient Relaxation
   },
 
   'drum-and-bass': {
@@ -493,6 +511,7 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Inner City Life', 'Brown Paper Bag', 'Atlantis', 'Super Sharp Shooter'],
     startHere: '"Inner City Life" by Goldie',
     spotifyTrackId: '0O7xFEqePrcTUgOi4qe0uB', // Inner City Life - Goldie
+    spotifyPlaylistId: '5XGbuIRSb5INv66b817DJH', // Drum And Bass Classics
   },
 
   'edm': {
@@ -519,5 +538,6 @@ export const genreDetails: Record<string, GenreDetails> = {
     signatureTracks: ['Get Lucky', 'Strobe', 'Scary Monsters', 'Levels'],
     startHere: '"Get Lucky" by Daft Punk',
     spotifyTrackId: '69kOkLUCkxIZYexIgSG8rq', // Get Lucky - Daft Punk
+    spotifyPlaylistId: '37i9dQZF1DX4dyzvuaRJ0n', // mint (EDM)
   },
 }

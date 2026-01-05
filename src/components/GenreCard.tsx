@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import type { Genre, Artist } from '../types'
+import type { Genre } from '../types'
 import { genreDetails } from '../data/genreDetails'
 import { GenreCardOverview } from './genre-card/GenreCardOverview'
 
@@ -8,20 +8,18 @@ type TabId = 'about' | 'listen'
 
 interface GenreCardProps {
   genre: Genre | null
-  selectedArtist?: Artist | null
   onClose: () => void
   onConnectionClick: (genreId: string) => void
   onExploreArtists?: () => void
-  onBackToGenre?: () => void
+  hideBackdrop?: boolean
 }
 
 export function GenreCard({
   genre,
-  selectedArtist,
   onClose,
   onConnectionClick,
   onExploreArtists,
-  onBackToGenre,
+  hideBackdrop = false,
 }: GenreCardProps) {
   const [activeTab, setActiveTab] = useState<TabId>('about')
 
@@ -30,9 +28,8 @@ export function GenreCard({
   const details = genreDetails[genre.id]
 
   return (
-    <AnimatePresence>
-      <>
-        {/* Backdrop */}
+    <>
+      {!hideBackdrop && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -40,13 +37,14 @@ export function GenreCard({
           onClick={onClose}
           className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
         />
+      )}
 
-        {/* Centered Modal - wider for multi-panel */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+      {/* Centered Modal - wider for multi-panel */}
+      <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.15 }}
           className="fixed inset-4 md:inset-6 lg:inset-8 z-50 overflow-hidden rounded-2xl"
           style={{
             background: 'linear-gradient(135deg, #1a1510 0%, #0d0a07 100%)',
@@ -67,80 +65,8 @@ export function GenreCard({
             </svg>
           </button>
 
-          {/* Back button when showing artist */}
-          {selectedArtist && onBackToGenre && (
-            <button
-              onClick={onBackToGenre}
-              className="absolute top-4 left-4 flex items-center gap-2 px-3 py-2 rounded-full bg-black/30 hover:bg-black/50 text-amber-200/70 hover:text-amber-200 transition-colors text-sm z-10"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-              {genre.name}
-            </button>
-          )}
-
-          <AnimatePresence mode="wait">
-            {selectedArtist ? (
-              /* Artist View - Simple centered layout */
-              <motion.div
-                key="artist-view"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-                className="p-8 pt-16"
-              >
-                <div className="max-w-lg mx-auto text-center">
-                  {/* Artist color indicator */}
-                  <div
-                    className="w-24 h-24 rounded-full mb-6 mx-auto"
-                    style={{
-                      background: `radial-gradient(circle at 30% 30%, ${genre.color}, ${genre.color}88)`,
-                      boxShadow: `0 0 40px ${genre.color}50, inset 0 2px 4px rgba(255,255,255,0.3)`,
-                    }}
-                  />
-
-                  <h2 className="text-3xl font-bold text-amber-100 mb-2">
-                    {selectedArtist.name}
-                  </h2>
-                  <p className="text-amber-200/60 text-sm font-medium tracking-wider mb-6">
-                    {selectedArtist.years}
-                  </p>
-
-                  {/* Significance */}
-                  <div
-                    className="p-6 rounded-lg mb-6"
-                    style={{
-                      background: 'rgba(251, 191, 36, 0.05)',
-                      border: '1px solid rgba(251, 191, 36, 0.15)',
-                    }}
-                  >
-                    <h3 className="text-xs font-bold text-amber-200/50 uppercase tracking-widest mb-3">
-                      Significance
-                    </h3>
-                    <p className="text-amber-100/90 leading-relaxed text-xl">
-                      {selectedArtist.significance}
-                    </p>
-                  </div>
-
-                  {/* Genre Badge */}
-                  <div className="flex items-center justify-center gap-3">
-                    <div
-                      className="w-6 h-6 rounded-full flex-shrink-0"
-                      style={{
-                        background: `radial-gradient(circle at 30% 30%, ${genre.color}, ${genre.color}88)`,
-                      }}
-                    />
-                    <span className="text-amber-200/60 text-sm">
-                      Part of <span className="text-amber-100 font-medium">{genre.name}</span>
-                    </span>
-                  </div>
-                </div>
-              </motion.div>
-            ) : (
-              /* Genre View - Multi-panel layout */
-              <motion.div
+          {/* Genre View - Multi-panel layout */}
+          <motion.div
                 key="genre-view"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -367,54 +293,42 @@ export function GenreCard({
                               exit={{ opacity: 0, y: -10 }}
                               transition={{ duration: 0.15 }}
                             >
-                              {/* START HERE - Featured at top */}
-                              <a
-                                href={`https://open.spotify.com/search/${encodeURIComponent(details.startHere)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block p-5 rounded-xl mb-8 hover:scale-[1.02] transition-transform cursor-pointer group"
-                                style={{
-                                  background: `linear-gradient(135deg, ${genre.color}15 0%, rgba(0,0,0,0.4) 100%)`,
-                                  border: `1px solid ${genre.color}40`,
-                                  boxShadow: `0 0 30px ${genre.color}10`,
-                                }}
-                              >
-                                <div className="flex items-center gap-2 mb-2">
-                                  <span className="text-lg">🎧</span>
-                                  <span
-                                    className="text-xs font-bold uppercase tracking-widest"
-                                    style={{ color: genre.color }}
-                                  >
-                                    Start Here
-                                  </span>
-                                  <svg
-                                    className="w-4 h-4 ml-auto text-amber-200/40 group-hover:text-green-400 transition-colors"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                  >
-                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                                  </svg>
+                              {/* Signature Tracks - Playlist with compact track list (same as artist modal) */}
+                              {details.spotifyPlaylistId && (
+                                <div className="mb-8">
+                                  <h4 className="text-xs font-bold text-amber-200/50 uppercase tracking-widest mb-3">
+                                    Signature Tracks
+                                  </h4>
+                                  <div className="rounded-xl overflow-hidden">
+                                    <iframe
+                                      src={`https://open.spotify.com/embed/playlist/${details.spotifyPlaylistId}?utm_source=generator&theme=0`}
+                                      width="100%"
+                                      height="152"
+                                      frameBorder="0"
+                                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                      loading="eager"
+                                      className="rounded-xl"
+                                    />
+                                  </div>
                                 </div>
-                                <p className="text-amber-100 text-xl font-medium group-hover:text-green-400 transition-colors">{details.startHere}</p>
-                                <p className="text-amber-100/50 text-sm mt-1">The perfect gateway into this genre</p>
-                              </a>
+                              )}
 
-                              {/* Essential Albums - Real album covers */}
-                              <div className="mb-8">
+                              {/* Essential Albums - Visual discovery */}
+                              <div>
                                 <h4 className="text-xs font-bold text-amber-200/50 uppercase tracking-widest mb-5">
                                   Essential Albums
                                 </h4>
-                                <div className="flex gap-12 justify-center">
+                                <div className="flex gap-8 justify-center flex-wrap">
                                   {details.definitiveAlbums.map((album) => (
                                     <a
                                       key={album.title}
                                       href={`https://open.spotify.com/search/${encodeURIComponent(`${album.title} ${album.artist}`)}`}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-center group w-32"
+                                      className="text-center group w-28"
                                     >
                                       <div
-                                        className="w-32 h-32 mb-4 relative cursor-pointer mx-auto group-hover:scale-105 transition-transform rounded-lg overflow-hidden"
+                                        className="w-28 h-28 mb-3 relative cursor-pointer mx-auto group-hover:scale-105 transition-transform rounded-lg overflow-hidden"
                                         style={{
                                           boxShadow: `0 8px 24px rgba(0,0,0,0.6), 0 0 30px ${genre.color}20`,
                                         }}
@@ -426,7 +340,6 @@ export function GenreCard({
                                             className="w-full h-full object-cover"
                                             referrerPolicy="no-referrer"
                                             onError={(e) => {
-                                              // Fallback to styled placeholder on error
                                               const target = e.target as HTMLImageElement
                                               target.style.display = 'none'
                                               const fallback = target.nextElementSibling as HTMLElement
@@ -442,7 +355,7 @@ export function GenreCard({
                                           }}
                                         >
                                           <span
-                                            className="text-4xl font-bold opacity-80"
+                                            className="text-3xl font-bold opacity-80"
                                             style={{ color: 'rgba(255,255,255,0.9)' }}
                                           >
                                             {album.title.charAt(0)}
@@ -452,7 +365,7 @@ export function GenreCard({
                                         {/* Spotify overlay on hover */}
                                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                           <svg
-                                            className="w-10 h-10 text-green-400"
+                                            className="w-8 h-8 text-green-400"
                                             viewBox="0 0 24 24"
                                             fill="currentColor"
                                           >
@@ -460,37 +373,9 @@ export function GenreCard({
                                           </svg>
                                         </div>
                                       </div>
-                                      <p className="text-base text-amber-100 font-medium group-hover:text-green-400 transition-colors line-clamp-2">{album.title}</p>
-                                      <p className="text-sm text-amber-100/60 line-clamp-1">{album.artist}</p>
+                                      <p className="text-sm text-amber-100 font-medium group-hover:text-green-400 transition-colors line-clamp-2">{album.title}</p>
+                                      <p className="text-xs text-amber-100/60 line-clamp-1">{album.artist}</p>
                                       <p className="text-xs text-amber-100/40 mt-0.5">{album.year}</p>
-                                    </a>
-                                  ))}
-                                </div>
-                              </div>
-
-                              {/* Iconic Songs - Compact row with Spotify links */}
-                              <div className="pt-4 border-t border-amber-200/10">
-                                <div className="flex items-center gap-3 flex-wrap">
-                                  <span className="text-xs font-bold text-amber-200/70 uppercase tracking-widest">Songs:</span>
-                                  {details.signatureTracks.map((track, index) => (
-                                    <a
-                                      key={track}
-                                      href={`https://open.spotify.com/search/${encodeURIComponent(track)}`}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-sm text-amber-100/70 flex items-center gap-1 hover:text-green-400 transition-colors group"
-                                    >
-                                      <svg
-                                        className="w-3.5 h-3.5 text-amber-200/40 group-hover:text-green-400 transition-colors"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                      >
-                                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                                      </svg>
-                                      {track}
-                                      {index < details.signatureTracks.length - 1 && (
-                                        <span className="text-amber-200/20 ml-2">·</span>
-                                      )}
                                     </a>
                                   ))}
                                 </div>
@@ -519,10 +404,7 @@ export function GenreCard({
                   </p>
                 </div>
               </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      </>
-    </AnimatePresence>
+      </motion.div>
+    </>
   )
 }

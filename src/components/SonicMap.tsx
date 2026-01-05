@@ -5,6 +5,7 @@ import { genreArtists } from '../data/artists'
 import { GenreNode } from './GenreNode'
 import { ConnectionLines } from './ConnectionLines'
 import { GenreCard } from './GenreCard'
+import { ArtistCard } from './ArtistCard'
 import { ArtistNode } from './ArtistNode'
 import { useAudioEngine } from '../hooks/useAudioEngine'
 import type { Genre, Artist } from '../types'
@@ -43,9 +44,11 @@ export function SonicMap() {
   const [expandedGenreId, setExpandedGenreId] = useState<string | null>(null)
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null)
   const [mapTransform, setMapTransform] = useState({ scale: 1, x: 0, y: 0 })
+  // Navigation history for artist-to-artist navigation
+  const [artistHistory, setArtistHistory] = useState<Array<{ artist: Artist; genre: Genre }>>([])
 
   // Audio engine for sonic feedback - short pluck sounds on hover
-  const { playGenre, initAudio } = useAudioEngine()
+  const { playGenre, stopGenre, initAudio } = useAudioEngine()
 
   // Initialize audio on first user click (required for browsers)
   useEffect(() => {
@@ -57,12 +60,14 @@ export function SonicMap() {
     return () => window.removeEventListener('click', handleFirstClick)
   }, [initAudio])
 
-  // Play pluck sound on hover
+  // Play/stop audio on hover
   useEffect(() => {
     if (hoveredGenreId) {
       playGenre(hoveredGenreId)
+    } else {
+      stopGenre()
     }
-  }, [hoveredGenreId, playGenre])
+  }, [hoveredGenreId, playGenre, stopGenre])
 
   // Track mouse for parallax
   useEffect(() => {
@@ -103,6 +108,9 @@ export function SonicMap() {
   }, [expandedGenreId, selectedGenre, selectedArtist, handleCollapseExpansion])
 
   const handleGenreClick = useCallback((genre: Genre) => {
+    // Stop any playing audio when opening modal
+    stopGenre()
+
     // If clicking a dimmed genre while another is expanded, collapse
     if (expandedGenreId && expandedGenreId !== genre.id) {
       handleCollapseExpansion()
@@ -120,7 +128,7 @@ export function SonicMap() {
       x: centerX * 1.8,
       y: centerY * 1.8,
     })
-  }, [expandedGenreId, handleCollapseExpansion])
+  }, [expandedGenreId, handleCollapseExpansion, stopGenre])
 
   const handleGenreHover = useCallback((genreId: string | null) => {
     setHoveredGenreId(genreId)
@@ -155,14 +163,33 @@ export function SonicMap() {
   }, [selectedGenre])
 
   const handleArtistClick = useCallback((artist: Artist, genre: Genre) => {
+    // If we're already viewing an artist, push current to history before navigating
+    if (selectedArtist && selectedGenre) {
+      setArtistHistory(prev => [...prev, { artist: selectedArtist, genre: selectedGenre }])
+    }
     setSelectedArtist(artist)
-    setSelectedGenre(genre) // Set genre context for the modal
-  }, [])
+    setSelectedGenre(genre)
+  }, [selectedArtist, selectedGenre])
+
+  const handleArtistBack = useCallback(() => {
+    if (artistHistory.length > 0) {
+      // Pop from history and go to previous artist
+      const newHistory = [...artistHistory]
+      const previous = newHistory.pop()!
+      setArtistHistory(newHistory)
+      setSelectedArtist(previous.artist)
+      setSelectedGenre(previous.genre)
+    } else {
+      // No history, go back to genre view
+      setSelectedArtist(null)
+    }
+  }, [artistHistory])
 
   const handleCloseCard = useCallback(() => {
-    // Close the modal
+    // Close the modal and clear history
     setSelectedGenre(null)
     setSelectedArtist(null)
+    setArtistHistory([])
 
     // If no artist bubbles are showing, zoom back out
     if (!expandedGenreId) {
@@ -519,17 +546,47 @@ export function SonicMap() {
         </motion.div>
       )}
 
-      {/* Genre/Artist modal - show when genre or artist is selected */}
-      {(selectedGenre || selectedArtist) && (
-        <GenreCard
-          genre={selectedGenre}
-          selectedArtist={selectedArtist}
-          onClose={handleCloseCard}
-          onConnectionClick={handleConnectionClick}
-          onExploreArtists={handleExploreArtists}
-          onBackToGenre={() => setSelectedArtist(null)}
-        />
-      )}
+      {/* Modal container - shared backdrop for smooth transitions */}
+      <AnimatePresence>
+        {selectedGenre && (
+          <>
+            {/* Shared backdrop */}
+            <motion.div
+              key="modal-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={handleCloseCard}
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
+            />
+
+            {/* Content switches between genre and artist - no mode="wait" for instant crossfade */}
+            <AnimatePresence>
+              {selectedArtist ? (
+                <ArtistCard
+                  key="artist-modal"
+                  artist={selectedArtist}
+                  genre={selectedGenre}
+                  onClose={handleCloseCard}
+                  onBack={handleArtistBack}
+                  backLabel={artistHistory.length > 0 ? artistHistory[artistHistory.length - 1].artist.name : selectedGenre?.name}
+                  onArtistClick={handleArtistClick}
+                  hideBackdrop
+                />
+              ) : (
+                <GenreCard
+                  key="genre-modal"
+                  genre={selectedGenre}
+                  onClose={handleCloseCard}
+                  onConnectionClick={handleConnectionClick}
+                  onExploreArtists={handleExploreArtists}
+                  hideBackdrop
+                />
+              )}
+            </AnimatePresence>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
