@@ -12,8 +12,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Hank Williams defined country music in just six years of recordings. His songs of heartbreak, loneliness, and hard living spoke to the common man and established templates that country music still follows today.',
       genres: ['country', 'gospel'],
       essentialAlbums: [
-        { title: '40 Greatest Hits', year: 1978, spotifyUrl: 'https://open.spotify.com/album/1afLvM52GpvMgmRzesDaRP' },
-        { title: 'The Original Singles Collection...Plus', year: 1990, spotifyUrl: 'https://open.spotify.com/album/2KJmfcTPlxIzRXwkQSgZsf' },
+        { title: '40 Greatest Hits', year: 1978, albumArt: 'https://i.scdn.co/image/ab67616d00001e02bf7de449bfd768b5a1e3bdd0', spotifyUrl: 'https://open.spotify.com/album/6zIYEv6soMoaZiypsHB5dd' },
+        { title: 'The Original Singles Collection...Plus', year: 1990, spotifyUrl: 'https://open.spotify.com/album/62SqkhUnO18912vRKmOUKy' },
       ],
       iconicSongs: [
         { title: 'I\'m So Lonesome I Could Cry', year: 1949 },
@@ -23,6 +23,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Jimmie Rodgers', 'Roy Acuff', 'Ernest Tubb'],
       influenced: ['Johnny Cash', 'George Jones', 'Waylon Jennings', 'Bob Dylan'],
+      imageUrl: 'https://i.scdn.co/image/4d78ff3bd821efd360841c5784d970a38a090c56',
       spotifyArtistId: '1FClsNYBUoNFtGgzeG74dW',
     },
     {
@@ -35,8 +36,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Johnny Cash was a towering figure who transcended genre boundaries. His deep baritone voice and rebellious spirit made him an icon of American music, equally at home in country, rock, folk, and gospel.',
       genres: ['country', 'rock-and-roll', 'gospel'],
       essentialAlbums: [
-        { title: 'At Folsom Prison', year: 1968, spotifyUrl: 'https://open.spotify.com/album/6EzvY8WEqwdDIjl7cLSf1s' },
-        { title: 'American IV: The Man Comes Around', year: 2002, spotifyUrl: 'https://open.spotify.com/album/1Vz94WQzBLgUYT4gCLNUPU' },
+        { title: 'At Folsom Prison', year: 1968, albumArt: 'https://i.scdn.co/image/ab67616d00001e02b7e5f0fd9df7a811984a96d6', spotifyUrl: 'https://open.spotify.com/album/4TJIdlY9hGSSTO1kUs1neh' },
+        { title: 'American IV: The Man Comes Around', year: 2002, spotifyUrl: 'https://open.spotify.com/album/2BlL4Gv2DLPu8p58Wcmlm9' },
       ],
       iconicSongs: [
         { title: 'Ring of Fire', year: 1963 },
@@ -46,6 +47,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Hank Williams', 'Carter Family', 'Jimmie Rodgers'],
       influenced: ['Kris Kristofferson', 'Willie Nelson', 'Chris Stapleton', 'Nine Inch Nails'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebf0c20db5ef6c6fbe5135d2e4',
       spotifyArtistId: '6kACVPfCOnqzgfEF5ryl0x',
     },
     {
@@ -58,8 +60,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Patsy Cline\'s rich contralto voice and emotional depth transcended country music to achieve pop crossover success. Her tragic death at 30 cut short a career that had already redefined what country music could be.',
       genres: ['country'],
       essentialAlbums: [
-        { title: 'Patsy Cline\'s Greatest Hits', year: 1967, spotifyUrl: 'https://open.spotify.com/album/4RjGPD3cSQxKcVSANqXu8U' },
-        { title: 'Showcase', year: 1961, spotifyUrl: 'https://open.spotify.com/album/2OWDERSdhAVKxVMMG0RY4R' },
+        { title: 'Patsy Cline\'s Greatest Hits', year: 1967, albumArt: 'https://i.scdn.co/image/ab67616d00001e021545c291adeea522ce055fcf', spotifyUrl: 'https://open.spotify.com/album/2rUMmQejerLG03UodBUQxS' },
+        { title: 'Showcase', year: 1961, spotifyUrl: 'https://open.spotify.com/album/54Ykk8Gg8TuHjLbYvErsKh' },
       ],
       iconicSongs: [
         { title: 'Crazy', year: 1961 },
@@ -69,6 +71,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Hank Williams', 'Kay Starr', 'Helen Morgan'],
       influenced: ['Loretta Lynn', 'Dolly Parton', 'k.d. lang', 'LeAnn Rimes'],
+      imageUrl: 'https://i.scdn.co/image/af95cec911f1efee46dd678af10db119d34599e9',
       spotifyArtistId: '7dNsHhGeGU5MV01r06O8gK',
     },
     {
@@ -81,8 +84,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Dolly Parton is one of the most honored female country performers of all time. A prolific songwriter with thousands of songs to her credit, she built an entertainment empire while maintaining her down-home authenticity.',
       genres: ['country', 'soul'],
       essentialAlbums: [
-        { title: 'Coat of Many Colors', year: 1971, spotifyUrl: 'https://open.spotify.com/album/2jWKUJkTbeoNcFZcDmYTMl' },
-        { title: 'Jolene', year: 1974, spotifyUrl: 'https://open.spotify.com/album/7LWTCCMGBK3cS1JYLIL3Y1' },
+        { title: 'Coat of Many Colors', year: 1971, albumArt: 'https://i.scdn.co/image/ab67616d00001e027fad1327fda63bea0e059072', spotifyUrl: 'https://open.spotify.com/album/17CT6ru3CyDXAi6xVaSUzg' },
+        { title: 'Jolene', year: 1974, spotifyUrl: 'https://open.spotify.com/album/5DyOxuvdSmTSNAmkfcsBsj' },
       ],
       iconicSongs: [
         { title: 'Jolene', year: 1973 },
@@ -92,6 +95,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Kitty Wells', 'Patsy Cline', 'Porter Wagoner'],
       influenced: ['Whitney Houston', 'Miley Cyrus', 'Kacey Musgraves', 'Taylor Swift'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000f17861aae76c2db6b8645f1553d0',
       spotifyArtistId: '32vWCbZh0xZ4o9gkz4PsEU',
     },
   ],
@@ -107,7 +111,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Robert Johnson recorded only 29 songs, yet his influence on rock and blues is immeasurable. Legend says he sold his soul to the devil at a crossroads in exchange for his supernatural guitar skills.',
       genres: ['delta-blues'],
       essentialAlbums: [
-        { title: 'King of the Delta Blues Singers', year: 1961, spotifyUrl: 'https://open.spotify.com/album/2pvmjmPJazjvqSUnLpGDy0' },
+        { title: 'King of the Delta Blues Singers', year: 1961, albumArt: 'https://i.scdn.co/image/ab67616d00001e0212549da864353c084cf0faa6', spotifyUrl: 'https://open.spotify.com/album/2IWaNq5o4tG1w6yxve5BMU' },
       ],
       iconicSongs: [
         { title: 'Cross Road Blues', year: 1937 },
@@ -117,6 +121,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Son House', 'Charley Patton', 'Willie Brown'],
       influenced: ['Muddy Waters', 'Eric Clapton', 'Keith Richards', 'Led Zeppelin'],
+      imageUrl: 'https://i.scdn.co/image/e5e3a261affcf0d3e511f3c61c150340135f2bfd',
       spotifyArtistId: '0f8MDDzIc6M4uH1xH0o0gy',
     },
     {
@@ -129,8 +134,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Muddy Waters electrified the Delta blues, creating the Chicago blues sound that would give birth to rock and roll. His powerful voice and slide guitar work influenced virtually every rock guitarist who followed.',
       genres: ['delta-blues'],
       essentialAlbums: [
-        { title: 'The Best of Muddy Waters', year: 1958, spotifyUrl: 'https://open.spotify.com/album/2VwSXVHgphVl6wKGbPPFxo' },
-        { title: 'Folk Singer', year: 1964, spotifyUrl: 'https://open.spotify.com/album/6bLbNQPZ84bMn29E5MNqkm' },
+        { title: 'The Best of Muddy Waters', year: 1958, albumArt: 'https://i.scdn.co/image/ab67616d00001e02f961bcc3e202a14cafe8ee7c', spotifyUrl: 'https://open.spotify.com/album/6xU8hHhpGaDmFdOVEGRzpY' },
+        { title: 'Folk Singer', year: 1964, spotifyUrl: 'https://open.spotify.com/album/5cLWh6nwcLUX2H4oGfW9Rx' },
       ],
       iconicSongs: [
         { title: 'Hoochie Coochie Man', year: 1954 },
@@ -140,6 +145,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Robert Johnson', 'Son House', 'Big Bill Broonzy'],
       influenced: ['The Rolling Stones', 'Eric Clapton', 'Led Zeppelin', 'Jimi Hendrix'],
+      imageUrl: 'https://i.scdn.co/image/40d562d19e9bf6bb6cd7b6886ec7608c281febca',
       spotifyArtistId: '4y6J8jwRAwO4dssiSmN91R',
     },
     {
@@ -152,8 +158,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'B.B. King brought the blues to the world stage with his expressive guitar playing and sophisticated vocal style. His guitar "Lucille" became as famous as the man himself.',
       genres: ['delta-blues', 'rb'],
       essentialAlbums: [
-        { title: 'Live at the Regal', year: 1965, spotifyUrl: 'https://open.spotify.com/album/6wxPFiU0l3Vf5tH2li0wvg' },
-        { title: 'Completely Well', year: 1969, spotifyUrl: 'https://open.spotify.com/album/5wSd08lOvQiKLtVLLt66nc' },
+        { title: 'Live at the Regal', year: 1965, albumArt: 'https://i.scdn.co/image/ab67616d00001e02bf373fb956297a3c0aa3a9a0', spotifyUrl: 'https://open.spotify.com/album/7njGz7ZeDXL6cH3VnflcQ2' },
+        { title: 'Completely Well', year: 1969, spotifyUrl: 'https://open.spotify.com/album/3Vp5uEx8koFke8NyfElrlD' },
       ],
       iconicSongs: [
         { title: 'The Thrill Is Gone', year: 1969 },
@@ -162,6 +168,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['T-Bone Walker', 'Blind Lemon Jefferson', 'Lonnie Johnson'],
       influenced: ['Eric Clapton', 'Jimi Hendrix', 'Stevie Ray Vaughan', 'John Mayer'],
+      imageUrl: 'https://i.scdn.co/image/7e53bec2f958fa7fd1868124a0897cb0d08b60ee',
       spotifyArtistId: '5xLSa7l4IV1gsQfhAMvl0U',
     },
     {
@@ -174,8 +181,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Howlin\' Wolf was six feet three inches of pure blues power. His massive voice and wild stage presence made him one of the most electrifying performers in blues history, and his Chess Records sides remain essential listening.',
       genres: ['delta-blues'],
       essentialAlbums: [
-        { title: 'Moanin\' in the Moonlight', year: 1959, spotifyUrl: 'https://open.spotify.com/album/2BVK0M0TZ5bxzDN2kphnNc' },
-        { title: 'Howlin\' Wolf', year: 1962, spotifyUrl: 'https://open.spotify.com/album/4p9R9j6lEWIZ8kchVpzwZi' },
+        { title: 'Moanin\' in the Moonlight', year: 1959, spotifyUrl: 'https://open.spotify.com/album/4wvqGLk1HThPA0b5lzRK2l' },
+        { title: 'Howlin\' Wolf', year: 1962, spotifyUrl: 'https://open.spotify.com/album/26TtzBrPdUkHMSTPSbctbl' },
       ],
       iconicSongs: [
         { title: 'Smokestack Lightning', year: 1956 },
@@ -185,6 +192,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Charley Patton', 'Jimmie Rodgers', 'Tommy Johnson'],
       influenced: ['The Rolling Stones', 'Led Zeppelin', 'The Doors', 'Cream'],
+      imageUrl: 'https://i.scdn.co/image/42a40543d2bde12565d33ee74a2566fd85b0c9f5',
       spotifyArtistId: '0Wxy5Qka8BN9crcFkiAxSR',
     },
   ],
@@ -200,8 +208,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Louis Armstrong transformed jazz from ensemble music into a soloist\'s art form. His revolutionary trumpet playing and gravelly voice made him the first true jazz superstar and one of the most influential musicians in history.',
       genres: ['jazz'],
       essentialAlbums: [
-        { title: 'Hot Fives & Sevens', year: 1925, spotifyUrl: 'https://open.spotify.com/album/3LvnU5nkDbGCOUZpDQvUEK' },
-        { title: 'Ella and Louis', year: 1956, spotifyUrl: 'https://open.spotify.com/album/1qOjlRolHzpGdxRhPMnYbT' },
+        { title: 'Hot Fives & Sevens', year: 1925, albumArt: 'https://i.scdn.co/image/ab67616d00001e024f62e0ca21ecc1ecbb9ba3d6', spotifyUrl: 'https://open.spotify.com/album/1fw3JJvlzlyRGDNVRQOzOK' },
+        { title: 'Ella and Louis', year: 1956, spotifyUrl: 'https://open.spotify.com/album/55HJDODj4X7DXmexhLR5q8' },
       ],
       iconicSongs: [
         { title: 'What a Wonderful World', year: 1967 },
@@ -211,6 +219,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['King Oliver', 'Bix Beiderbecke', 'Bessie Smith'],
       influenced: ['Miles Davis', 'Dizzy Gillespie', 'Billie Holiday', 'Every jazz musician'],
+      imageUrl: 'https://i.scdn.co/image/ab67726900008f7453b6519baafe8f4d6135453e',
       spotifyArtistId: '19eLuQmk9aCobbVDHc6eek',
     },
     {
@@ -223,8 +232,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Duke Ellington composed thousands of pieces that elevated jazz to an American art form. His orchestra served as his instrument, creating sophisticated soundscapes that bridged jazz, classical, and popular music.',
       genres: ['jazz'],
       essentialAlbums: [
-        { title: 'Ellington at Newport', year: 1956, spotifyUrl: 'https://open.spotify.com/album/1EM0Ry4fVyxkwrL32LCH9q' },
-        { title: 'Black, Brown and Beige', year: 1958, spotifyUrl: 'https://open.spotify.com/album/3J2ixw43UKrjfLqltDqxDZ' },
+        { title: 'Ellington at Newport', year: 1956, albumArt: 'https://i.scdn.co/image/ab67616d00001e0272c6eda3eb7ed3d1190210b4', spotifyUrl: 'https://open.spotify.com/album/0t41BkcZayaAsa0FdRelfz' },
+        { title: 'Black, Brown and Beige', year: 1958, spotifyUrl: 'https://open.spotify.com/album/0ffDvNnCuFJ2TKMQUIWMr7' },
       ],
       iconicSongs: [
         { title: 'Take the "A" Train', year: 1941 },
@@ -234,6 +243,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['James P. Johnson', 'Will Marion Cook', 'Sidney Bechet'],
       influenced: ['Miles Davis', 'Charles Mingus', 'Wynton Marsalis', 'Quincy Jones'],
+      imageUrl: 'https://i.scdn.co/image/c169af91bf56ac7d3962000f6ab237e1586d9732',
       spotifyArtistId: '4F7Q5NV6h5TSwCainz8S5A',
     },
     {
@@ -246,8 +256,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Miles Davis was at the forefront of nearly every major development in jazz from the mid-1940s through the early 1990s. From bebop to cool jazz to fusion, he constantly pushed the boundaries of what jazz could be.',
       genres: ['jazz', 'funk'],
       essentialAlbums: [
-        { title: 'Kind of Blue', year: 1959, spotifyUrl: 'https://open.spotify.com/album/1weenld61qoidwYuZ1GESA' },
-        { title: 'Bitches Brew', year: 1970, spotifyUrl: 'https://open.spotify.com/album/2WT1pbYjLJciAR26yMebkH' },
+        { title: 'Kind of Blue', year: 1959, albumArt: 'https://i.scdn.co/image/ab67616d00001e02387a29c90de3b2398c29c34f', spotifyUrl: 'https://open.spotify.com/album/1weenld61qoidwYuZ1GESA' },
+        { title: 'Bitches Brew', year: 1970, albumArt: 'https://i.scdn.co/image/ab67616d00001e02d3709135d1005baa36939d80', spotifyUrl: 'https://open.spotify.com/album/2WT1pbYjLJciAR26yMebkH' },
       ],
       iconicSongs: [
         { title: 'So What', year: 1959 },
@@ -257,6 +267,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Charlie Parker', 'Dizzy Gillespie', 'Duke Ellington'],
       influenced: ['Herbie Hancock', 'John Coltrane', 'Wayne Shorter', 'Kendrick Lamar'],
+      imageUrl: 'https://i.scdn.co/image/a318c54208af38364d131a54ced2416423696018',
       spotifyArtistId: '0kbYTNQb4Pb1rPbbaF0pT4',
     },
     {
@@ -280,6 +291,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Miles Davis', 'Thelonious Monk', 'Charlie Parker'],
       influenced: ['Pharoah Sanders', 'Kamasi Washington', 'Kenny Garrett'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000517473c7f7505c1af82929ec41df',
       spotifyArtistId: '2hGh5VOeeqimQFxqXvfCUf',
     },
   ],
@@ -295,8 +307,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Mahalia Jackson was the most influential gospel singer in history. Her powerful contralto voice and unwavering faith made her a civil rights icon who sang at the March on Washington and refused to perform secular music.',
       genres: ['gospel'],
       essentialAlbums: [
-        { title: 'The World\'s Greatest Gospel Singer', year: 1954, spotifyUrl: 'https://open.spotify.com/album/7bNNFBVGiNVyKqE8xHR6Os' },
-        { title: 'Live at Newport 1958', year: 1958, spotifyUrl: 'https://open.spotify.com/album/4WkZ0T0YlNT6iHPNPk7vkM' },
+        { title: 'The World\'s Greatest Gospel Singer', year: 1954, albumArt: 'https://i.scdn.co/image/ab67616d00001e023663e1d6d7bbf7c28b22fb8c', spotifyUrl: 'https://open.spotify.com/album/1MPqWg5gRFkgiUqlhE16dC' },
+        { title: 'Live at Newport 1958', year: 1958, spotifyUrl: 'https://open.spotify.com/album/5etzySknik0gycSFgcakQz' },
       ],
       iconicSongs: [
         { title: 'Move On Up a Little Higher', year: 1947 },
@@ -306,6 +318,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Bessie Smith', 'Thomas A. Dorsey', 'Willie Mae Ford Smith'],
       influenced: ['Aretha Franklin', 'Mavis Staples', 'Whitney Houston', 'Donna Summer'],
+      imageUrl: 'https://i.scdn.co/image/e04ce3fd84236d6b7a1b25b7d3fd3fcf958bb310',
       spotifyArtistId: '6QBUIuGCAJSAtefEY1EEdB',
     },
     {
@@ -328,6 +341,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Thomas A. Dorsey', 'Arizona Dranes'],
       influenced: ['Little Richard', 'Chuck Berry', 'Elvis Presley', 'Johnny Cash'],
+      imageUrl: 'https://i.scdn.co/image/ab67616d00001e02885e41e6e6e438bb95bf561a',
       spotifyArtistId: '2dXf5lu5iilcaTQJZodce7',
     },
     {
@@ -351,6 +365,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Mahalia Jackson', 'Ray Charles', 'The Soul Stirrers'],
       influenced: ['Otis Redding', 'Marvin Gaye', 'Al Green', 'Rod Stewart'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000517441aaa3a05d2ddba59454273e',
       spotifyArtistId: '6hnWRPzGGKiapVX1UCdEAC',
     },
     {
@@ -374,6 +389,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Clara Ward', 'Sam Cooke', 'Mahalia Jackson'],
       influenced: ['Whitney Houston', 'Alicia Keys', 'Beyoncé', 'Adele'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174f12270128127ba170f90097d',
       spotifyArtistId: '7nwUJBm0HE4ZxD3f5cy5ok',
     },
   ],
@@ -400,6 +416,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Nat King Cole', 'Charles Brown', 'Art Tatum'],
       influenced: ['Stevie Wonder', 'Billy Joel', 'Van Morrison', 'Joe Cocker'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb6fc460f10177fa38af69b8bf',
       spotifyArtistId: '1eYhYunlNJlDoQhtYBvPsi',
     },
     {
@@ -412,8 +429,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'James Brown was the hardest working man in show business. His revolutionary emphasis on rhythm and "the one" created funk music and laid the foundation for hip-hop, disco, and virtually all dance music that followed.',
       genres: ['rb', 'soul', 'funk'],
       essentialAlbums: [
-        { title: 'Live at the Apollo', year: 1963, spotifyUrl: 'https://open.spotify.com/album/2poAUFGkHetMzM4xzLBVhY' },
-        { title: 'Sex Machine', year: 1970, spotifyUrl: 'https://open.spotify.com/album/0rVv7p6J0xE9JXj8eY2pL3' },
+        { title: 'Live at the Apollo', year: 1963, albumArt: 'https://i.scdn.co/image/ab67616d00001e021e317c26dd7cb4e4cb0fc0c0', spotifyUrl: 'https://open.spotify.com/album/2poAUFGkHetMzM4xzLBVhY' },
+        { title: 'Sex Machine', year: 1970, albumArt: 'https://i.scdn.co/image/ab67616d00001e02b42d2bcb1103c72e3cb106cd', spotifyUrl: 'https://open.spotify.com/album/1yIzP2rNMHGqSORQFlnM0X' },
       ],
       iconicSongs: [
         { title: 'I Got You (I Feel Good)', year: 1965 },
@@ -423,6 +440,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Little Richard', 'Louis Jordan', 'Gospel music'],
       influenced: ['Prince', 'Michael Jackson', 'Afrika Bambaataa', 'Bruno Mars'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174158342aa8bb8a192c778f2a5',
       spotifyArtistId: '7GaxyUddsPok8BuhxN6OUW',
     },
     {
@@ -435,7 +453,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Marvin Gaye evolved from Motown hitmaker to socially conscious artist with "What\'s Going On." His sensual voice and willingness to address political and personal themes transformed R&B into a vehicle for serious expression.',
       genres: ['rb', 'soul'],
       essentialAlbums: [
-        { title: 'What\'s Going On', year: 1971, spotifyUrl: 'https://open.spotify.com/album/2v6ANhWhZBUKkg6pJJBs3B' },
+        { title: 'What\'s Going On', year: 1971, albumArt: 'https://i.scdn.co/image/ab67616d00001e02b36949bee43217351961ffbc', spotifyUrl: 'https://open.spotify.com/album/2v6ANhWhZBUKkg6pJJBs3B' },
         { title: 'Let\'s Get It On', year: 1973, spotifyUrl: 'https://open.spotify.com/album/2NiSePBfkzrCbPbEYv3zVD' },
       ],
       iconicSongs: [
@@ -446,6 +464,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sam Cooke', 'Ray Charles', 'Nat King Cole'],
       influenced: ['Prince', 'D\'Angelo', 'Usher', 'Maxwell'],
+      imageUrl: 'https://i.scdn.co/image/f69e669cd95c6008c6220fd060982ff9516ed636',
       spotifyArtistId: '3koiLjNrgRTNbOwViDipeA',
     },
     {
@@ -458,7 +477,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Stevie Wonder\'s "classic period" albums of the 1970s are among the most acclaimed in popular music. His mastery of synthesizers, social commentary, and genre-blending created a new template for artistic ambition in pop.',
       genres: ['rb', 'soul', 'funk'],
       essentialAlbums: [
-        { title: 'Songs in the Key of Life', year: 1976, spotifyUrl: 'https://open.spotify.com/album/6YUCc2RiXcEKS9ibuZxjt0' },
+        { title: 'Songs in the Key of Life', year: 1976, albumArt: 'https://i.scdn.co/image/ab67616d00001e022fee61bfec596bb6f5447c50', spotifyUrl: 'https://open.spotify.com/album/6YUCc2RiXcEKS9ibuZxjt0' },
         { title: 'Innervisions', year: 1973, spotifyUrl: 'https://open.spotify.com/album/4E1SPgmB7T00TGENpgSvnf' },
       ],
       iconicSongs: [
@@ -469,6 +488,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Ray Charles', 'Smokey Robinson', 'Marvin Gaye'],
       influenced: ['Prince', 'Michael Jackson', 'Pharrell Williams', 'Bruno Mars'],
+      imageUrl: 'https://i.scdn.co/image/37c7875911b1d8195b05d40061a86bd01908a0d9',
       spotifyArtistId: '7guDJrEfX3qb6FEbdPA5qi',
     },
   ],
@@ -495,6 +515,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Arthur Crudup', 'B.B. King', 'Sister Rosetta Tharpe', 'Dean Martin'],
       influenced: ['The Beatles', 'Bruce Springsteen', 'Michael Jackson'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051749a93e273380982dff84c0d7c',
       spotifyArtistId: '43ZHCT0cAZBISjO8DG9PnE',
     },
     {
@@ -518,6 +539,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Muddy Waters', 'T-Bone Walker', 'Nat King Cole'],
       influenced: ['The Beatles', 'The Rolling Stones', 'Keith Richards', 'Angus Young'],
+      imageUrl: 'https://i.scdn.co/image/7cfff5d03c5f80539eebba8827e8569c71898ea4',
       spotifyArtistId: '293zczrfYafIItmnmM3coR',
     },
     {
@@ -530,8 +552,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Little Richard\'s explosive piano playing, falsetto screams, and flamboyant persona created the template for rock and roll showmanship. His wild energy and gender-bending style influenced everyone from The Beatles to Prince.',
       genres: ['rock-and-roll', 'rb'],
       essentialAlbums: [
-        { title: 'Here\'s Little Richard', year: 1957, spotifyUrl: 'https://open.spotify.com/album/2ISfPiF9U0OYCQT2ZFJrYE' },
-        { title: 'Little Richard', year: 1958, spotifyUrl: 'https://open.spotify.com/album/3xXnr8LHEOmrp6zOMVHIXY' },
+        { title: 'Here\'s Little Richard', year: 1957, spotifyUrl: 'https://open.spotify.com/album/7ovpNMN1fSlA3RMN9KNkLo' },
+        { title: 'Little Richard', year: 1958, spotifyUrl: 'https://open.spotify.com/album/4C9Rff0rJaPWD7dpvYkXWr' },
       ],
       iconicSongs: [
         { title: 'Tutti Frutti', year: 1955 },
@@ -541,6 +563,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sister Rosetta Tharpe', 'Fats Domino', 'Billy Wright'],
       influenced: ['The Beatles', 'James Brown', 'Prince', 'Jimi Hendrix'],
+      imageUrl: 'https://i.scdn.co/image/8482a715712ad99032f35870bd2430b9b71b7283',
       spotifyArtistId: '4xls23Ye9WR9yy3yYMpAMm',
     },
     {
@@ -553,8 +576,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'The Beatles transformed popular music from entertainment into art. Their constant evolution—from pop hits to psychedelia to experimental sounds—opened up infinite possibilities for what rock music could achieve.',
       genres: ['rock-and-roll', 'rock'],
       essentialAlbums: [
-        { title: 'Sgt. Pepper\'s Lonely Hearts Club Band', year: 1967, spotifyUrl: 'https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW' },
-        { title: 'Abbey Road', year: 1969, spotifyUrl: 'https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN' },
+        { title: 'Sgt. Pepper\'s Lonely Hearts Club Band', year: 1967, albumArt: 'https://i.scdn.co/image/ab67616d00001e0234ef8f7d06cf2fc2146f420a', spotifyUrl: 'https://open.spotify.com/album/6QaVfG1pHYl1z15ZxkvVDW' },
+        { title: 'Abbey Road', year: 1969, albumArt: 'https://i.scdn.co/image/ab67616d00001e02dc30583ba717007b00cceb25', spotifyUrl: 'https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN' },
       ],
       iconicSongs: [
         { title: 'A Day in the Life', year: 1967 },
@@ -564,6 +587,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Chuck Berry', 'Elvis Presley', 'Little Richard', 'Buddy Holly'],
       influenced: ['Every rock band since 1964', 'Brian Wilson', 'Oasis', 'Radiohead'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433',
       spotifyArtistId: '3WrFJ7ztbogyGnTHbHJFl2',
     },
   ],
@@ -590,6 +614,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sam Cooke', 'Little Richard', 'James Brown'],
       influenced: ['Aretha Franklin', 'Rod Stewart', 'Janis Joplin', 'Chris Stapleton'],
+      imageUrl: 'https://i.scdn.co/image/a5897eff01844c42d894a586e618ebc4aa0b9d2f',
       spotifyArtistId: '60df5JBRRPcnSpsIMxxwQm',
     },
     {
@@ -613,6 +638,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sam Cooke', 'Otis Redding', 'Jackie Wilson'],
       influenced: ['Prince', 'Talking Heads', 'Maxwell', 'John Legend'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000f17895368fba7c1ebfeb929dcbdf',
       spotifyArtistId: '3dkbV4qihUeMsqN4vBGg93',
     },
     {
@@ -636,6 +662,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sam Cooke', 'Nat King Cole', 'Jerry Butler'],
       influenced: ['Bob Marley', 'Prince', 'Alicia Keys', 'Kanye West'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174eea0f2f51d7969bbb4000f92',
       spotifyArtistId: '2AV6XDIs32ofIJhkkDevjm',
     },
     {
@@ -648,8 +675,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Diana Ross led The Supremes to become the most successful Motown act ever. Her glamorous solo career, spanning soul, disco, and pop, made her an icon of style and star power for six decades.',
       genres: ['soul', 'disco'],
       essentialAlbums: [
-        { title: 'Diana Ross (1970)', year: 1970, spotifyUrl: 'https://open.spotify.com/album/2LTFH2HHYlQGmGcKPnstS4' },
-        { title: 'Diana', year: 1980, spotifyUrl: 'https://open.spotify.com/album/0qQy6sjB3yFQi3MeV6zxJk' },
+        { title: 'Diana Ross (1970)', year: 1970, spotifyUrl: 'https://open.spotify.com/album/2xRVmAB5mT2jTSnG44hogO' },
+        { title: 'Diana', year: 1980, spotifyUrl: 'https://open.spotify.com/album/4HFljvPDjtfepj0fLpjjYZ' },
       ],
       iconicSongs: [
         { title: 'Ain\'t No Mountain High Enough', year: 1970 },
@@ -659,6 +686,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Billie Holiday', 'Etta James', 'Smokey Robinson'],
       influenced: ['Madonna', 'Beyoncé', 'Whitney Houston', 'Mariah Carey'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174db59e1c017a93648b119f0cc',
       spotifyArtistId: '3MdG05syQeRYPPcClLaUGl',
     },
   ],
@@ -685,6 +713,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Toots Hibbert', 'Curtis Mayfield', 'James Brown'],
       influenced: ['The Police', 'The Clash', 'Lauryn Hill', 'Rihanna'],
+      imageUrl: 'https://i.scdn.co/image/4cd57e5e12ea2c24644c40886d65a9b22eca9802',
       spotifyArtistId: '2QsynagSdAqZj3U9HgDzjD',
     },
     {
@@ -708,6 +737,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Bob Marley', 'Toots Hibbert', 'Joe Higgs'],
       influenced: ['Damian Marley', 'Steel Pulse', 'Chronixx'],
+      imageUrl: 'https://i.scdn.co/image/ff0dc4f22c8e5074d7996313d785785a555e46bb',
       spotifyArtistId: '0oea1hwGMfUxZbLxJc1XUN',
     },
     {
@@ -720,8 +750,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Jimmy Cliff brought reggae to the world through his starring role in "The Harder They Come." His optimistic anthems like "You Can Get It If You Really Want" offered hope and inspiration beyond Jamaica\'s shores.',
       genres: ['reggae', 'soul'],
       essentialAlbums: [
-        { title: 'The Harder They Come', year: 1972, spotifyUrl: 'https://open.spotify.com/album/1ffCEK0e9OqiEb4ZRv0lYS' },
-        { title: 'Wonderful World, Beautiful People', year: 1970, spotifyUrl: 'https://open.spotify.com/album/5m4FJzMi5YQxXblHXZlPfy' },
+        { title: 'The Harder They Come', year: 1972, spotifyUrl: 'https://open.spotify.com/album/3L6BeuI5Du0b7sl2AmYVGA' },
+        { title: 'Wonderful World, Beautiful People', year: 1970, spotifyUrl: 'https://open.spotify.com/album/139eT46kuMTZqJsdz7cv8E' },
       ],
       iconicSongs: [
         { title: 'The Harder They Come', year: 1972 },
@@ -731,6 +761,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Fats Domino', 'Sam Cooke', 'Derrick Morgan'],
       influenced: ['The Clash', 'Bruce Springsteen', 'Keith Richards'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000f17811bdad2b191ac35053d34bd2',
       spotifyArtistId: '3rJ3m1tM6vUgiWLjfV8sRf',
     },
     {
@@ -743,8 +774,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Toots Hibbert coined the term "reggae" with his 1968 song "Do the Reggay." His raw, soulful voice with Toots & The Maytals created some of Jamaica\'s most joyous and spiritually uplifting music.',
       genres: ['reggae', 'soul'],
       essentialAlbums: [
-        { title: 'Funky Kingston', year: 1973, spotifyUrl: 'https://open.spotify.com/album/2k4j3lHfJe6J1iZGBhvWGG' },
-        { title: 'In the Dark', year: 1974, spotifyUrl: 'https://open.spotify.com/album/5BL2BaP6j8T0M9MNJ6vfWA' },
+        { title: 'Funky Kingston', year: 1973, spotifyUrl: 'https://open.spotify.com/album/7a341nZsSfwyBsq1tMPETz' },
+        { title: 'In the Dark', year: 1974, spotifyUrl: 'https://open.spotify.com/album/6FuHnw9KkeYH6TSJaNOlto' },
       ],
       iconicSongs: [
         { title: 'Pressure Drop', year: 1969 },
@@ -754,6 +785,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Ray Charles', 'Otis Redding', 'James Brown'],
       influenced: ['The Clash', 'The Specials', 'No Doubt', 'Amy Winehouse'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174346451ca43eb84f810f13b96',
       spotifyArtistId: '6ZFv3wQwwWPiVDWhv0mjQK',
     },
   ],
@@ -780,6 +812,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['The Stooges', 'New York Dolls', 'MC5'],
       influenced: ['Sex Pistols', 'The Clash', 'Green Day', 'Nirvana'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051745b9f46a5c5bf8243179d56b0',
       spotifyArtistId: '1co4F2pPNH8JjTutZkmgSm',
     },
     {
@@ -802,6 +835,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['New York Dolls', 'The Stooges', 'The Who'],
       influenced: ['The Clash', 'Siouxsie and the Banshees', 'Joy Division', 'Green Day'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174d3fa01fd4baad1158dd2fd8b',
       spotifyArtistId: '1u7kkVrr14iBvrpYnZILJR',
     },
     {
@@ -825,6 +859,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Sex Pistols', 'Bob Marley', 'The Who'],
       influenced: ['U2', 'Green Day', 'Rage Against the Machine', 'No Doubt'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051742fc4d22f2e060511db2ae971',
       spotifyArtistId: '3RGLhK1IP9jnYFH4BRFJBS',
     },
     {
@@ -848,6 +883,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Bob Dylan', 'The Rolling Stones', 'Arthur Rimbaud'],
       influenced: ['R.E.M.', 'Siouxsie Sioux', 'PJ Harvey', 'Courtney Love'],
+      imageUrl: 'https://i.scdn.co/image/44012cfc4fedcbe92ac5e14178061fd3a872417f',
       spotifyArtistId: '0vYkHhJ48Bs3jWcvZXvOrP',
     },
   ],
@@ -874,6 +910,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['James Brown', 'Sly Stone', 'Jimi Hendrix'],
       influenced: ['Prince', 'Red Hot Chili Peppers', 'Dr. Dre', 'OutKast'],
+      imageUrl: 'https://i.scdn.co/image/ab67616d00001e024b5328d5fcc004dc67355694',
       spotifyArtistId: '6XswoC68grx55in1WQnJ7E',
     },
     {
@@ -897,6 +934,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['James Brown', 'The Beatles', 'Jimi Hendrix'],
       influenced: ['Prince', 'George Clinton', 'Miles Davis', 'Red Hot Chili Peppers'],
+      imageUrl: 'https://i.scdn.co/image/468e538febbd5553625965bacc8abd5a5e44ed71',
       spotifyArtistId: '5m8H6zSadhu1j9Yi04VLqD',
     },
     {
@@ -909,8 +947,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Prince was a singular genius who mastered every instrument and genre he touched. His fusion of funk, rock, pop, and R&B, combined with his provocative sexuality and showmanship, made him one of music\'s greatest talents.',
       genres: ['funk', 'rb', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Purple Rain', year: 1984, spotifyUrl: 'https://open.spotify.com/album/7nXJ5k4XgRj5OLg9m8V3zc' },
-        { title: 'Sign o\' the Times', year: 1987, spotifyUrl: 'https://open.spotify.com/album/4Io5vWtmV1rFj4yirKb4y4' },
+        { title: 'Purple Rain', year: 1984, albumArt: 'https://i.scdn.co/image/ab67616d00001e02d52bfb90ee8dfeda8378b99b', spotifyUrl: 'https://open.spotify.com/album/7nXJ5k4XgRj5OLg9m8V3zc' },
+        { title: 'Sign o\' the Times', year: 1987, albumArt: 'https://i.scdn.co/image/ab67616d00001e0254ab617bc2d4974ab6ffbece', spotifyUrl: 'https://open.spotify.com/album/4Io5vWtmV1rFj4yirKb4y4' },
       ],
       iconicSongs: [
         { title: 'Purple Rain', year: 1984 },
@@ -920,6 +958,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['James Brown', 'Sly Stone', 'Jimi Hendrix', 'Stevie Wonder'],
       influenced: ['The Weeknd', 'Bruno Mars', 'Janelle Monáe', 'Frank Ocean'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174eaca358712b3fe4ed9814640',
       spotifyArtistId: '5a2EaR3hamoenG9rDuVn8j',
     },
     {
@@ -943,6 +982,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Parliament-Funkadelic', 'Marvin Gaye', 'Sly Stone'],
       influenced: ['MC Hammer', 'Prince', 'New Edition', 'Mary Jane Girls'],
+      imageUrl: 'https://i.scdn.co/image/aa4cf47f4d71f91fe70f61bb703f35dc1afeb185',
       spotifyArtistId: '0FrpdcVlJQqibaz5HfBUrL',
     },
   ],
@@ -969,6 +1009,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Karlheinz Stockhausen', 'The Beach Boys', 'James Brown'],
       influenced: ['Afrika Bambaataa', 'Depeche Mode', 'New Order', 'Daft Punk'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174c46999e5afaf35c91cbe652b',
       spotifyArtistId: '0dmPX6ovclgOy8WWJaFEUU',
     },
     {
@@ -992,6 +1033,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Karlheinz Stockhausen', 'Pink Floyd', 'Terry Riley'],
       influenced: ['Trent Reznor', 'The Orb', 'Boards of Canada', 'Stranger Things soundtrack'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051749b94355f06250928e4e4ead0',
       spotifyArtistId: '1BGN1IdyiSR0ZYrkoKNchl',
     },
     {
@@ -1015,6 +1057,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Pierre Schaeffer', 'Kraftwerk', 'Pink Floyd'],
       influenced: ['Moby', 'BT', 'Vangelis', 'EDM producers worldwide'],
+      imageUrl: 'https://i.scdn.co/image/dcfb5f6c56b0353bdc972be58cf4d7028ebddb29',
       spotifyArtistId: '5MhLmv7GgyjbxGqiIGasvT',
     },
     {
@@ -1038,6 +1081,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Kraftwerk', 'David Bowie', 'Gary Numan'],
       influenced: ['Nine Inch Nails', 'Marilyn Manson', 'The Killers', 'Muse'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174aff13c9484fdad590ccfb73c',
       spotifyArtistId: '762310PdDnwsDxAQxzQkfX',
     },
   ],
@@ -1064,6 +1108,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Mahalia Jackson', 'Janis Joplin', 'Giorgio Moroder'],
       influenced: ['Madonna', 'Lady Gaga', 'Daft Punk', 'Beyoncé'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051749e708b5a9b76b98301d35123',
       spotifyArtistId: '2eogQKWWoohI3BSnoG7E2U',
     },
     {
@@ -1087,6 +1132,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['The Beatles', 'Otis Redding', 'Stevie Wonder'],
       influenced: ['Justin Timberlake', 'Jamiroquai', 'Daft Punk', 'Take That'],
+      imageUrl: 'https://i.scdn.co/image/1ea4795e17ffa658d7ad23095d58997a278179a9',
       spotifyArtistId: '1LZEQNv7sE11VDY3SdxQeN',
     },
     {
@@ -1110,6 +1156,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['James Brown', 'Roxy Music', 'Earth, Wind & Fire'],
       influenced: ['Daft Punk', 'The Sugarhill Gang', 'Madonna', 'Every house producer'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051744c74c17081e7e0ef8b5eb323',
       spotifyArtistId: '0Xf8oDAJYd2D0k3NLI19OV',
     },
     {
@@ -1133,6 +1180,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Aretha Franklin', 'Diana Ross', 'Gladys Knight'],
       influenced: ['Beyoncé', 'Lady Gaga', 'Destiny\'s Child', 'Lizzo'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174b75ca1c0223fc450dfe3c1ec',
       spotifyArtistId: '6V6WCgi7waF55bJmylC4H5',
     },
   ],
@@ -1148,7 +1196,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Grandmaster Flash pioneered DJ techniques like scratching, punch phrasing, and beat juggling. His group\'s "The Message" was one of the first hip-hop songs to address social issues.',
       genres: ['hip-hop'],
       essentialAlbums: [
-        { title: 'The Message', year: 1982, spotifyUrl: 'https://open.spotify.com/album/6eBqL0PbfPwXmnshjCfheZ' },
+        { title: 'The Message', year: 1982, spotifyUrl: 'https://open.spotify.com/album/4dEczweFPXeLMMVD1zIdi7' },
       ],
       iconicSongs: [
         { title: 'The Message', year: 1982 },
@@ -1157,6 +1205,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['DJ Kool Herc', 'James Brown', 'Sly Stone'],
       influenced: ['Run-D.M.C.', 'Public Enemy', 'DJ Premier', 'Nas'],
+      imageUrl: 'https://i.scdn.co/image/3db8b56133ee8d37d8bae810b195705908e986ea',
       spotifyArtistId: '5hQCwevTf03u1rECrRMeop',
     },
     {
@@ -1180,6 +1229,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Grandmaster Flash', 'Kurtis Blow', 'Aerosmith'],
       influenced: ['Beastie Boys', 'LL Cool J', 'Jay-Z', 'Eminem'],
+      imageUrl: 'https://i.scdn.co/image/bbdeb7e5e0b12a8896daeeddfbf685a5ebd66271',
       spotifyArtistId: '3CQIn7N5CuRDP8wEI7FiDA',
     },
     {
@@ -1203,6 +1253,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Grandmaster Flash', 'James Brown', 'Malcolm X'],
       influenced: ['Rage Against the Machine', 'N.W.A', 'Ice Cube', 'Kendrick Lamar'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174bec3cbe75ac982c675655e88',
       spotifyArtistId: '6Mo9PoU6svvhgEum7wh2Nd',
     },
     {
@@ -1215,7 +1266,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Nas released "Illmatic" at age 20, widely considered the greatest hip-hop album ever made. His vivid storytelling, complex rhyme schemes, and poetic lyricism set the standard for lyrical excellence in rap.',
       genres: ['hip-hop'],
       essentialAlbums: [
-        { title: 'Illmatic', year: 1994, spotifyUrl: 'https://open.spotify.com/album/3kEtdS2pH6hKcMU9Wioob1' },
+        { title: 'Illmatic', year: 1994, albumArt: 'https://i.scdn.co/image/ab67616d00001e0271d840defb002ed3b180f7cd', spotifyUrl: 'https://open.spotify.com/album/3kEtdS2pH6hKcMU9Wioob1' },
         { title: 'It Was Written', year: 1996, spotifyUrl: 'https://open.spotify.com/album/5XBGlhKG1PYLqkgPynX6ex' },
       ],
       iconicSongs: [
@@ -1226,6 +1277,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Rakim', 'Kool G Rap', 'Grandmaster Flash'],
       influenced: ['Jay-Z', 'Kendrick Lamar', 'J. Cole', 'Joey Bada$$'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174153198caeef9e3bda92f9285',
       spotifyArtistId: '20qISvAhX20dpIbOOzGK3q',
     },
   ],
@@ -1241,7 +1293,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Frankie Knuckles created house music at Chicago\'s Warehouse club. His pioneering DJ sets blended disco, soul, and electronic music into a new sound that conquered the world.',
       genres: ['house', 'disco'],
       essentialAlbums: [
-        { title: 'Beyond the Mix', year: 1991, spotifyUrl: 'https://open.spotify.com/album/2pJpqkV5vTG4TBcnbTZHKH' },
+        { title: 'Beyond the Mix', year: 1991, spotifyUrl: 'https://open.spotify.com/album/1UvxqCKVJCaJD4FXVjB6Rf' },
       ],
       iconicSongs: [
         { title: 'Your Love', year: 1987 },
@@ -1250,6 +1302,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Larry Levan', 'Donna Summer', 'Giorgio Moroder'],
       influenced: ['Daft Punk', 'David Guetta', 'Disclosure', 'Every house DJ'],
+      imageUrl: 'https://i.scdn.co/image/7e895d1634865f4e3eba99ac1ce6ffeb036b7cac',
       spotifyArtistId: '63yl9nDNrHpiAYGlNJxxjc',
     },
     {
@@ -1262,7 +1315,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Larry Heard, as Mr. Fingers, created "Can You Feel It" and "Mystery of Love"—tracks that defined deep house music. His jazzy, soulful productions brought emotional depth to electronic dance music.',
       genres: ['house', 'electronic'],
       essentialAlbums: [
-        { title: 'Introduction', year: 1992, spotifyUrl: 'https://open.spotify.com/album/1EbVOa6xMX5a3gTU6nf3Kh' },
+        { title: 'Introduction', year: 1992, spotifyUrl: 'https://open.spotify.com/album/2rNRuTBgRujbZG9Fq3Q5WE' },
         { title: 'Amnesia', year: 1988 },
       ],
       iconicSongs: [
@@ -1273,6 +1326,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Frankie Knuckles', 'Stevie Wonder', 'Roy Ayers'],
       influenced: ['Disclosure', 'Four Tet', 'Floating Points', 'Every deep house producer'],
+      imageUrl: 'https://i.scdn.co/image/29dd50d9a51002524ea2354c9fed0b5ec34b8ae6',
       spotifyArtistId: '3j7teie3p6UnbA8nW51Trz',
     },
     {
@@ -1295,6 +1349,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Frankie Knuckles', 'Kraftwerk', 'Giorgio Moroder'],
       influenced: ['CeCe Peniston', 'Ten City', 'UK house scene'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051743134a7107ee71716b7ea61d5',
       spotifyArtistId: '2Di8r9df6xjyj6CVOqbGVz',
     },
     {
@@ -1307,7 +1362,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Kerri Chandler inherited the house music tradition from his DJ father and became one of deep house\'s most respected producers. His soulful, keyboard-driven productions define the New Jersey sound.',
       genres: ['house'],
       essentialAlbums: [
-        { title: 'Spaces and Places', year: 2022, spotifyUrl: 'https://open.spotify.com/album/5kIJ3gRWfQQqQwPQP0PZ5X' },
+        { title: 'Spaces and Places', year: 2022, spotifyUrl: 'https://open.spotify.com/album/4Q4G4hrAms9J3mYmofZlrT' },
       ],
       iconicSongs: [
         { title: 'Rain', year: 1996 },
@@ -1317,6 +1372,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Frankie Knuckles', 'Larry Levan', 'Larry Heard'],
       influenced: ['Disclosure', 'Jamie xx', 'Daniel Avery'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174a8acffcb0f02a43a54c77f40',
       spotifyArtistId: '7nqpEU6DCHkNtK1bYsyS3W',
     },
   ],
@@ -1341,6 +1397,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Kraftwerk', 'Parliament-Funkadelic', 'Gary Numan'],
       influenced: ['Derrick May', 'Kevin Saunderson', 'Carl Craig', 'Jeff Mills'],
+      imageUrl: 'https://i.scdn.co/image/0b9b5ad01f6c69a9a5be951ce378f38dd0208db3',
       spotifyArtistId: '208EQzx7RmoE2Ng9gF2edh',
     },
     {
@@ -1353,7 +1410,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Derrick May, alongside Juan Atkins and Kevin Saunderson, created Detroit techno. His tracks like "Strings of Life" brought orchestral emotion to electronic music and remain some of the genre\'s most celebrated works.',
       genres: ['techno', 'electronic'],
       essentialAlbums: [
-        { title: 'Innovator', year: 1996, spotifyUrl: 'https://open.spotify.com/album/5V7Qx5tXLbnPQpTpSJGhQU' },
+        { title: 'Innovator', year: 1996, spotifyUrl: 'https://open.spotify.com/album/1tCTyOZrTwwmIK4yV8KImY' },
       ],
       iconicSongs: [
         { title: 'Strings of Life', year: 1987 },
@@ -1363,6 +1420,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Juan Atkins', 'Kraftwerk', 'Parliament-Funkadelic'],
       influenced: ['Carl Craig', 'Jeff Mills', 'Laurent Garnier', 'European techno scene'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051747ca301a140785ca26b9a6b31',
       spotifyArtistId: '0v6N0xV7AfHHKVcgUOjC51',
     },
     {
@@ -1375,7 +1433,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Kevin Saunderson completed the Belleville Three and brought techno to the pop charts with Inner City. His ability to make techno accessible without compromising its essence helped spread the sound globally.',
       genres: ['techno', 'house'],
       essentialAlbums: [
-        { title: 'Paradise (Inner City)', year: 1989, spotifyUrl: 'https://open.spotify.com/album/6WBpCJiH0GhVJ3qTUgGXWJ' },
+        { title: 'Paradise (Inner City)', year: 1989, spotifyUrl: 'https://open.spotify.com/album/2CwxbRPETEraKmAKDNrEcs' },
       ],
       iconicSongs: [
         { title: 'Big Fun', year: 1988 },
@@ -1385,6 +1443,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Juan Atkins', 'Kraftwerk', 'Giorgio Moroder'],
       influenced: ['The Chemical Brothers', 'Basement Jaxx', 'Todd Terry'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000f17885641acf4b0c40abe470ff13',
       spotifyArtistId: '0jS6VTFGujWxinY5TSQwOG',
     },
     {
@@ -1397,8 +1456,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Richie Hawtin, as Plastikman, pioneered minimal techno and acid house. His stripped-back aesthetic and technological innovation with the final scratch vinyl emulation system changed how DJs perform.',
       genres: ['techno', 'electronic'],
       essentialAlbums: [
-        { title: 'Sheet One (as Plastikman)', year: 1993, spotifyUrl: 'https://open.spotify.com/album/4fAyKj2B8V9Gbo9QjHoAr1' },
-        { title: 'Consumed', year: 1998, spotifyUrl: 'https://open.spotify.com/album/42XPLBiEliyzQcLbIlmYzb' },
+        { title: 'Sheet One (as Plastikman)', year: 1993, spotifyUrl: 'https://open.spotify.com/album/31wRVrTfonpur6rpM8wZ84' },
+        { title: 'Consumed', year: 1998, spotifyUrl: 'https://open.spotify.com/album/1U7aY4kI9xeMuI3nD4LKBy' },
       ],
       iconicSongs: [
         { title: 'Spastik', year: 1993 },
@@ -1408,6 +1467,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Juan Atkins', 'Derrick May', 'Aphex Twin'],
       influenced: ['Ricardo Villalobos', 'Tale of Us', 'Minimal techno worldwide'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb0da1de5df15aa99d71bc439a',
       spotifyArtistId: '3AhwIUus3pIaA3CvYBEtpy',
     },
   ],
@@ -1434,6 +1494,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Iggy Pop', 'Hüsker Dü', 'Captain Beefheart'],
       influenced: ['Nirvana', 'Radiohead', 'Weezer', 'PJ Harvey'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174419ffe5eb82b7460c76a986a',
       spotifyArtistId: '6zvul52xwTWzilBZl6BUbT',
     },
     {
@@ -1446,7 +1507,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Sonic Youth brought avant-garde experimentation to rock music with their alternate tunings and feedback-drenched guitar work. They bridged the gap between art-world experimentation and underground rock.',
       genres: ['indie', 'punk'],
       essentialAlbums: [
-        { title: 'Daydream Nation', year: 1988, spotifyUrl: 'https://open.spotify.com/album/3USQKOw0se5pBNEndu82Rb' },
+        { title: 'Daydream Nation', year: 1988, albumArt: 'https://i.scdn.co/image/ab67616d00001e02db8e38addb58131f77b48377', spotifyUrl: 'https://open.spotify.com/album/3USQKOw0se5pBNEndu82Rb' },
         { title: 'Goo', year: 1990, spotifyUrl: 'https://open.spotify.com/album/4xd8lQdJJfGcwPl6Zxvt05' },
       ],
       iconicSongs: [
@@ -1457,6 +1518,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['The Velvet Underground', 'Glenn Branca', 'The Stooges'],
       influenced: ['Nirvana', 'My Bloody Valentine', 'Pavement', 'Beck'],
+      imageUrl: 'https://i.scdn.co/image/a6f14050fe0b0e188d23298efffd3ff06511e99c',
       spotifyArtistId: '5UqTO8smerMvxHYA5xsXb6',
     },
     {
@@ -1469,8 +1531,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Radiohead evolved from Brit-pop guitar band to electronic art-rock pioneers. Albums like "OK Computer" and "Kid A" challenged what rock music could be and predicted the anxieties of the digital age.',
       genres: ['indie', 'electronic', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'OK Computer', year: 1997, spotifyUrl: 'https://open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE' },
-        { title: 'Kid A', year: 2000, spotifyUrl: 'https://open.spotify.com/album/6GjwtEZcfenmOf6l18N7T7' },
+        { title: 'OK Computer', year: 1997, albumArt: 'https://i.scdn.co/image/ab67616d00001e02c8b444df094279e70d0ed856', spotifyUrl: 'https://open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE' },
+        { title: 'Kid A', year: 2000, albumArt: 'https://i.scdn.co/image/ab67616d00001e026c7112082b63beefffe40151', spotifyUrl: 'https://open.spotify.com/album/6GjwtEZcfenmOf6l18N7T7' },
       ],
       iconicSongs: [
         { title: 'Paranoid Android', year: 1997 },
@@ -1480,6 +1542,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Pixies', 'R.E.M.', 'Brian Eno', 'Miles Davis'],
       influenced: ['Muse', 'Coldplay', 'Arcade Fire', 'Alt-J'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051744104fbd80f1f795728abbd59',
       spotifyArtistId: '4Z8W4fKeB5YxbusRsdQVPb',
     },
     {
@@ -1493,7 +1556,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['indie', 'rock-and-roll'],
       essentialAlbums: [
         { title: 'Funeral', year: 2004, spotifyUrl: 'https://open.spotify.com/album/0b2B3OoIXF4njnlesJfEg1' },
-        { title: 'The Suburbs', year: 2010, spotifyUrl: 'https://open.spotify.com/album/3DrgM5X3yX1JP1liNLAOHI' },
+        { title: 'The Suburbs', year: 2010, albumArt: 'https://i.scdn.co/image/ab67616d00001e02532391d63cfd6d32677f7af6', spotifyUrl: 'https://open.spotify.com/album/3DrgM5X3yX1JP1liNLAOHI' },
       ],
       iconicSongs: [
         { title: 'Wake Up', year: 2004 },
@@ -1503,6 +1566,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Talking Heads', 'David Bowie', 'Neutral Milk Hotel'],
       influenced: ['The National', 'Local Natives', 'Fleet Foxes', 'Bon Iver'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000f17857c6e5fa2170e9a938f4a880',
       spotifyArtistId: '3kjuyTCjPG1WMFCiyc5IuB',
     },
   ],
@@ -1518,7 +1582,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Nirvana brought alternative rock to the mainstream with "Smells Like Teen Spirit." Kurt Cobain\'s raw emotion, catchy melodies, and punk ethos defined a generation\'s angst.',
       genres: ['grunge', 'punk', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Nevermind', year: 1991, spotifyUrl: 'https://open.spotify.com/album/2guirTSEqLizK7j9i1MTTZ' },
+        { title: 'Nevermind', year: 1991, albumArt: 'https://i.scdn.co/image/ab67616d00001e02e175a19e530c898d167d39bf', spotifyUrl: 'https://open.spotify.com/album/2guirTSEqLizK7j9i1MTTZ' },
         { title: 'In Utero', year: 1993, spotifyUrl: 'https://open.spotify.com/album/6bkPC6pfADexmVYy2peGLz' },
       ],
       iconicSongs: [
@@ -1529,6 +1593,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Pixies', 'Black Flag', 'Sonic Youth', 'The Melvins'],
       influenced: ['Foo Fighters', 'Weezer', 'Green Day', 'Every 90s rock band'],
+      imageUrl: 'https://i.scdn.co/image/a4e10b79a642e9891383448cbf37d7266a6883d6',
       spotifyArtistId: '6olE6TJLqED3rqDCT0FyPh',
     },
     {
@@ -1541,7 +1606,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Pearl Jam emerged from the ashes of Mother Love Bone to become grunge\'s most enduring band. Eddie Vedder\'s passionate vocals and the band\'s commitment to fan-friendly practices made them alternative rock\'s conscience.',
       genres: ['grunge', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Ten', year: 1991, spotifyUrl: 'https://open.spotify.com/album/5B4PYA7wNN4WdEXdIJu58a' },
+        { title: 'Ten', year: 1991, albumArt: 'https://i.scdn.co/image/ab67616d00001e022d0e5ab5bd2e234fbcffa3e0', spotifyUrl: 'https://open.spotify.com/album/5B4PYA7wNN4WdEXdIJu58a' },
         { title: 'Vs.', year: 1993, spotifyUrl: 'https://open.spotify.com/album/1p4MHSJZzKYpDGgymMjFNf' },
       ],
       iconicSongs: [
@@ -1552,6 +1617,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Neil Young', 'The Who', 'The Ramones'],
       influenced: ['Creed', 'Foo Fighters', 'Nickelback', 'Kings of Leon'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174e431fb8ba17cdee73e4ce08a',
       spotifyArtistId: '1w5Kfo2jwwIPruYS2UWh56',
     },
     {
@@ -1575,6 +1641,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Black Sabbath', 'Led Zeppelin', 'The Stooges'],
       influenced: ['Audioslave', 'Mastodon', 'Deftones', 'Queens of the Stone Age'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174d5233fdc8cad84de5b366f1b',
       spotifyArtistId: '1Yox196W7bzVNZI7RBaPnf',
     },
     {
@@ -1598,6 +1665,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Black Sabbath', 'Van Halen', 'Slayer'],
       influenced: ['Godsmack', 'Breaking Benjamin', 'Seether', 'Three Days Grace'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb6114a63659d0d5c0a801f733',
       spotifyArtistId: '64tNsm6TnZe2zpcMVMOoHL',
     },
   ],
@@ -1613,7 +1681,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Brian Eno invented ambient music as "an atmosphere, a tint." His production work with artists from David Bowie to U2 and Coldplay revolutionized how records are made.',
       genres: ['ambient', 'electronic', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Ambient 1: Music for Airports', year: 1978, spotifyUrl: 'https://open.spotify.com/album/063f8Ej8rLVTz9KkjQKEMa' },
+        { title: 'Ambient 1: Music for Airports', year: 1978, albumArt: 'https://i.scdn.co/image/ab67616d00001e0237a379ca6520eaf191de6ff2', spotifyUrl: 'https://open.spotify.com/album/063f8Ej8rLVTz9KkjQKEMa' },
         { title: 'Another Green World', year: 1975, spotifyUrl: 'https://open.spotify.com/album/3z6NqFP5ATD6n0GKvLi6vK' },
       ],
       iconicSongs: [
@@ -1623,6 +1691,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['John Cage', 'Velvet Underground', 'Minimalist composers'],
       influenced: ['Aphex Twin', 'Sigur Rós', 'Radiohead', 'Boards of Canada'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051745533ce5711f95f0c436b30fe',
       spotifyArtistId: '7MSUfLeTdDEoZiJPDSBXgi',
     },
     {
@@ -1635,7 +1704,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Richard D. James, as Aphex Twin, is electronic music\'s mad scientist. His work spans serene ambient pieces to frenetic drill and bass, always pushing technology and musicality to their limits.',
       genres: ['ambient', 'electronic'],
       essentialAlbums: [
-        { title: 'Selected Ambient Works 85-92', year: 1992, spotifyUrl: 'https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k' },
+        { title: 'Selected Ambient Works 85-92', year: 1992, albumArt: 'https://i.scdn.co/image/ab67616d00001e0238906032688bb13b135ce19a', spotifyUrl: 'https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k' },
         { title: 'Richard D. James Album', year: 1996, spotifyUrl: 'https://open.spotify.com/album/6VolVFuZuIbcxceSdnXGDO' },
       ],
       iconicSongs: [
@@ -1646,6 +1715,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Brian Eno', 'Kraftwerk', 'Tangerine Dream'],
       influenced: ['Radiohead', 'Skrillex', 'Flying Lotus', 'Every electronic producer'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174aa3c91d792eb520a5d58daa5',
       spotifyArtistId: '6kBDZFXuLrZgHnvmPu9NsG',
     },
     {
@@ -1658,7 +1728,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Boards of Canada create hazy, nostalgic electronic music that sounds like half-remembered childhood memories. Their use of degraded samples and analog warmth influenced a generation of electronic musicians.',
       genres: ['ambient', 'electronic'],
       essentialAlbums: [
-        { title: 'Music Has the Right to Children', year: 1998, spotifyUrl: 'https://open.spotify.com/album/1vWnB0hYmluskQuzxwo25a' },
+        { title: 'Music Has the Right to Children', year: 1998, albumArt: 'https://i.scdn.co/image/ab67616d00001e020ddcb1077d30a5ffb59b6864', spotifyUrl: 'https://open.spotify.com/album/1vWnB0hYmluskQuzxwo25a' },
         { title: 'Geogaddi', year: 2002, spotifyUrl: 'https://open.spotify.com/album/5LE6JKQvf8FDOKSA08vqCw' },
       ],
       iconicSongs: [
@@ -1669,6 +1739,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Brian Eno', 'Autechre', 'My Bloody Valentine'],
       influenced: ['Tycho', 'Tame Impala', 'Washed Out', 'Com Truise'],
+      imageUrl: 'https://i.scdn.co/image/c0b33a8d211600d70dcda3077d6a582da34321b0',
       spotifyArtistId: '2VAvhf61GgLYmC6C8anyX1',
     },
     {
@@ -1692,6 +1763,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Brian Eno', 'Cocteau Twins', 'Talk Talk'],
       influenced: ['Explosions in the Sky', 'M83', 'Coldplay', 'Bon Iver'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051746e9247ebb1bd90c23fb776fc',
       spotifyArtistId: '6UUrUCIZtQeOf8tC0WuzRy',
     },
   ],
@@ -1718,6 +1790,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['A Guy Called Gerald', 'LTJ Bukem', 'Detroit techno'],
       influenced: ['High Contrast', 'Calibre', 'Hospital Records artists'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051748f652839f17c3f0eb205f1d3',
       spotifyArtistId: '2SYqJ3uDLLXZNyZdLKBy4M',
     },
     {
@@ -1741,6 +1814,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Goldie', 'DJ Krust', 'Massive Attack'],
       influenced: ['Chase & Status', 'Sub Focus', 'Pendulum'],
+      imageUrl: 'https://i.scdn.co/image/608feb4a99c80b5804ed7072283c2c7ff248ccf2',
       spotifyArtistId: '5UjqeSp9dX6Nrge7WdDukr',
     },
     {
@@ -1764,6 +1838,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['A Guy Called Gerald', 'Goldie', 'Jazz fusion'],
       influenced: ['High Contrast', 'Nu:Tone', 'Calibre', 'Hospital Records'],
+      imageUrl: 'https://i.scdn.co/image/ab67726900008f74c88b3a7bfba377485ad2fff0',
       spotifyArtistId: '5Wfn5sc1w3DhMTpU7oPJZL',
     },
     {
@@ -1786,6 +1861,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Grooverider', 'Fabio', 'DJ Hype'],
       influenced: ['Sub Focus', 'Wilkinson', 'Culture Shock'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051745f50134ddc05a12e03b02ca2',
       spotifyArtistId: '73A3bLnfnz5BoQjb4gNCga',
     },
   ],
@@ -1801,8 +1877,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Daft Punk brought house music to global audiences with their robotic personas and irresistible hooks. Their ability to merge electronic innovation with pop appeal made them legends.',
       genres: ['edm', 'house', 'disco'],
       essentialAlbums: [
-        { title: 'Discovery', year: 2001, spotifyUrl: 'https://open.spotify.com/album/2noRn2Aes5aoNVsU6iWThc' },
-        { title: 'Random Access Memories', year: 2013, spotifyUrl: 'https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa' },
+        { title: 'Discovery', year: 2001, albumArt: 'https://i.scdn.co/image/ab67616d00001e022c25dad9f8fd54652f7ba5df', spotifyUrl: 'https://open.spotify.com/album/2noRn2Aes5aoNVsU6iWThc' },
+        { title: 'Random Access Memories', year: 2013, albumArt: 'https://i.scdn.co/image/ab67616d00001e029b9b36b0e22870b9f542d937', spotifyUrl: 'https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa' },
       ],
       iconicSongs: [
         { title: 'One More Time', year: 2000 },
@@ -1812,6 +1888,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Kraftwerk', 'Giorgio Moroder', 'Chic'],
       influenced: ['Justice', 'Disclosure', 'The Weeknd', 'Every EDM producer'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174d3aa7cc0e419b6c459b08e8e',
       spotifyArtistId: '4tZwfgrHOc3mvqYlEYSvVi',
     },
     {
@@ -1835,6 +1912,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Daft Punk', 'Aphex Twin', 'Richie Hawtin'],
       influenced: ['Marshmello', 'Virtual Riot', 'REZZ'],
+      imageUrl: 'https://i.scdn.co/image/ab6761610000517489ffabe57a25cedeca3309e7',
       spotifyArtistId: '2CIMQHirSU0MQqyYHq0eOx',
     },
     {
@@ -1858,6 +1936,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Aphex Twin', 'Justice', 'Noisia'],
       influenced: ['Marshmello', 'Virtual Riot', 'Dubstep worldwide'],
+      imageUrl: 'https://i.scdn.co/image/ab676161000051744b7641931a85c5f8d42714cf',
       spotifyArtistId: '5he5w2lnU9x7JFhnwcekXX',
     },
     {
@@ -1881,6 +1960,7 @@ export const genreArtists: Record<string, Artist[]> = {
       ],
       influencedBy: ['Daft Punk', 'Fatboy Slim', 'Eric Prydz'],
       influenced: ['Kygo', 'Zedd', 'Martin Garrix'],
+      imageUrl: 'https://i.scdn.co/image/ab67616100005174f150017ca69c8793503c2d4f',
       spotifyArtistId: '7CajNmpbOovFoOoasH2HaY',
     },
   ],

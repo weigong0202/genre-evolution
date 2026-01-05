@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import type { Artist } from '../types'
 import { getColorBrightness, adjustColor } from '../utils/color'
@@ -19,6 +20,8 @@ export function ArtistNode({
   isSelected,
   onClick,
 }: ArtistNodeProps) {
+  const [imageError, setImageError] = useState(false)
+
   // Calculate position in radial pattern
   const angle = ((index / total) * 2 * Math.PI) - (Math.PI / 2) // Start from top
   const radius = 80 // Distance from parent center in pixels
@@ -32,6 +35,9 @@ export function ArtistNode({
   // Determine text color
   const brightness = getColorBrightness(artistColor)
   const textColor = brightness > 160 ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.95)'
+
+  // Check if we should show image
+  const showImage = artist.imageUrl && !imageError
 
   return (
     <motion.div
@@ -75,9 +81,9 @@ export function ArtistNode({
 
       {/* Main node */}
       <motion.div
-        className="relative w-10 h-10 rounded-full flex items-center justify-center border-2"
+        className="relative w-10 h-10 rounded-full flex items-center justify-center border-2 overflow-hidden"
         style={{
-          background: `radial-gradient(circle at 30% 30%, ${artistColor}dd, ${artistColor}88)`,
+          background: showImage ? '#1a1a1a' : `radial-gradient(circle at 30% 30%, ${artistColor}dd, ${artistColor}88)`,
           borderColor: isSelected ? '#fff' : 'rgba(255,255,255,0.3)',
           boxShadow: `
             inset 0 1px 3px rgba(255,255,255,0.3),
@@ -88,22 +94,34 @@ export function ArtistNode({
         whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.95 }}
       >
-        {/* Halftone texture */}
-        <div
-          className="absolute inset-0 rounded-full opacity-15"
-          style={{
-            backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.3) 1px, transparent 1px)',
-            backgroundSize: '3px 3px',
-          }}
-        />
+        {showImage ? (
+          /* Artist profile image */
+          <img
+            src={artist.imageUrl}
+            alt={artist.name}
+            className="w-full h-full object-cover"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <>
+            {/* Halftone texture */}
+            <div
+              className="absolute inset-0 rounded-full opacity-15"
+              style={{
+                backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.3) 1px, transparent 1px)',
+                backgroundSize: '3px 3px',
+              }}
+            />
 
-        {/* Artist initial or icon */}
-        <span
-          className="text-[9px] font-bold text-center leading-none"
-          style={{ color: textColor }}
-        >
-          {artist.name.split(' ').map(w => w[0]).join('').slice(0, 2)}
-        </span>
+            {/* Artist initial or icon */}
+            <span
+              className="text-[9px] font-bold text-center leading-none"
+              style={{ color: textColor }}
+            >
+              {artist.name.split(' ').map(w => w[0]).join('').slice(0, 2)}
+            </span>
+          </>
+        )}
       </motion.div>
 
       {/* Artist name label */}
