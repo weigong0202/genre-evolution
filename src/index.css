@@ -43,3 +43,43 @@ html, body, #root {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
+
+/* Monospace font for data/metadata */
+.font-mono-data {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Star twinkling animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.star-twinkle {
+  animation: twinkle ease-in-out infinite;
+}
+
+/* Vinyl spin animation */
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-record {
+  animation: vinyl-spin 2s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl-record:hover {
+  animation-play-state: running;
+}
