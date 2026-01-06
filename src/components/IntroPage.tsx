@@ -302,7 +302,7 @@ export function IntroPage({ onEnter, isTransitioning }: IntroPageProps) {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
         whileHover={{
           scale: 1.02,
           background: 'rgba(10, 10, 15, 0.6)',

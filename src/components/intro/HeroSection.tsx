@@ -135,8 +135,8 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
-                delay: 0.5 + i * 0.1,
+                duration: 0.4,
+                delay: 0.1 + i * 0.05,
                 ease: 'easeOut',
               }}
             >
@@ -157,8 +157,8 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
-                delay: 1.2 + i * 0.08,
+                duration: 0.4,
+                delay: 0.4 + i * 0.04,
                 ease: 'easeOut',
               }}
             >
@@ -173,7 +173,7 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
         className="text-xl md:text-2xl text-amber-200/80 italic tracking-wide text-center relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, delay: 0.8, ease: 'easeOut' }}
       >
         Where every beat has a story
       </motion.p>
@@ -183,7 +183,7 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
         className="w-32 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent mt-8 relative z-10"
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
-        transition={{ duration: 1, delay: 3, ease: 'easeOut' }}
+        transition={{ duration: 0.6, delay: 1, ease: 'easeOut' }}
       />
 
       {/* Scroll indicator */}
@@ -191,7 +191,7 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.5, duration: 0.5 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
         style={{ opacity: heroOpacity }}
       >
         <span className="text-amber-200/60 text-sm tracking-widest uppercase">
