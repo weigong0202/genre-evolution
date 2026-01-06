@@ -10,6 +10,8 @@ export function useAudioEngine() {
   const currentGainRef = useRef<GainNode | null>(null)
   const lastPlayedGenreRef = useRef<string | null>(null)
   const lastPlayTimeRef = useRef<number>(0)
+  // Track the intended playing genre - used to cancel pending plays
+  const intendedGenreRef = useRef<string | null>(null)
 
   // Initialize AudioContext on first user interaction
   const initAudio = useCallback(() => {
@@ -75,6 +77,9 @@ export function useAudioEngine() {
     const ctx = audioContextRef.current
     if (!ctx) return
 
+    // Mark this as the intended genre to play
+    intendedGenreRef.current = genreId
+
     // Resume context if suspended
     if (ctx.state === 'suspended') {
       await ctx.resume()
@@ -115,6 +120,11 @@ export function useAudioEngine() {
       const loadedBuffer = await loadGenreAudio(genreId)
       if (!loadedBuffer) return
       buffer = loadedBuffer
+
+      // Check if stop was called while loading - abort if so
+      if (intendedGenreRef.current !== genreId) {
+        return
+      }
     }
 
     // Create audio nodes
@@ -166,6 +176,9 @@ export function useAudioEngine() {
 
   // Stop current sound with fade out
   const stopGenre = useCallback(() => {
+    // Clear intended genre to cancel any pending plays
+    intendedGenreRef.current = null
+
     const ctx = audioContextRef.current
     if (!ctx) return
 
@@ -178,8 +191,10 @@ export function useAudioEngine() {
         currentSourceRef.current = null
         currentGainRef.current = null
 
-        // Fade out and stop
-        gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.15)
+        // Fade out quickly and stop
+        gain.gain.cancelScheduledValues(ctx.currentTime)
+        gain.gain.setValueAtTime(gain.gain.value, ctx.currentTime)
+        gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.08)
         setTimeout(() => {
           try {
             source.stop()
@@ -188,7 +203,7 @@ export function useAudioEngine() {
           } catch (e) {
             // Already stopped
           }
-        }, 150)
+        }, 80)
       } catch (e) {
         // Already stopped
       }
