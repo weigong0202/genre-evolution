@@ -27,7 +27,7 @@ export function EnterButton({ onEnter }: EnterButtonProps) {
   return (
     <section
       ref={ref}
-      className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-24 relative"
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:py-16 md:py-24 relative"
     >
       {/* Portal Container */}
       <motion.div
@@ -191,14 +191,14 @@ export function EnterButton({ onEnter }: EnterButtonProps) {
 
       {/* Decorative bottom elements */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-4"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: 1, duration: 0.6 }}
       >
-        <div className="w-16 h-px bg-gradient-to-r from-transparent to-amber-400/30" />
-        <span className="text-amber-200/30 text-xs font-mono">SONIC UNIVERSE</span>
-        <div className="w-16 h-px bg-gradient-to-l from-transparent to-amber-400/30" />
+        <div className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-amber-400/30" />
+        <span className="text-amber-200/30 text-[10px] sm:text-xs font-mono">SONIC UNIVERSE</span>
+        <div className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-amber-400/30" />
       </motion.div>
     </section>
   )
