@@ -101,44 +101,6 @@ export function EnterButton({ onEnter }: EnterButtonProps) {
           })}
         </svg>
 
-        {/* Event horizon rings - responsive sizes */}
-        {[1, 2, 3, 4, 5].map((ring) => {
-          // Base sizes for different breakpoints: mobile (130px), sm (160px), md (180px)
-          const baseSize = 130 - ring * 18 // Mobile
-          const smSize = 160 - ring * 22   // sm
-          const mdSize = 180 - ring * 25   // md+
-          return (
-            <motion.div
-              key={ring}
-              className="absolute rounded-full"
-              style={{
-                width: `clamp(${baseSize}px, ${smSize}px, ${mdSize}px)`,
-                height: `clamp(${baseSize}px, ${smSize}px, ${mdSize}px)`,
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)',
-                border: `1px solid rgba(251, 191, 36, ${0.3 - ring * 0.04})`,
-                boxShadow: isHovered
-                  ? `0 0 ${20 - ring * 3}px rgba(251, 191, 36, ${0.4 - ring * 0.06})`
-                  : 'none',
-              }}
-              animate={isHovered ? {
-                scale: [1, 0.8 + ring * 0.05, 1],
-                opacity: [0.5, 1, 0.5],
-              } : {
-                scale: [1, 1.05, 1],
-                opacity: [0.3, 0.5, 0.3],
-              }}
-              transition={{
-                duration: isHovered ? 0.8 : 2 + ring * 0.3,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: ring * 0.1,
-              }}
-            />
-          )
-        })}
-
         {/* Central portal / wormhole */}
         <motion.div
           className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full flex items-center justify-center"

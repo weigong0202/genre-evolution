@@ -145,9 +145,9 @@ export function StorySection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            {/* Stylized artist silhouette */}
+            {/* Floating silhouette shapes */}
             <div className="relative w-32 h-32 mb-8">
-              {/* Glow behind */}
+              {/* Subtle glow behind */}
               <div
                 className="absolute inset-0 rounded-full"
                 style={{
@@ -155,44 +155,61 @@ export function StorySection() {
                   transform: 'scale(1.5)',
                 }}
               />
-              {/* Circular frame with artist silhouette */}
+              {/* Floating head */}
               <motion.div
-                className="relative w-full h-full rounded-full overflow-hidden"
+                className="absolute rounded-full"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(232,121,249,0.3) 0%, rgba(147,51,234,0.2) 100%)',
-                  border: '2px solid rgba(232,121,249,0.3)',
-                  boxShadow: '0 0 30px rgba(232,121,249,0.2)',
+                  width: 36,
+                  height: 36,
+                  left: 'calc(50% - 18px)',
+                  top: '15%',
+                  background: 'radial-gradient(circle at 30% 30%, #E879F9, #9333EA88)',
+                  boxShadow: '0 0 20px rgba(232,121,249,0.5), inset 0 1px 2px rgba(255,255,255,0.3)',
                 }}
                 animate={{
-                  boxShadow: [
-                    '0 0 30px rgba(232,121,249,0.2)',
-                    '0 0 40px rgba(232,121,249,0.3)',
-                    '0 0 30px rgba(232,121,249,0.2)',
-                  ],
+                  y: [0, -4, 0],
+                  scale: [1, 1.05, 1],
                 }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-              >
-                {/* Abstract artist representation */}
-                <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-                  <circle cx="50" cy="35" r="18" fill="rgba(255,255,255,0.4)" />
-                  <ellipse cx="50" cy="75" rx="25" ry="20" fill="rgba(255,255,255,0.3)" />
-                </svg>
-              </motion.div>
+              />
+              {/* Floating body - wider */}
+              <motion.div
+                className="absolute"
+                style={{
+                  width: 64,
+                  height: 42,
+                  left: 'calc(50% - 32px)',
+                  top: '50%',
+                  background: 'radial-gradient(ellipse at 30% 30%, #D946EF, #7C3AED88)',
+                  boxShadow: '0 0 20px rgba(217,70,239,0.5), inset 0 1px 2px rgba(255,255,255,0.3)',
+                  borderRadius: '50%',
+                }}
+                animate={{
+                  y: [0, -3, 0],
+                  scale: [1, 1.03, 1],
+                }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                  delay: 0.2,
+                }}
+              />
               {/* Floating music notes */}
               {[0, 1, 2].map((i) => (
                 <motion.div
                   key={i}
-                  className="absolute text-purple-300/40 text-lg"
+                  className="absolute text-purple-300/50 text-base"
                   style={{
-                    left: `${20 + i * 30}%`,
-                    top: `${10 + i * 20}%`,
+                    left: `${15 + i * 32}%`,
+                    top: `${5 + i * 25}%`,
                   }}
                   animate={{
-                    y: [0, -10, 0],
+                    y: [0, -8, 0],
                     opacity: [0.3, 0.6, 0.3],
                   }}
                   transition={{
