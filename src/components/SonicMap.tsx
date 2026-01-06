@@ -190,16 +190,20 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
   }, [artistHistory])
 
   const handleCloseCard = useCallback(() => {
+    // Keep track of the genre we're closing (to expand its artists)
+    const genreToExpand = selectedGenre
+
     // Close the modal and clear history
     setSelectedGenre(null)
     setSelectedArtist(null)
     setArtistHistory([])
 
-    // If no artist bubbles are showing, zoom back out
-    if (!expandedGenreId) {
-      setMapTransform({ scale: 1, x: 0, y: 0 })
+    // Show artist bubbles for the genre we just closed
+    // (keeps the zoomed view, user can click elsewhere to collapse)
+    if (genreToExpand && !expandedGenreId) {
+      setExpandedGenreId(genreToExpand.id)
     }
-  }, [expandedGenreId])
+  }, [selectedGenre, expandedGenreId])
 
   return (
     <div className="relative w-full h-full overflow-hidden bg-stone-950">
