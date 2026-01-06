@@ -3,33 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HeroSection } from './intro/HeroSection'
 import { StorySection } from './intro/StorySection'
 import { EnterButton } from './intro/EnterButton'
-
-// Generate static star positions with z-depth for warp effect
-function generateStars(count: number) {
-  const stars: Array<{
-    x: number
-    y: number
-    z: number // depth for parallax
-    size: number
-    opacity: number
-    layer: number
-    animationDelay: number
-    animationDuration: number
-  }> = []
-  for (let i = 0; i < count; i++) {
-    stars.push({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      z: Math.random(), // 0 = far, 1 = close
-      size: Math.random() * 3 + 1.5,
-      opacity: Math.random() * 0.6 + 0.3,
-      layer: Math.floor(Math.random() * 3),
-      animationDelay: Math.random() * 5,
-      animationDuration: Math.random() * 2 + 2,
-    })
-  }
-  return stars
-}
+import { generateStars } from '../utils/particles'
 
 interface IntroPageProps {
   onEnter: () => void
@@ -42,8 +16,8 @@ export function IntroPage({ onEnter, isTransitioning }: IntroPageProps) {
   const [maxScroll, setMaxScroll] = useState(1)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Memoize stars to prevent regeneration
-  const staticStars = useMemo(() => generateStars(180), [])
+  // Memoize stars to prevent regeneration (includeDepth for warp effect)
+  const staticStars = useMemo(() => generateStars({ count: 180, includeDepth: true }), [])
 
   // Track mouse for parallax
   useEffect(() => {
@@ -110,12 +84,13 @@ export function IntroPage({ onEnter, isTransitioning }: IntroPageProps) {
     const dy = star.y - centerY
 
     // Closer stars (higher z) move faster
-    const zFactor = 0.5 + star.z * 1.5
+    const z = star.z ?? 0
+    const zFactor = 0.5 + z * 1.5
     const warpX = star.x + dx * warpIntensity * zFactor * 0.3
     const warpY = star.y + dy * warpIntensity * zFactor * 0.3
 
     // Stars grow as they "approach", but return to normal in Phase 4
-    const sizeMultiplier = 1 + warpIntensity * star.z * 0.4
+    const sizeMultiplier = 1 + warpIntensity * z * 0.4
 
     // In hovering phase, stars gently pulse brighter (anticipation)
     const hoverPulse = isHoveringPhase ? 1.2 : 1

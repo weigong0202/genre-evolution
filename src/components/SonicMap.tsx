@@ -7,35 +7,12 @@ import { ConnectionLines } from './ConnectionLines'
 import { GenreCard } from './GenreCard'
 import { ArtistCard } from './ArtistCard'
 import { ArtistNode } from './ArtistNode'
+import { AboutModal } from './AboutModal'
 import { useAudioEngine } from '../hooks/useAudioEngine'
+import { generateStars } from '../utils/particles'
 import type { Genre, Artist } from '../types'
 
-// Generate static star positions (memoized to avoid regenerating)
-function generateStars(count: number) {
-  const stars: Array<{
-    x: number
-    y: number
-    size: number
-    opacity: number
-    layer: number
-    animationDelay: number
-    animationDuration: number
-  }> = []
-  for (let i = 0; i < count; i++) {
-    stars.push({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 3 + 1.5, // Bigger: 1.5-4.5px
-      opacity: Math.random() * 0.6 + 0.3, // Brighter: 0.3-0.9
-      layer: Math.floor(Math.random() * 3), // 0 = far, 1 = mid, 2 = near
-      animationDelay: Math.random() * 5, // Random delay 0-5s
-      animationDuration: Math.random() * 2 + 2, // Duration 2-4s
-    })
-  }
-  return stars
-}
-
-const staticStars = generateStars(100) // More stars
+const staticStars = generateStars(100)
 
 interface SonicMapProps {
   onReplayIntro?: () => void
@@ -50,6 +27,8 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
   const [mapTransform, setMapTransform] = useState({ scale: 1, x: 0, y: 0 })
   // Navigation history for artist-to-artist navigation
   const [artistHistory, setArtistHistory] = useState<Array<{ artist: Artist; genre: Genre }>>([])
+  // About modal visibility
+  const [showAbout, setShowAbout] = useState(false)
 
   // Audio engine for sonic feedback - short pluck sounds on hover
   const { playGenre, stopGenre, initAudio } = useAudioEngine()
@@ -554,24 +533,41 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
         </motion.div>
       )}
 
-      {/* Replay Intro button - subtle, bottom-left corner */}
-      {onReplayIntro && (
+      {/* Top-center buttons - Intro and About */}
+      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+        {onReplayIntro && (
+          <button
+            onClick={onReplayIntro}
+            className="px-4 py-2 text-amber-200/80 text-sm font-medium tracking-wide
+                       hover:text-amber-100 hover:border-amber-500/40 transition-all duration-200"
+            style={{
+              background: 'rgba(10, 10, 15, 0.7)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              border: '1px solid rgba(251, 191, 36, 0.25)',
+              borderRadius: '8px',
+            }}
+            title="Replay the intro experience"
+          >
+            ✦ Intro
+          </button>
+        )}
         <button
-          onClick={onReplayIntro}
-          className="fixed bottom-4 left-4 z-30 px-3 py-1.5 text-stone-400/60 text-xs tracking-wide
-                     hover:text-amber-200/80 transition-colors duration-200"
+          onClick={() => setShowAbout(true)}
+          className="px-4 py-2 text-amber-200/80 text-sm font-medium tracking-wide
+                     hover:text-amber-100 hover:border-amber-500/40 transition-all duration-200"
           style={{
-            background: 'rgba(10, 10, 15, 0.4)',
-            backdropFilter: 'blur(8px)',
-            WebkitBackdropFilter: 'blur(8px)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRadius: '6px',
+            background: 'rgba(10, 10, 15, 0.7)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(251, 191, 36, 0.25)',
+            borderRadius: '8px',
           }}
-          title="Replay the intro experience"
+          title="About Sonic Universe"
         >
-          ✦ Intro
+          ✦ About
         </button>
-      )}
+      </div>
 
       {/* Modal container - shared backdrop for smooth transitions */}
       <AnimatePresence>
@@ -612,6 +608,13 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
               )}
             </AnimatePresence>
           </>
+        )}
+      </AnimatePresence>
+
+      {/* About Modal */}
+      <AnimatePresence>
+        {showAbout && (
+          <AboutModal onClose={() => setShowAbout(false)} />
         )}
       </AnimatePresence>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { Artist } from '../types'
 import { getColorBrightness, adjustColor } from '../utils/color'
@@ -12,7 +12,7 @@ interface ArtistNodeProps {
   onClick: () => void
 }
 
-export function ArtistNode({
+export const ArtistNode = memo(function ArtistNode({
   artist,
   parentColor,
   index,
@@ -144,4 +144,4 @@ export function ArtistNode({
       </motion.div>
     </motion.div>
   )
-}
+})

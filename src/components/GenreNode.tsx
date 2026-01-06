@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { motion } from 'framer-motion'
 import type { Genre } from '../types'
 import type { ReactNode } from 'react'
@@ -17,7 +18,7 @@ interface GenreNodeProps {
   children?: ReactNode
 }
 
-export function GenreNode({
+export const GenreNode = memo(function GenreNode({
   genre,
   isSelected,
   isConnected,
@@ -149,4 +150,4 @@ export function GenreNode({
       {children}
     </motion.div>
   )
-}
+})

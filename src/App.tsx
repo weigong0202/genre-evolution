@@ -2,6 +2,13 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SonicMap } from './components/SonicMap'
 import { IntroPage } from './components/IntroPage'
+import { ErrorBoundary } from './components/ErrorBoundary'
+import { logValidationResults } from './utils/validateData'
+
+// Run data validation in development
+if (import.meta.env.DEV) {
+  logValidationResults()
+}
 
 const VISITED_KEY = 'sonic-universe-visited'
 
@@ -33,31 +40,33 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-stone-950">
-      <AnimatePresence mode="wait">
-        {showIntro ? (
-          <motion.div
-            key="intro"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="w-full h-full"
-          >
-            <IntroPage onEnter={handleEnter} isTransitioning={isTransitioning} />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="map"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="w-full h-full"
-          >
-            <SonicMap onReplayIntro={() => setShowIntro(true)} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <ErrorBoundary>
+      <div className="w-screen h-screen bg-stone-950">
+        <AnimatePresence mode="wait">
+          {showIntro ? (
+            <motion.div
+              key="intro"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-full h-full"
+            >
+              <IntroPage onEnter={handleEnter} isTransitioning={isTransitioning} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="map"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="w-full h-full"
+            >
+              <SonicMap onReplayIntro={() => setShowIntro(true)} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </ErrorBoundary>
   )
 }
 
