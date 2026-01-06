@@ -112,20 +112,22 @@ export function AboutModal({ onClose }: AboutModalProps) {
                   border: '1px solid rgba(251, 191, 36, 0.1)',
                 }}
               >
-                <p className="text-amber-100/80 mb-4">
+                <p className="text-amber-100/80 mb-4 text-center">
                   Have ideas for improvements, found a bug, or want to suggest a genre?
                   I'd love to hear from you.
                 </p>
-                <a
-                  href="mailto:weigong0202@gmail.com?subject=Sonic Universe Feedback"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 transition-colors border border-amber-500/30"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                  Send Feedback
-                </a>
+                <div className="flex justify-center">
+                  <a
+                    href="mailto:weigong0202@gmail.com?subject=Sonic Universe Feedback"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-100 transition-colors border border-amber-500/30"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Send Feedback
+                  </a>
+                </div>
               </div>
             </section>
 
