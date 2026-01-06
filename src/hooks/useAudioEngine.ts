@@ -171,20 +171,27 @@ export function useAudioEngine() {
 
     if (currentSourceRef.current && currentGainRef.current) {
       try {
-        currentGainRef.current.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.2)
         const source = currentSourceRef.current
+        const gain = currentGainRef.current
+
+        // Immediately clear refs so new sounds can play
+        currentSourceRef.current = null
+        currentGainRef.current = null
+
+        // Fade out and stop
+        gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.15)
         setTimeout(() => {
           try {
             source.stop()
+            source.disconnect()
+            gain.disconnect()
           } catch (e) {
             // Already stopped
           }
-        }, 200)
+        }, 150)
       } catch (e) {
         // Already stopped
       }
-      currentSourceRef.current = null
-      currentGainRef.current = null
     }
   }, [])
 

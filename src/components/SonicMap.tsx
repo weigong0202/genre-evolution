@@ -37,7 +37,11 @@ function generateStars(count: number) {
 
 const staticStars = generateStars(100) // More stars
 
-export function SonicMap() {
+interface SonicMapProps {
+  onReplayIntro?: () => void
+}
+
+export function SonicMap({ onReplayIntro }: SonicMapProps) {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null)
   const [hoveredGenreId, setHoveredGenreId] = useState<string | null>(null)
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
@@ -544,6 +548,25 @@ export function SonicMap() {
             Click anywhere or press ESC to collapse
           </div>
         </motion.div>
+      )}
+
+      {/* Replay Intro button - subtle, bottom-left corner */}
+      {onReplayIntro && (
+        <button
+          onClick={onReplayIntro}
+          className="fixed bottom-4 left-4 z-30 px-3 py-1.5 text-stone-400/60 text-xs tracking-wide
+                     hover:text-amber-200/80 transition-colors duration-200"
+          style={{
+            background: 'rgba(10, 10, 15, 0.4)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            borderRadius: '6px',
+          }}
+          title="Replay the intro experience"
+        >
+          ✦ Intro
+        </button>
       )}
 
       {/* Modal container - shared backdrop for smooth transitions */}

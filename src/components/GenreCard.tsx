@@ -348,19 +348,13 @@ export function GenreCard({
                                           />
                                         ) : null}
                                         <div
-                                          className={`absolute inset-0 flex flex-col items-center justify-center p-2 ${album.albumArt ? 'hidden' : ''}`}
+                                          className={`absolute inset-0 flex items-center justify-center ${album.albumArt ? 'hidden' : ''}`}
                                           style={{
-                                            background: `linear-gradient(135deg, ${genre.color}60 0%, ${genre.color}30 50%, rgba(0,0,0,0.5) 100%)`,
-                                            border: `1px solid ${genre.color}40`,
+                                            background: `linear-gradient(135deg, ${genre.color}50, ${genre.color}20)`,
+                                            border: `1px solid ${genre.color}30`,
                                           }}
                                         >
-                                          <span
-                                            className="text-3xl font-bold opacity-80"
-                                            style={{ color: 'rgba(255,255,255,0.9)' }}
-                                          >
-                                            {album.title.charAt(0)}
-                                          </span>
-                                          <span className="text-xs text-white/60 mt-1 text-center line-clamp-2">{album.artist}</span>
+                                          <span className="text-4xl opacity-50">💿</span>
                                         </div>
                                         {/* Spotify overlay on hover */}
                                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

@@ -13,7 +13,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['country', 'gospel'],
       essentialAlbums: [
         { title: '40 Greatest Hits', year: 1978, albumArt: 'https://i.scdn.co/image/ab67616d00001e02bf7de449bfd768b5a1e3bdd0', spotifyUrl: 'https://open.spotify.com/album/6zIYEv6soMoaZiypsHB5dd' },
-        { title: 'The Original Singles Collection...Plus', year: 1990, spotifyUrl: 'https://open.spotify.com/album/62SqkhUnO18912vRKmOUKy' },
+        { title: 'The Original Singles Collection...Plus', year: 1990, albumArt: 'https://archive.org/download/mbid-b276ed25-be22-4325-b67b-f783a3d0b15a/mbid-b276ed25-be22-4325-b67b-f783a3d0b15a-42216284059_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/62SqkhUnO18912vRKmOUKy' },
       ],
       iconicSongs: [
         { title: 'I\'m So Lonesome I Could Cry', year: 1949 },
@@ -37,7 +37,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['country', 'rock-and-roll', 'gospel'],
       essentialAlbums: [
         { title: 'At Folsom Prison', year: 1968, albumArt: 'https://i.scdn.co/image/ab67616d00001e02b7e5f0fd9df7a811984a96d6', spotifyUrl: 'https://open.spotify.com/album/4TJIdlY9hGSSTO1kUs1neh' },
-        { title: 'American IV: The Man Comes Around', year: 2002, spotifyUrl: 'https://open.spotify.com/album/2BlL4Gv2DLPu8p58Wcmlm9' },
+        { title: 'American IV: The Man Comes Around', year: 2002, albumArt: 'https://archive.org/download/mbid-d24e7761-a7c4-48f6-bd0a-8fa892147191/mbid-d24e7761-a7c4-48f6-bd0a-8fa892147191-13716047076_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/2BlL4Gv2DLPu8p58Wcmlm9' },
       ],
       iconicSongs: [
         { title: 'Ring of Fire', year: 1963 },
@@ -61,7 +61,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['country'],
       essentialAlbums: [
         { title: 'Patsy Cline\'s Greatest Hits', year: 1967, albumArt: 'https://i.scdn.co/image/ab67616d00001e021545c291adeea522ce055fcf', spotifyUrl: 'https://open.spotify.com/album/2rUMmQejerLG03UodBUQxS' },
-        { title: 'Showcase', year: 1961, spotifyUrl: 'https://open.spotify.com/album/54Ykk8Gg8TuHjLbYvErsKh' },
+        { title: 'Showcase', year: 1961, albumArt: 'https://archive.org/download/mbid-3879c3c8-89f7-44e1-a136-919e993d2589/mbid-3879c3c8-89f7-44e1-a136-919e993d2589-11008854712_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/54Ykk8Gg8TuHjLbYvErsKh' },
       ],
       iconicSongs: [
         { title: 'Crazy', year: 1961 },
@@ -85,7 +85,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['country', 'soul'],
       essentialAlbums: [
         { title: 'Coat of Many Colors', year: 1971, albumArt: 'https://i.scdn.co/image/ab67616d00001e027fad1327fda63bea0e059072', spotifyUrl: 'https://open.spotify.com/album/17CT6ru3CyDXAi6xVaSUzg' },
-        { title: 'Jolene', year: 1974, spotifyUrl: 'https://open.spotify.com/album/5DyOxuvdSmTSNAmkfcsBsj' },
+        { title: 'Jolene', year: 1974, albumArt: 'https://archive.org/download/mbid-c0684a74-bf18-4338-87ca-c6f9d25ad237/mbid-c0684a74-bf18-4338-87ca-c6f9d25ad237-9975998761_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5DyOxuvdSmTSNAmkfcsBsj' },
       ],
       iconicSongs: [
         { title: 'Jolene', year: 1973 },
@@ -135,7 +135,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['delta-blues'],
       essentialAlbums: [
         { title: 'The Best of Muddy Waters', year: 1958, albumArt: 'https://i.scdn.co/image/ab67616d00001e02f961bcc3e202a14cafe8ee7c', spotifyUrl: 'https://open.spotify.com/album/6xU8hHhpGaDmFdOVEGRzpY' },
-        { title: 'Folk Singer', year: 1964, spotifyUrl: 'https://open.spotify.com/album/5cLWh6nwcLUX2H4oGfW9Rx' },
+        { title: 'Folk Singer', year: 1964, albumArt: 'https://archive.org/download/mbid-4f4a2e6c-109a-46df-801c-dacd46ad4c97/mbid-4f4a2e6c-109a-46df-801c-dacd46ad4c97-12683601335_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5cLWh6nwcLUX2H4oGfW9Rx' },
       ],
       iconicSongs: [
         { title: 'Hoochie Coochie Man', year: 1954 },
@@ -159,7 +159,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['delta-blues', 'rb'],
       essentialAlbums: [
         { title: 'Live at the Regal', year: 1965, albumArt: 'https://i.scdn.co/image/ab67616d00001e02bf373fb956297a3c0aa3a9a0', spotifyUrl: 'https://open.spotify.com/album/7njGz7ZeDXL6cH3VnflcQ2' },
-        { title: 'Completely Well', year: 1969, spotifyUrl: 'https://open.spotify.com/album/3Vp5uEx8koFke8NyfElrlD' },
+        { title: 'Completely Well', year: 1969, albumArt: 'https://archive.org/download/mbid-6fc0bdaf-2283-4819-b206-3fb0f7d1bb6f/mbid-6fc0bdaf-2283-4819-b206-3fb0f7d1bb6f-20643048930_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3Vp5uEx8koFke8NyfElrlD' },
       ],
       iconicSongs: [
         { title: 'The Thrill Is Gone', year: 1969 },
@@ -181,7 +181,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Howlin\' Wolf was six feet three inches of pure blues power. His massive voice and wild stage presence made him one of the most electrifying performers in blues history, and his Chess Records sides remain essential listening.',
       genres: ['delta-blues'],
       essentialAlbums: [
-        { title: 'Moanin\' in the Moonlight', year: 1959, spotifyUrl: 'https://open.spotify.com/album/4wvqGLk1HThPA0b5lzRK2l' },
+        { title: 'Moanin\' in the Moonlight', year: 1959, albumArt: 'https://archive.org/download/mbid-76a240cd-1b98-4539-b79c-f75265bb683e/mbid-76a240cd-1b98-4539-b79c-f75265bb683e-36313932650_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4wvqGLk1HThPA0b5lzRK2l' },
         { title: 'Howlin\' Wolf', year: 1962, spotifyUrl: 'https://open.spotify.com/album/26TtzBrPdUkHMSTPSbctbl' },
       ],
       iconicSongs: [
@@ -209,7 +209,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['jazz'],
       essentialAlbums: [
         { title: 'Hot Fives & Sevens', year: 1925, albumArt: 'https://i.scdn.co/image/ab67616d00001e024f62e0ca21ecc1ecbb9ba3d6', spotifyUrl: 'https://open.spotify.com/album/1fw3JJvlzlyRGDNVRQOzOK' },
-        { title: 'Ella and Louis', year: 1956, spotifyUrl: 'https://open.spotify.com/album/55HJDODj4X7DXmexhLR5q8' },
+        { title: 'Ella and Louis', year: 1956, albumArt: 'https://archive.org/download/mbid-52486b56-5406-4e57-8a63-ec5b15b8f10b/mbid-52486b56-5406-4e57-8a63-ec5b15b8f10b-14316324035_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/55HJDODj4X7DXmexhLR5q8' },
       ],
       iconicSongs: [
         { title: 'What a Wonderful World', year: 1967 },
@@ -233,7 +233,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['jazz'],
       essentialAlbums: [
         { title: 'Ellington at Newport', year: 1956, albumArt: 'https://i.scdn.co/image/ab67616d00001e0272c6eda3eb7ed3d1190210b4', spotifyUrl: 'https://open.spotify.com/album/0t41BkcZayaAsa0FdRelfz' },
-        { title: 'Black, Brown and Beige', year: 1958, spotifyUrl: 'https://open.spotify.com/album/0ffDvNnCuFJ2TKMQUIWMr7' },
+        { title: 'Black, Brown and Beige', year: 1958, albumArt: 'https://archive.org/download/mbid-bbd8350d-7954-3212-89b3-41bf4c1b41e2/mbid-bbd8350d-7954-3212-89b3-41bf4c1b41e2-36569658019_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0ffDvNnCuFJ2TKMQUIWMr7' },
       ],
       iconicSongs: [
         { title: 'Take the "A" Train', year: 1941 },
@@ -280,8 +280,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'John Coltrane transformed the saxophone into a vehicle for spiritual expression. His "sheets of sound" technique and relentless pursuit of transcendence made him one of the most influential musicians in jazz history.',
       genres: ['jazz'],
       essentialAlbums: [
-        { title: 'A Love Supreme', year: 1965, spotifyUrl: 'https://open.spotify.com/album/4EkPiqvNl0LnVXAJgPWFP2' },
-        { title: 'Giant Steps', year: 1960, spotifyUrl: 'https://open.spotify.com/album/5PvzTeSMVALKBECqGCD8aU' },
+        { title: 'A Love Supreme', year: 1965, albumArt: 'https://archive.org/download/mbid-38ad8234-305a-4c5d-8286-c55fb5c0392a/mbid-38ad8234-305a-4c5d-8286-c55fb5c0392a-12686384195_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4EkPiqvNl0LnVXAJgPWFP2' },
+        { title: 'Giant Steps', year: 1960, albumArt: 'https://archive.org/download/mbid-aeeb97ce-e509-4afd-87b9-9538bb252e10/mbid-aeeb97ce-e509-4afd-87b9-9538bb252e10-1304628409_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5PvzTeSMVALKBECqGCD8aU' },
       ],
       iconicSongs: [
         { title: 'Giant Steps', year: 1960 },
@@ -308,7 +308,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['gospel'],
       essentialAlbums: [
         { title: 'The World\'s Greatest Gospel Singer', year: 1954, albumArt: 'https://i.scdn.co/image/ab67616d00001e023663e1d6d7bbf7c28b22fb8c', spotifyUrl: 'https://open.spotify.com/album/1MPqWg5gRFkgiUqlhE16dC' },
-        { title: 'Live at Newport 1958', year: 1958, spotifyUrl: 'https://open.spotify.com/album/5etzySknik0gycSFgcakQz' },
+        { title: 'Live at Newport 1958', year: 1958, albumArt: 'https://archive.org/download/mbid-255a1e1f-16de-4233-9757-73dce99bcd48/mbid-255a1e1f-16de-4233-9757-73dce99bcd48-16054584591_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5etzySknik0gycSFgcakQz' },
       ],
       iconicSongs: [
         { title: 'Move On Up a Little Higher', year: 1947 },
@@ -354,8 +354,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Sam Cooke pioneered soul music by bringing gospel\'s emotional intensity to pop music. His silky voice and shrewd business sense paved the way for Black artists to control their own careers, before his tragic murder at 33.',
       genres: ['gospel', 'soul', 'rb'],
       essentialAlbums: [
-        { title: 'Live at the Harlem Square Club, 1963', year: 1985, spotifyUrl: 'https://open.spotify.com/album/7HlYKJlMRbPkKN9pEIcOrG' },
-        { title: 'Portrait of a Legend 1951-1964', year: 2003, spotifyUrl: 'https://open.spotify.com/album/1yJYYjhZ7dngpPLzN0LJPC' },
+        { title: 'Live at the Harlem Square Club, 1963', year: 1985, albumArt: 'https://archive.org/download/mbid-3e3a43d1-1fc0-4907-b657-9eca4b1195c8/mbid-3e3a43d1-1fc0-4907-b657-9eca4b1195c8-8906854009_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7HlYKJlMRbPkKN9pEIcOrG' },
+        { title: 'Portrait of a Legend 1951-1964', year: 2003, albumArt: 'https://archive.org/download/mbid-adf924e8-8a2d-4e16-bf56-ebffd5bec3b5/mbid-adf924e8-8a2d-4e16-bf56-ebffd5bec3b5-8926174363_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1yJYYjhZ7dngpPLzN0LJPC' },
       ],
       iconicSongs: [
         { title: 'A Change Is Gonna Come', year: 1964 },
@@ -378,8 +378,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Aretha Franklin\'s voice was a force of nature. Raised in the church, she brought gospel fervor to R&B and pop, demanding respect and delivering transcendence with every performance.',
       genres: ['gospel', 'soul', 'rb'],
       essentialAlbums: [
-        { title: 'I Never Loved a Man the Way I Love You', year: 1967, spotifyUrl: 'https://open.spotify.com/album/6uMrzeShpRtmN9Ffsj6VVh' },
-        { title: 'Lady Soul', year: 1968, spotifyUrl: 'https://open.spotify.com/album/0nAfLwPP0ZOOu3rTbsOPdM' },
+        { title: 'I Never Loved a Man the Way I Love You', year: 1967, albumArt: 'https://archive.org/download/mbid-dab4a1dc-e7d1-4e8b-b39a-5573a310f974/mbid-dab4a1dc-e7d1-4e8b-b39a-5573a310f974-26503165857_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6uMrzeShpRtmN9Ffsj6VVh' },
+        { title: 'Lady Soul', year: 1968, albumArt: 'https://archive.org/download/mbid-5c9b9213-c85c-43fd-8522-de03df8e0b1d/mbid-5c9b9213-c85c-43fd-8522-de03df8e0b1d-15463598991_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0nAfLwPP0ZOOu3rTbsOPdM' },
       ],
       iconicSongs: [
         { title: 'Respect', year: 1967 },
@@ -405,8 +405,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Ray Charles pioneered soul music by blending gospel, rhythm and blues, and jazz. His bold fusion of sacred and secular music shocked and thrilled audiences, creating a new American art form.',
       genres: ['rb', 'soul', 'jazz'],
       essentialAlbums: [
-        { title: 'The Genius of Ray Charles', year: 1959, spotifyUrl: 'https://open.spotify.com/album/1NSoYotGU4BiGSbJlPZGEk' },
-        { title: 'Modern Sounds in Country and Western Music', year: 1962, spotifyUrl: 'https://open.spotify.com/album/4k7BvN3Af0kmsFM0GkiODi' },
+        { title: 'The Genius of Ray Charles', year: 1959, albumArt: 'https://archive.org/download/mbid-2f1fa63b-6a09-49de-9cf5-0078c7204b70/mbid-2f1fa63b-6a09-49de-9cf5-0078c7204b70-23062544365_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1NSoYotGU4BiGSbJlPZGEk' },
+        { title: 'Modern Sounds in Country and Western Music', year: 1962, albumArt: 'https://archive.org/download/mbid-ccd2e6c7-e974-4b73-a114-a7299bd76581/mbid-ccd2e6c7-e974-4b73-a114-a7299bd76581-18249207918_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4k7BvN3Af0kmsFM0GkiODi' },
       ],
       iconicSongs: [
         { title: 'What\'d I Say', year: 1959 },
@@ -478,7 +478,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['rb', 'soul', 'funk'],
       essentialAlbums: [
         { title: 'Songs in the Key of Life', year: 1976, albumArt: 'https://i.scdn.co/image/ab67616d00001e022fee61bfec596bb6f5447c50', spotifyUrl: 'https://open.spotify.com/album/6YUCc2RiXcEKS9ibuZxjt0' },
-        { title: 'Innervisions', year: 1973, spotifyUrl: 'https://open.spotify.com/album/4E1SPgmB7T00TGENpgSvnf' },
+        { title: 'Innervisions', year: 1973, albumArt: 'https://archive.org/download/mbid-f5b19d0e-1398-41db-a24f-50b3f6599a39/mbid-f5b19d0e-1398-41db-a24f-50b3f6599a39-1243783912_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4E1SPgmB7T00TGENpgSvnf' },
       ],
       iconicSongs: [
         { title: 'Superstition', year: 1972 },
@@ -504,8 +504,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Elvis Presley brought rock and roll to mainstream America. By fusing Black rhythm and blues with white country music, he created a cultural revolution that changed music, fashion, and attitudes forever.',
       genres: ['rock-and-roll', 'country', 'gospel'],
       essentialAlbums: [
-        { title: 'Elvis Presley', year: 1956, spotifyUrl: 'https://open.spotify.com/album/5L8ovgcsQGjPPRUPaWzlhI' },
-        { title: 'From Elvis in Memphis', year: 1969, spotifyUrl: 'https://open.spotify.com/album/0LZvTCiLJxsY5IU4t9DQTH' },
+        { title: 'Elvis Presley', year: 1956, albumArt: 'https://archive.org/download/mbid-248058aa-da35-4baf-94ca-239fa079ba7f/mbid-248058aa-da35-4baf-94ca-239fa079ba7f-7711649647_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5L8ovgcsQGjPPRUPaWzlhI' },
+        { title: 'From Elvis in Memphis', year: 1969, albumArt: 'https://archive.org/download/mbid-e3f84078-44da-45ba-87ca-f8d3c3c5ea2f/mbid-e3f84078-44da-45ba-87ca-f8d3c3c5ea2f-14756703136_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0LZvTCiLJxsY5IU4t9DQTH' },
       ],
       iconicSongs: [
         { title: 'Hound Dog', year: 1956 },
@@ -528,8 +528,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Chuck Berry defined the rock and roll guitar sound. His signature riffs, duck walk, and storytelling lyrics created the blueprint that every rock guitarist since has followed.',
       genres: ['rock-and-roll', 'rb'],
       essentialAlbums: [
-        { title: 'After School Session', year: 1957, spotifyUrl: 'https://open.spotify.com/album/3RfBJGNWjBYR38jSEBd8vO' },
-        { title: 'Chuck Berry Is on Top', year: 1959, spotifyUrl: 'https://open.spotify.com/album/6cg3WNJX4qPpZZc1z8WEnS' },
+        { title: 'After School Session', year: 1957, albumArt: 'https://archive.org/download/mbid-461de79f-61b5-4435-b0a6-1ad4a6450706/mbid-461de79f-61b5-4435-b0a6-1ad4a6450706-7944650221_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3RfBJGNWjBYR38jSEBd8vO' },
+        { title: 'Chuck Berry Is on Top', year: 1959, albumArt: 'https://archive.org/download/mbid-f789c8bb-f9b6-465c-8f0b-5b882994ce1f/mbid-f789c8bb-f9b6-465c-8f0b-5b882994ce1f-42704099464_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6cg3WNJX4qPpZZc1z8WEnS' },
       ],
       iconicSongs: [
         { title: 'Johnny B. Goode', year: 1958 },
@@ -552,8 +552,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Little Richard\'s explosive piano playing, falsetto screams, and flamboyant persona created the template for rock and roll showmanship. His wild energy and gender-bending style influenced everyone from The Beatles to Prince.',
       genres: ['rock-and-roll', 'rb'],
       essentialAlbums: [
-        { title: 'Here\'s Little Richard', year: 1957, spotifyUrl: 'https://open.spotify.com/album/7ovpNMN1fSlA3RMN9KNkLo' },
-        { title: 'Little Richard', year: 1958, spotifyUrl: 'https://open.spotify.com/album/4C9Rff0rJaPWD7dpvYkXWr' },
+        { title: 'Here\'s Little Richard', year: 1957, albumArt: 'https://archive.org/download/mbid-de258922-d3a8-49a2-a023-51adac63f8c5/mbid-de258922-d3a8-49a2-a023-51adac63f8c5-3049566920_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7ovpNMN1fSlA3RMN9KNkLo' },
+        { title: 'Little Richard', year: 1958, albumArt: 'https://archive.org/download/mbid-e8c1426d-b237-4b8a-a22b-820b807849d4/mbid-e8c1426d-b237-4b8a-a22b-820b807849d4-9523057681_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4C9Rff0rJaPWD7dpvYkXWr' },
       ],
       iconicSongs: [
         { title: 'Tutti Frutti', year: 1955 },
@@ -603,8 +603,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Otis Redding was soul music\'s most passionate voice. His raw, emotional delivery and incredible stage presence made him a legend before his tragic death at 26, just days after recording "(Sittin\' On) The Dock of the Bay."',
       genres: ['soul', 'rb'],
       essentialAlbums: [
-        { title: 'Otis Blue: Otis Redding Sings Soul', year: 1965, spotifyUrl: 'https://open.spotify.com/album/3vfzM05lZbH0UWLhPJZdLZ' },
-        { title: 'The Dock of the Bay', year: 1968, spotifyUrl: 'https://open.spotify.com/album/0rrF9DfLv7AqhW3hQn0ZGE' },
+        { title: 'Otis Blue: Otis Redding Sings Soul', year: 1965, albumArt: 'https://archive.org/download/mbid-193c2998-cd3c-4981-93e3-203c07c8618b/mbid-193c2998-cd3c-4981-93e3-203c07c8618b-5547472895_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3vfzM05lZbH0UWLhPJZdLZ' },
+        { title: 'The Dock of the Bay', year: 1968, albumArt: 'https://archive.org/download/mbid-7815b7cb-4457-4924-af45-5f86d90b32ed/mbid-7815b7cb-4457-4924-af45-5f86d90b32ed-42197570200_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0rrF9DfLv7AqhW3hQn0ZGE' },
       ],
       iconicSongs: [
         { title: '(Sittin\' On) The Dock of the Bay', year: 1968 },
@@ -627,8 +627,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Al Green created some of the smoothest, most sensual soul music ever recorded. His Hi Records sides with producer Willie Mitchell defined 1970s soul before he became a minister and returned to gospel.',
       genres: ['soul', 'gospel'],
       essentialAlbums: [
-        { title: 'Let\'s Stay Together', year: 1972, spotifyUrl: 'https://open.spotify.com/album/5J3M6twmJFZACMBBWmzNVL' },
-        { title: 'I\'m Still in Love with You', year: 1972, spotifyUrl: 'https://open.spotify.com/album/53FuP0LRR1BBc0jS8CFvBG' },
+        { title: 'Let\'s Stay Together', year: 1972, albumArt: 'https://archive.org/download/mbid-8a88c9a7-f5c0-4c41-a87d-4d7415e41981/mbid-8a88c9a7-f5c0-4c41-a87d-4d7415e41981-2264109941_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5J3M6twmJFZACMBBWmzNVL' },
+        { title: 'I\'m Still in Love with You', year: 1972, albumArt: 'https://archive.org/download/mbid-5c6a8b5a-ad76-40fd-841e-198a43ac8695/mbid-5c6a8b5a-ad76-40fd-841e-198a43ac8695-27418361381_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/53FuP0LRR1BBc0jS8CFvBG' },
       ],
       iconicSongs: [
         { title: 'Let\'s Stay Together', year: 1971 },
@@ -651,8 +651,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Curtis Mayfield brought social consciousness to soul music with The Impressions and his landmark solo work. His falsetto voice and funk-influenced "Super Fly" soundtrack proved soul could be both political and popular.',
       genres: ['soul', 'funk'],
       essentialAlbums: [
-        { title: 'Super Fly', year: 1972, spotifyUrl: 'https://open.spotify.com/album/6Hj6jhXOGH7C24Db1lw4lB' },
-        { title: 'Curtis', year: 1970, spotifyUrl: 'https://open.spotify.com/album/7cZPTBOQAVGxj0lRm7SZBX' },
+        { title: 'Super Fly', year: 1972, albumArt: 'https://archive.org/download/mbid-d9c00e12-5fef-4183-bd14-b501dabc3613/mbid-d9c00e12-5fef-4183-bd14-b501dabc3613-18106194058_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6Hj6jhXOGH7C24Db1lw4lB' },
+        { title: 'Curtis', year: 1970, albumArt: 'https://archive.org/download/mbid-34bf0064-0b15-4759-9964-d177c58fc7d8/mbid-34bf0064-0b15-4759-9964-d177c58fc7d8-19800314051_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7cZPTBOQAVGxj0lRm7SZBX' },
       ],
       iconicSongs: [
         { title: 'Move On Up', year: 1970 },
@@ -702,8 +702,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Bob Marley brought reggae music and Rastafarian philosophy to the world. His messages of love, unity, and resistance against oppression resonated across cultures and continue to inspire generations.',
       genres: ['reggae'],
       essentialAlbums: [
-        { title: 'Legend', year: 1984, spotifyUrl: 'https://open.spotify.com/album/5hhfCiMigHXH4XNBKwTKpA' },
-        { title: 'Exodus', year: 1977, spotifyUrl: 'https://open.spotify.com/album/4XZTKldxZ87QPNrH9Bznny' },
+        { title: 'Legend', year: 1984, albumArt: 'https://archive.org/download/mbid-fe608587-a2a2-4172-9fae-1f3b1fd99bd2/mbid-fe608587-a2a2-4172-9fae-1f3b1fd99bd2-31895731397_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5hhfCiMigHXH4XNBKwTKpA' },
+        { title: 'Exodus', year: 1977, albumArt: 'https://archive.org/download/mbid-77cfed3c-5cc6-4a59-91bd-a440a09abde8/mbid-77cfed3c-5cc6-4a59-91bd-a440a09abde8-31896200993_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4XZTKldxZ87QPNrH9Bznny' },
       ],
       iconicSongs: [
         { title: 'No Woman, No Cry', year: 1974 },
@@ -726,8 +726,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Peter Tosh was reggae\'s fiercest revolutionary. A founding Wailer with Bob Marley, his solo career championed marijuana legalization and African liberation with an uncompromising militancy that made him a rebel icon.',
       genres: ['reggae'],
       essentialAlbums: [
-        { title: 'Legalize It', year: 1976, spotifyUrl: 'https://open.spotify.com/album/5lfb1JBU0F5XcdJhBjjkzO' },
-        { title: 'Equal Rights', year: 1977, spotifyUrl: 'https://open.spotify.com/album/3xK7TZ2NLILLNLRt4b3dAJ' },
+        { title: 'Legalize It', year: 1976, albumArt: 'https://archive.org/download/mbid-e9d52ec5-6fe5-4ff1-a253-aac5327ed196/mbid-e9d52ec5-6fe5-4ff1-a253-aac5327ed196-3057541324_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5lfb1JBU0F5XcdJhBjjkzO' },
+        { title: 'Equal Rights', year: 1977, albumArt: 'https://archive.org/download/mbid-de01b731-d6ab-3ba2-82c5-b269d95370ab/mbid-de01b731-d6ab-3ba2-82c5-b269d95370ab-43650681312_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3xK7TZ2NLILLNLRt4b3dAJ' },
       ],
       iconicSongs: [
         { title: 'Legalize It', year: 1976 },
@@ -750,8 +750,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Jimmy Cliff brought reggae to the world through his starring role in "The Harder They Come." His optimistic anthems like "You Can Get It If You Really Want" offered hope and inspiration beyond Jamaica\'s shores.',
       genres: ['reggae', 'soul'],
       essentialAlbums: [
-        { title: 'The Harder They Come', year: 1972, spotifyUrl: 'https://open.spotify.com/album/3L6BeuI5Du0b7sl2AmYVGA' },
-        { title: 'Wonderful World, Beautiful People', year: 1970, spotifyUrl: 'https://open.spotify.com/album/139eT46kuMTZqJsdz7cv8E' },
+        { title: 'The Harder They Come', year: 1972, albumArt: 'https://archive.org/download/mbid-572a8942-c468-46c2-a6b5-156875b4cde7/mbid-572a8942-c468-46c2-a6b5-156875b4cde7-36330326569_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3L6BeuI5Du0b7sl2AmYVGA' },
+        { title: 'Wonderful World, Beautiful People', year: 1970, albumArt: 'https://archive.org/download/mbid-f42f09fc-fbca-4dea-903f-320fe5a0431a/mbid-f42f09fc-fbca-4dea-903f-320fe5a0431a-15082311997_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/139eT46kuMTZqJsdz7cv8E' },
       ],
       iconicSongs: [
         { title: 'The Harder They Come', year: 1972 },
@@ -802,7 +802,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['punk', 'rock-and-roll'],
       essentialAlbums: [
         { title: 'Ramones', year: 1976, spotifyUrl: 'https://open.spotify.com/album/5Jjp7cPd6R2ux8SqnZkRDa' },
-        { title: 'Rocket to Russia', year: 1977, spotifyUrl: 'https://open.spotify.com/album/2HmjhUxfkIDUZxY0yPsXnR' },
+        { title: 'Rocket to Russia', year: 1977, albumArt: 'https://archive.org/download/mbid-dd7b900f-d365-408b-bb05-9a91b9cd89b7/mbid-dd7b900f-d365-408b-bb05-9a91b9cd89b7-7235814706_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/2HmjhUxfkIDUZxY0yPsXnR' },
       ],
       iconicSongs: [
         { title: 'Blitzkrieg Bop', year: 1976 },
@@ -825,7 +825,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'The Sex Pistols ignited the UK punk explosion with their anarchic energy and anti-establishment attitude. In just two years, they released one album that changed British culture forever and made "punk" a household word.',
       genres: ['punk'],
       essentialAlbums: [
-        { title: 'Never Mind the Bollocks, Here\'s the Sex Pistols', year: 1977, spotifyUrl: 'https://open.spotify.com/album/6iwz0Y4kAftSv67dKVdYJJ' },
+        { title: 'Never Mind the Bollocks, Here\'s the Sex Pistols', year: 1977, albumArt: 'https://archive.org/download/mbid-c6f06bc3-44ac-4555-8991-057f6bce36d7/mbid-c6f06bc3-44ac-4555-8991-057f6bce36d7-41018729651_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6iwz0Y4kAftSv67dKVdYJJ' },
       ],
       iconicSongs: [
         { title: 'Anarchy in the U.K.', year: 1976 },
@@ -848,8 +848,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'The Clash expanded punk\'s sonic and political palette by incorporating reggae, funk, and rockabilly. Their passionate politics and musical ambition made them the most important band of the punk era.',
       genres: ['punk', 'reggae', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'London Calling', year: 1979, spotifyUrl: 'https://open.spotify.com/album/6FCzvataOTPsWjMQsPzwIT' },
-        { title: 'The Clash', year: 1977, spotifyUrl: 'https://open.spotify.com/album/3nm4AerykUmFYs1WXV5NrP' },
+        { title: 'London Calling', year: 1979, albumArt: 'https://archive.org/download/mbid-efc61929-387e-42a9-8194-caccdca7012e/mbid-efc61929-387e-42a9-8194-caccdca7012e-1978576697_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6FCzvataOTPsWjMQsPzwIT' },
+        { title: 'The Clash', year: 1977, albumArt: 'https://archive.org/download/mbid-826e6850-832a-4afe-af9e-5bc5deefaafc/mbid-826e6850-832a-4afe-af9e-5bc5deefaafc-2616225432_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3nm4AerykUmFYs1WXV5NrP' },
       ],
       iconicSongs: [
         { title: 'London Calling', year: 1979 },
@@ -872,8 +872,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Patti Smith merged poetry with rock and roll, creating a new form of artistic expression. Her debut album "Horses" is one of the most influential rock records ever made, proving punk could be both literate and primal.',
       genres: ['punk', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Horses', year: 1975, spotifyUrl: 'https://open.spotify.com/album/0yI6DqfbXrhc0kadl4VXTM' },
-        { title: 'Easter', year: 1978, spotifyUrl: 'https://open.spotify.com/album/0WwEXtO1zfHqSJPqBDLvKZ' },
+        { title: 'Horses', year: 1975, albumArt: 'https://archive.org/download/mbid-96c08749-3ffe-37f2-a226-132c6e59c17d/mbid-96c08749-3ffe-37f2-a226-132c6e59c17d-11436427595_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0yI6DqfbXrhc0kadl4VXTM' },
+        { title: 'Easter', year: 1978, albumArt: 'https://archive.org/download/mbid-32e47b04-3f6c-407c-88d2-3976a6169d0c/mbid-32e47b04-3f6c-407c-88d2-3976a6169d0c-15271390782_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0WwEXtO1zfHqSJPqBDLvKZ' },
       ],
       iconicSongs: [
         { title: 'Gloria', year: 1975 },
@@ -899,7 +899,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'George Clinton\'s Parliament-Funkadelic collective created a cosmic funk universe. Their elaborate stage shows, sci-fi mythology, and irresistible grooves defined funk at its most adventurous.',
       genres: ['funk', 'soul', 'rb'],
       essentialAlbums: [
-        { title: 'Mothership Connection', year: 1975, spotifyUrl: 'https://open.spotify.com/album/6VrR7vNkaiHQgvYpuHpLIx' },
+        { title: 'Mothership Connection', year: 1975, albumArt: 'https://archive.org/download/mbid-ba7c8843-848f-432e-9245-8817efec8e36/mbid-ba7c8843-848f-432e-9245-8817efec8e36-41539539978_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6VrR7vNkaiHQgvYpuHpLIx' },
         { title: 'One Nation Under a Groove', year: 1978, spotifyUrl: 'https://open.spotify.com/album/6sZ2FG1E31mKGxMh1HkZJn' },
       ],
       iconicSongs: [
@@ -923,8 +923,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Sly Stone created a revolutionary sound that merged funk, soul, rock, and psychedelia with a racially integrated band. Their utopian vision gave way to darker masterpieces that influenced everything from funk to hip-hop.',
       genres: ['funk', 'soul', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Stand!', year: 1969, spotifyUrl: 'https://open.spotify.com/album/4I7BlkgTzsbPOzJmfoLzD5' },
-        { title: 'There\'s a Riot Goin\' On', year: 1971, spotifyUrl: 'https://open.spotify.com/album/5qVykcyH4f6RBrJvFv79g6' },
+        { title: 'Stand!', year: 1969, albumArt: 'https://archive.org/download/mbid-0c106850-4531-43a2-b54c-0edbe9b9a88e/mbid-0c106850-4531-43a2-b54c-0edbe9b9a88e-40011830835_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4I7BlkgTzsbPOzJmfoLzD5' },
+        { title: 'There\'s a Riot Goin\' On', year: 1971, albumArt: 'https://archive.org/download/mbid-c6a21811-4e7b-4f84-a752-1fa032004965/mbid-c6a21811-4e7b-4f84-a752-1fa032004965-37982509162_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5qVykcyH4f6RBrJvFv79g6' },
       ],
       iconicSongs: [
         { title: 'Everyday People', year: 1968 },
@@ -971,8 +971,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Rick James dubbed his sound "punk funk" and delivered some of the most infectious grooves of the early \'80s. His wild persona and undeniable hits made him a funk superstar before personal troubles derailed his career.',
       genres: ['funk', 'rb'],
       essentialAlbums: [
-        { title: 'Street Songs', year: 1981, spotifyUrl: 'https://open.spotify.com/album/4bBBKj4bVwMVjJMwTqD3qE' },
-        { title: 'Come Get It!', year: 1978, spotifyUrl: 'https://open.spotify.com/album/0NFTMqMM4OwIlQQkYfHGWb' },
+        { title: 'Street Songs', year: 1981, albumArt: 'https://archive.org/download/mbid-34663e63-d771-3cd5-83da-31eeefb4e11a/mbid-34663e63-d771-3cd5-83da-31eeefb4e11a-4279191141_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4bBBKj4bVwMVjJMwTqD3qE' },
+        { title: 'Come Get It!', year: 1978, albumArt: 'https://archive.org/download/mbid-fa66b25a-bd7d-42df-bd7e-f97ffb66e259/mbid-fa66b25a-bd7d-42df-bd7e-f97ffb66e259-24707737284_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0NFTMqMM4OwIlQQkYfHGWb' },
       ],
       iconicSongs: [
         { title: 'Super Freak', year: 1981 },
@@ -1022,8 +1022,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Tangerine Dream pioneered the "Berlin School" of electronic music with their sequencer-driven soundscapes. Their prolific output of albums and film scores laid the groundwork for ambient, new age, and electronic dance music.',
       genres: ['electronic', 'ambient'],
       essentialAlbums: [
-        { title: 'Phaedra', year: 1974, spotifyUrl: 'https://open.spotify.com/album/5RZYQWkfr0IZBLe2NrpFZ1' },
-        { title: 'Rubycon', year: 1975, spotifyUrl: 'https://open.spotify.com/album/5m8WmJzRjqTONh7L17qtOB' },
+        { title: 'Phaedra', year: 1974, albumArt: 'https://archive.org/download/mbid-61349b01-d312-41ed-a2dd-baeec82e451e/mbid-61349b01-d312-41ed-a2dd-baeec82e451e-24995663399_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5RZYQWkfr0IZBLe2NrpFZ1' },
+        { title: 'Rubycon', year: 1975, albumArt: 'https://archive.org/download/mbid-1d16698f-e1fc-48b3-ab4a-941c2ecec5bb/mbid-1d16698f-e1fc-48b3-ab4a-941c2ecec5bb-16199575899_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5m8WmJzRjqTONh7L17qtOB' },
       ],
       iconicSongs: [
         { title: 'Phaedra', year: 1974 },
@@ -1046,8 +1046,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Jean-Michel Jarre brought electronic music to the masses with "Oxygène" and pioneered spectacular outdoor concerts with lasers and fireworks. His melodic approach made synthesizer music accessible worldwide.',
       genres: ['electronic', 'ambient'],
       essentialAlbums: [
-        { title: 'Oxygène', year: 1976, spotifyUrl: 'https://open.spotify.com/album/15EyYbw0jO3MJI1EYOQX1l' },
-        { title: 'Équinoxe', year: 1978, spotifyUrl: 'https://open.spotify.com/album/7Aofz4hojBZzlLJUq1qDq3' },
+        { title: 'Oxygène', year: 1976, albumArt: 'https://archive.org/download/mbid-3ed8b7ee-1f2a-448f-bfb2-dd3a7fb0efb8/mbid-3ed8b7ee-1f2a-448f-bfb2-dd3a7fb0efb8-1242540512_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/15EyYbw0jO3MJI1EYOQX1l' },
+        { title: 'Équinoxe', year: 1978, albumArt: 'https://archive.org/download/mbid-e8a932e9-20dc-4f9a-a507-ffa3530788a3/mbid-e8a932e9-20dc-4f9a-a507-ffa3530788a3-43819070573_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7Aofz4hojBZzlLJUq1qDq3' },
       ],
       iconicSongs: [
         { title: 'Oxygène, Pt. 4', year: 1976 },
@@ -1070,8 +1070,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Depeche Mode evolved from synth-pop beginners to electronic rock stadium fillers. Their dark, sensual sound and industrial-influenced production made them the most successful electronic band in history.',
       genres: ['electronic', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Violator', year: 1990, spotifyUrl: 'https://open.spotify.com/album/1SXTyqaVTRUjiH1gfgcbdc' },
-        { title: 'Music for the Masses', year: 1987, spotifyUrl: 'https://open.spotify.com/album/6O0s2lCLNT8UasCaZbHBUk' },
+        { title: 'Violator', year: 1990, albumArt: 'https://archive.org/download/mbid-5454efa9-445a-4b73-8d16-e9fdbf022119/mbid-5454efa9-445a-4b73-8d16-e9fdbf022119-18529866710_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1SXTyqaVTRUjiH1gfgcbdc' },
+        { title: 'Music for the Masses', year: 1987, albumArt: 'https://archive.org/download/mbid-8d059e75-d9bb-4d90-97a9-1cb6ed7472c6/mbid-8d059e75-d9bb-4d90-97a9-1cb6ed7472c6-9552817368_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6O0s2lCLNT8UasCaZbHBUk' },
       ],
       iconicSongs: [
         { title: 'Enjoy the Silence', year: 1990 },
@@ -1097,8 +1097,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Donna Summer defined the disco era with her powerful voice and groundbreaking collaborations with producer Giorgio Moroder. Together they created the template for electronic dance music.',
       genres: ['disco', 'electronic', 'rb'],
       essentialAlbums: [
-        { title: 'Bad Girls', year: 1979, spotifyUrl: 'https://open.spotify.com/album/1lWmFNkYJ4oyLN0Tg2lOzP' },
-        { title: 'I Remember Yesterday', year: 1977, spotifyUrl: 'https://open.spotify.com/album/4xvlxHpxfpjTYRiCuH4qWG' },
+        { title: 'Bad Girls', year: 1979, albumArt: 'https://archive.org/download/mbid-a00a258f-66a4-422a-82ae-f27c3cb13924/mbid-a00a258f-66a4-422a-82ae-f27c3cb13924-35939520246_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1lWmFNkYJ4oyLN0Tg2lOzP' },
+        { title: 'I Remember Yesterday', year: 1977, albumArt: 'https://archive.org/download/mbid-4b53ff3d-c6d1-4dd4-930f-820429710962/mbid-4b53ff3d-c6d1-4dd4-930f-820429710962-36606091192_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4xvlxHpxfpjTYRiCuH4qWG' },
       ],
       iconicSongs: [
         { title: 'I Feel Love', year: 1977 },
@@ -1121,8 +1121,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'The Bee Gees reinvented themselves as disco kings with the Saturday Night Fever soundtrack. The Gibb brothers\' falsetto harmonies and songwriting genius made them one of the best-selling acts of all time.',
       genres: ['disco', 'soul'],
       essentialAlbums: [
-        { title: 'Saturday Night Fever (Soundtrack)', year: 1977, spotifyUrl: 'https://open.spotify.com/album/2PbLz63qztbPwEqMWnZBsO' },
-        { title: 'Spirits Having Flown', year: 1979, spotifyUrl: 'https://open.spotify.com/album/6KR7HREg4ENpQ7lxJGPuFW' },
+        { title: 'Saturday Night Fever (Soundtrack)', year: 1977, albumArt: 'https://archive.org/download/mbid-9228448e-79ba-467b-9b54-fbc3a98f4a1d/mbid-9228448e-79ba-467b-9b54-fbc3a98f4a1d-11222289646_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/2PbLz63qztbPwEqMWnZBsO' },
+        { title: 'Spirits Having Flown', year: 1979, albumArt: 'https://archive.org/download/mbid-19e64305-ce07-4e1e-a6fe-819c76b8352d/mbid-19e64305-ce07-4e1e-a6fe-819c76b8352d-22618269187_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6KR7HREg4ENpQ7lxJGPuFW' },
       ],
       iconicSongs: [
         { title: 'Stayin\' Alive', year: 1977 },
@@ -1146,7 +1146,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['disco', 'funk'],
       essentialAlbums: [
         { title: 'C\'est Chic', year: 1978, spotifyUrl: 'https://open.spotify.com/album/3r2gr0dHYpyUVF5HzjOqRC' },
-        { title: 'Risqué', year: 1979, spotifyUrl: 'https://open.spotify.com/album/68nz2I0kAZP8YghVXOcWmC' },
+        { title: 'Risqué', year: 1979, albumArt: 'https://archive.org/download/mbid-e7f2c9bb-d26d-4afe-9ac3-54ed8772196d/mbid-e7f2c9bb-d26d-4afe-9ac3-54ed8772196d-11479816051_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/68nz2I0kAZP8YghVXOcWmC' },
       ],
       iconicSongs: [
         { title: 'Le Freak', year: 1978 },
@@ -1169,8 +1169,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Gloria Gaynor\'s "I Will Survive" became the ultimate disco anthem and an empowerment hymn for generations. Her powerful voice and the song\'s message of resilience transcended the disco era to become timeless.',
       genres: ['disco', 'soul'],
       essentialAlbums: [
-        { title: 'Love Tracks', year: 1978, spotifyUrl: 'https://open.spotify.com/album/7KhkXLQdoz7HJPqGbBLaJ5' },
-        { title: 'Never Can Say Goodbye', year: 1975, spotifyUrl: 'https://open.spotify.com/album/6AYFWjxEHqMkJpSxnPbJJD' },
+        { title: 'Love Tracks', year: 1978, albumArt: 'https://archive.org/download/mbid-2716d091-9a43-46b8-ad05-78a786f0147c/mbid-2716d091-9a43-46b8-ad05-78a786f0147c-28744938118_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7KhkXLQdoz7HJPqGbBLaJ5' },
+        { title: 'Never Can Say Goodbye', year: 1975, albumArt: 'https://archive.org/download/mbid-0c4d9f28-1450-4fa2-a77e-2e3b7211cd19/mbid-0c4d9f28-1450-4fa2-a77e-2e3b7211cd19-36015976311_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6AYFWjxEHqMkJpSxnPbJJD' },
       ],
       iconicSongs: [
         { title: 'I Will Survive', year: 1978 },
@@ -1196,7 +1196,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Grandmaster Flash pioneered DJ techniques like scratching, punch phrasing, and beat juggling. His group\'s "The Message" was one of the first hip-hop songs to address social issues.',
       genres: ['hip-hop'],
       essentialAlbums: [
-        { title: 'The Message', year: 1982, spotifyUrl: 'https://open.spotify.com/album/4dEczweFPXeLMMVD1zIdi7' },
+        { title: 'The Message', year: 1982, albumArt: 'https://archive.org/download/mbid-195f74bb-1af7-4ef1-893a-e9d652f6b0c1/mbid-195f74bb-1af7-4ef1-893a-e9d652f6b0c1-36596374796_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4dEczweFPXeLMMVD1zIdi7' },
       ],
       iconicSongs: [
         { title: 'The Message', year: 1982 },
@@ -1218,8 +1218,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Run-D.M.C. took hip-hop from the streets to the arenas. Their hard beats, stripped-down style, and rock collaborations broke down barriers and made rap a global phenomenon.',
       genres: ['hip-hop', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Raising Hell', year: 1986, spotifyUrl: 'https://open.spotify.com/album/4XMP3TlcrqLbaOLKZ0fNPh' },
-        { title: 'Run-D.M.C.', year: 1984, spotifyUrl: 'https://open.spotify.com/album/1e8v5PZ8JkjLKz9FBfMhAX' },
+        { title: 'Raising Hell', year: 1986, albumArt: 'https://archive.org/download/mbid-70266b79-66da-4a8d-9949-7332b8b755ba/mbid-70266b79-66da-4a8d-9949-7332b8b755ba-38062324215_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4XMP3TlcrqLbaOLKZ0fNPh' },
+        { title: 'Run-D.M.C.', year: 1984, albumArt: 'https://archive.org/download/mbid-49bc5725-08e7-45cf-ae1a-14ea0c9d9c97/mbid-49bc5725-08e7-45cf-ae1a-14ea0c9d9c97-11743113743_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1e8v5PZ8JkjLKz9FBfMhAX' },
       ],
       iconicSongs: [
         { title: 'Walk This Way', year: 1986 },
@@ -1242,8 +1242,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Public Enemy revolutionized hip-hop with their politically charged lyrics and the Bomb Squad\'s dense, noisy production. Chuck D\'s commanding voice and Flavor Flav\'s hype man energy made them the most important rap group of their era.',
       genres: ['hip-hop'],
       essentialAlbums: [
-        { title: 'It Takes a Nation of Millions to Hold Us Back', year: 1988, spotifyUrl: 'https://open.spotify.com/album/4qA23mLdzL7HjpTvFjdcr8' },
-        { title: 'Fear of a Black Planet', year: 1990, spotifyUrl: 'https://open.spotify.com/album/4s3rn7hcaejfSxu1BFHJbl' },
+        { title: 'It Takes a Nation of Millions to Hold Us Back', year: 1988, albumArt: 'https://archive.org/download/mbid-4ef7fe79-3002-4779-9aa4-3430ae0ce6be/mbid-4ef7fe79-3002-4779-9aa4-3430ae0ce6be-9705281248_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4qA23mLdzL7HjpTvFjdcr8' },
+        { title: 'Fear of a Black Planet', year: 1990, albumArt: 'https://archive.org/download/mbid-b1ec7150-bfd2-4dc2-b7c3-8a82826acc29/mbid-b1ec7150-bfd2-4dc2-b7c3-8a82826acc29-14823271238_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4s3rn7hcaejfSxu1BFHJbl' },
       ],
       iconicSongs: [
         { title: 'Fight the Power', year: 1989 },
@@ -1267,7 +1267,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['hip-hop'],
       essentialAlbums: [
         { title: 'Illmatic', year: 1994, albumArt: 'https://i.scdn.co/image/ab67616d00001e0271d840defb002ed3b180f7cd', spotifyUrl: 'https://open.spotify.com/album/3kEtdS2pH6hKcMU9Wioob1' },
-        { title: 'It Was Written', year: 1996, spotifyUrl: 'https://open.spotify.com/album/5XBGlhKG1PYLqkgPynX6ex' },
+        { title: 'It Was Written', year: 1996, albumArt: 'https://archive.org/download/mbid-dee08d2d-eb6d-4376-988a-07984dbdf738/mbid-dee08d2d-eb6d-4376-988a-07984dbdf738-12639957674_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5XBGlhKG1PYLqkgPynX6ex' },
       ],
       iconicSongs: [
         { title: 'N.Y. State of Mind', year: 1994 },
@@ -1293,7 +1293,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Frankie Knuckles created house music at Chicago\'s Warehouse club. His pioneering DJ sets blended disco, soul, and electronic music into a new sound that conquered the world.',
       genres: ['house', 'disco'],
       essentialAlbums: [
-        { title: 'Beyond the Mix', year: 1991, spotifyUrl: 'https://open.spotify.com/album/1UvxqCKVJCaJD4FXVjB6Rf' },
+        { title: 'Beyond the Mix', year: 1991, albumArt: 'https://archive.org/download/mbid-33d1434d-3179-416f-b45b-02fe98640282/mbid-33d1434d-3179-416f-b45b-02fe98640282-17153996559_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1UvxqCKVJCaJD4FXVjB6Rf' },
       ],
       iconicSongs: [
         { title: 'Your Love', year: 1987 },
@@ -1362,7 +1362,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Kerri Chandler inherited the house music tradition from his DJ father and became one of deep house\'s most respected producers. His soulful, keyboard-driven productions define the New Jersey sound.',
       genres: ['house'],
       essentialAlbums: [
-        { title: 'Spaces and Places', year: 2022, spotifyUrl: 'https://open.spotify.com/album/4Q4G4hrAms9J3mYmofZlrT' },
+        { title: 'Spaces and Places', year: 2022, albumArt: 'https://archive.org/download/mbid-ef19a75f-f7a6-485e-98e9-158cecb9d43b/mbid-ef19a75f-f7a6-485e-98e9-158cecb9d43b-35323586061_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4Q4G4hrAms9J3mYmofZlrT' },
       ],
       iconicSongs: [
         { title: 'Rain', year: 1996 },
@@ -1410,7 +1410,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Derrick May, alongside Juan Atkins and Kevin Saunderson, created Detroit techno. His tracks like "Strings of Life" brought orchestral emotion to electronic music and remain some of the genre\'s most celebrated works.',
       genres: ['techno', 'electronic'],
       essentialAlbums: [
-        { title: 'Innovator', year: 1996, spotifyUrl: 'https://open.spotify.com/album/1tCTyOZrTwwmIK4yV8KImY' },
+        { title: 'Innovator', year: 1996, albumArt: 'https://archive.org/download/mbid-262bb974-03d4-4078-a9d8-f0bbe1f35129/mbid-262bb974-03d4-4078-a9d8-f0bbe1f35129-40912575186_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1tCTyOZrTwwmIK4yV8KImY' },
       ],
       iconicSongs: [
         { title: 'Strings of Life', year: 1987 },
@@ -1484,7 +1484,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['indie', 'punk'],
       essentialAlbums: [
         { title: 'Doolittle', year: 1989, spotifyUrl: 'https://open.spotify.com/album/6ymZBbRSmVpYriHypIBHsh' },
-        { title: 'Surfer Rosa', year: 1988, spotifyUrl: 'https://open.spotify.com/album/5xq9Hrb7e337mviDA8qPAS' },
+        { title: 'Surfer Rosa', year: 1988, albumArt: 'https://archive.org/download/mbid-e78fc156-e0be-4e1a-a668-9338356dfe29/mbid-e78fc156-e0be-4e1a-a668-9338356dfe29-3350498477_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5xq9Hrb7e337mviDA8qPAS' },
       ],
       iconicSongs: [
         { title: 'Where Is My Mind?', year: 1988 },
@@ -1508,7 +1508,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['indie', 'punk'],
       essentialAlbums: [
         { title: 'Daydream Nation', year: 1988, albumArt: 'https://i.scdn.co/image/ab67616d00001e02db8e38addb58131f77b48377', spotifyUrl: 'https://open.spotify.com/album/3USQKOw0se5pBNEndu82Rb' },
-        { title: 'Goo', year: 1990, spotifyUrl: 'https://open.spotify.com/album/4xd8lQdJJfGcwPl6Zxvt05' },
+        { title: 'Goo', year: 1990, albumArt: 'https://archive.org/download/mbid-3e095e00-39aa-4f8f-be4b-cf8da2661060/mbid-3e095e00-39aa-4f8f-be4b-cf8da2661060-13523354678_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4xd8lQdJJfGcwPl6Zxvt05' },
       ],
       iconicSongs: [
         { title: 'Teen Age Riot', year: 1988 },
@@ -1555,7 +1555,7 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Arcade Fire brought orchestral ambition and anthemic emotion to indie rock. Their albums tackle suburban alienation and existential themes with an intensity that fills arenas while maintaining indie credibility.',
       genres: ['indie', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Funeral', year: 2004, spotifyUrl: 'https://open.spotify.com/album/0b2B3OoIXF4njnlesJfEg1' },
+        { title: 'Funeral', year: 2004, albumArt: 'https://archive.org/download/mbid-58c07638-4343-4ad7-ac37-da79f6aeb8e1/mbid-58c07638-4343-4ad7-ac37-da79f6aeb8e1-31589070944_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0b2B3OoIXF4njnlesJfEg1' },
         { title: 'The Suburbs', year: 2010, albumArt: 'https://i.scdn.co/image/ab67616d00001e02532391d63cfd6d32677f7af6', spotifyUrl: 'https://open.spotify.com/album/3DrgM5X3yX1JP1liNLAOHI' },
       ],
       iconicSongs: [
@@ -1607,7 +1607,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['grunge', 'rock-and-roll'],
       essentialAlbums: [
         { title: 'Ten', year: 1991, albumArt: 'https://i.scdn.co/image/ab67616d00001e022d0e5ab5bd2e234fbcffa3e0', spotifyUrl: 'https://open.spotify.com/album/5B4PYA7wNN4WdEXdIJu58a' },
-        { title: 'Vs.', year: 1993, spotifyUrl: 'https://open.spotify.com/album/1p4MHSJZzKYpDGgymMjFNf' },
+        { title: 'Vs.', year: 1993, albumArt: 'https://archive.org/download/mbid-9878d699-584d-3217-aead-e3e8fa6b3dd5/mbid-9878d699-584d-3217-aead-e3e8fa6b3dd5-1638299049_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1p4MHSJZzKYpDGgymMjFNf' },
       ],
       iconicSongs: [
         { title: 'Alive', year: 1991 },
@@ -1630,8 +1630,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Soundgarden combined Black Sabbath heaviness with punk attitude and Chris Cornell\'s four-octave voice. Their complex time signatures and dark imagery made them the thinking person\'s metal band of the grunge era.',
       genres: ['grunge', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Superunknown', year: 1994, spotifyUrl: 'https://open.spotify.com/album/4KOljT3hObuSXvGCCvS6SO' },
-        { title: 'Badmotorfinger', year: 1991, spotifyUrl: 'https://open.spotify.com/album/7bfYfNNIu2FTBU2M8bRfIT' },
+        { title: 'Superunknown', year: 1994, albumArt: 'https://archive.org/download/mbid-d7b074fa-20da-3fb0-a8df-52751e14d96c/mbid-d7b074fa-20da-3fb0-a8df-52751e14d96c-2236678397_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4KOljT3hObuSXvGCCvS6SO' },
+        { title: 'Badmotorfinger', year: 1991, albumArt: 'https://archive.org/download/mbid-eb4f6474-f247-3556-8e6c-6c0b407f656f/mbid-eb4f6474-f247-3556-8e6c-6c0b407f656f-19728027264_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7bfYfNNIu2FTBU2M8bRfIT' },
       ],
       iconicSongs: [
         { title: 'Black Hole Sun', year: 1994 },
@@ -1654,8 +1654,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Alice in Chains brought metal heaviness to grunge with their distinctive vocal harmonies between Layne Staley and Jerry Cantrell. Their unflinching exploration of addiction and depression created some of the era\'s darkest music.',
       genres: ['grunge', 'rock-and-roll'],
       essentialAlbums: [
-        { title: 'Dirt', year: 1992, spotifyUrl: 'https://open.spotify.com/album/4bP5dTVL4dvTwrEUdnE2QQ' },
-        { title: 'Jar of Flies', year: 1994, spotifyUrl: 'https://open.spotify.com/album/3LXLvUDqDwb1ay3joVRSnk' },
+        { title: 'Dirt', year: 1992, albumArt: 'https://archive.org/download/mbid-47f3efa5-137c-40e8-ab1b-42d57f5cfbbf/mbid-47f3efa5-137c-40e8-ab1b-42d57f5cfbbf-9835602113_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4bP5dTVL4dvTwrEUdnE2QQ' },
+        { title: 'Jar of Flies', year: 1994, albumArt: 'https://archive.org/download/mbid-cb7b887a-44bf-4a59-a5da-d229c0357128/mbid-cb7b887a-44bf-4a59-a5da-d229c0357128-43776965567_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/3LXLvUDqDwb1ay3joVRSnk' },
       ],
       iconicSongs: [
         { title: 'Man in the Box', year: 1990 },
@@ -1705,7 +1705,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['ambient', 'electronic'],
       essentialAlbums: [
         { title: 'Selected Ambient Works 85-92', year: 1992, albumArt: 'https://i.scdn.co/image/ab67616d00001e0238906032688bb13b135ce19a', spotifyUrl: 'https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k' },
-        { title: 'Richard D. James Album', year: 1996, spotifyUrl: 'https://open.spotify.com/album/6VolVFuZuIbcxceSdnXGDO' },
+        { title: 'Richard D. James Album', year: 1996, albumArt: 'https://archive.org/download/mbid-ca7d2673-1711-3bad-92da-b3831fa770fc/mbid-ca7d2673-1711-3bad-92da-b3831fa770fc-2573223248_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6VolVFuZuIbcxceSdnXGDO' },
       ],
       iconicSongs: [
         { title: 'Xtal', year: 1992 },
@@ -1729,7 +1729,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['ambient', 'electronic'],
       essentialAlbums: [
         { title: 'Music Has the Right to Children', year: 1998, albumArt: 'https://i.scdn.co/image/ab67616d00001e020ddcb1077d30a5ffb59b6864', spotifyUrl: 'https://open.spotify.com/album/1vWnB0hYmluskQuzxwo25a' },
-        { title: 'Geogaddi', year: 2002, spotifyUrl: 'https://open.spotify.com/album/5LE6JKQvf8FDOKSA08vqCw' },
+        { title: 'Geogaddi', year: 2002, albumArt: 'https://archive.org/download/mbid-5da8e677-bec2-471f-82ec-5b51133cd0c7/mbid-5da8e677-bec2-471f-82ec-5b51133cd0c7-35875388138_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5LE6JKQvf8FDOKSA08vqCw' },
       ],
       iconicSongs: [
         { title: 'Roygbiv', year: 1998 },
@@ -1753,7 +1753,7 @@ export const genreArtists: Record<string, Artist[]> = {
       genres: ['ambient', 'indie'],
       essentialAlbums: [
         { title: '( )', year: 2002, spotifyUrl: 'https://open.spotify.com/album/1DZ3aFnF1CVrRwaqMIJZbh' },
-        { title: 'Takk...', year: 2005, spotifyUrl: 'https://open.spotify.com/album/0HsT4bTDHxLSmYFKdVutrw' },
+        { title: 'Takk...', year: 2005, albumArt: 'https://archive.org/download/mbid-a2cf21bd-8786-4d50-891a-e4b3e64b6a09/mbid-a2cf21bd-8786-4d50-891a-e4b3e64b6a09-43023762537_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0HsT4bTDHxLSmYFKdVutrw' },
       ],
       iconicSongs: [
         { title: 'Hoppípolla', year: 2005 },
@@ -1779,8 +1779,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Goldie helped transform jungle into drum and bass with his landmark album "Timeless." His orchestral approach to breakbeats and emotional depth elevated the genre from underground to artistic legitimacy.',
       genres: ['drum-and-bass', 'electronic'],
       essentialAlbums: [
-        { title: 'Timeless', year: 1995, spotifyUrl: 'https://open.spotify.com/album/4cO2F6LQ6pkJwOmBjknB0I' },
-        { title: 'Saturnz Return', year: 1998, spotifyUrl: 'https://open.spotify.com/album/6nO0Kxir6dPvLT4k2d0e4v' },
+        { title: 'Timeless', year: 1995, albumArt: 'https://archive.org/download/mbid-98ab8a25-eebd-42cf-a549-54f8de4c1e0e/mbid-98ab8a25-eebd-42cf-a549-54f8de4c1e0e-8544879120_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/4cO2F6LQ6pkJwOmBjknB0I' },
+        { title: 'Saturnz Return', year: 1998, albumArt: 'https://archive.org/download/mbid-bd50be04-ab08-4468-b1a9-93fb05364bda/mbid-bd50be04-ab08-4468-b1a9-93fb05364bda-2610470476_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6nO0Kxir6dPvLT4k2d0e4v' },
       ],
       iconicSongs: [
         { title: 'Inner City Life', year: 1994 },
@@ -1803,8 +1803,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Roni Size and Reprazent won the Mercury Prize with "New Forms," bringing drum and bass to mainstream recognition. His fusion of live instrumentation with breakbeats created a new template for electronic music.',
       genres: ['drum-and-bass'],
       essentialAlbums: [
-        { title: 'New Forms', year: 1997, spotifyUrl: 'https://open.spotify.com/album/7oVJdTAb3k3fDEJ3UsQ0wC' },
-        { title: 'In the Mode', year: 2000, spotifyUrl: 'https://open.spotify.com/album/0iKTuJPNkETJuJMKFhJCkK' },
+        { title: 'New Forms', year: 1997, albumArt: 'https://archive.org/download/mbid-d06fe934-8560-4818-9d74-cd02a34b2c56/mbid-d06fe934-8560-4818-9d74-cd02a34b2c56-11134793260_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/7oVJdTAb3k3fDEJ3UsQ0wC' },
+        { title: 'In the Mode', year: 2000, albumArt: 'https://archive.org/download/mbid-c2a52e44-1767-42f3-91ec-bbb117ef88a7/mbid-c2a52e44-1767-42f3-91ec-bbb117ef88a7-42817159369_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/0iKTuJPNkETJuJMKFhJCkK' },
       ],
       iconicSongs: [
         { title: 'Brown Paper Bag', year: 1997 },
@@ -1827,8 +1827,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'LTJ Bukem pioneered "liquid" drum and bass with his Good Looking Records label. His jazzy, atmospheric productions provided a soulful counterpoint to the genre\'s harder sounds.',
       genres: ['drum-and-bass', 'ambient'],
       essentialAlbums: [
-        { title: 'Journey Inwards', year: 2000, spotifyUrl: 'https://open.spotify.com/album/6gP0O5PJsHm6qjJYXPnXhd' },
-        { title: 'Logical Progression', year: 1996, spotifyUrl: 'https://open.spotify.com/album/1Tm8kv0dqdP0kKHmyG2O7Q' },
+        { title: 'Journey Inwards', year: 2000, albumArt: 'https://archive.org/download/mbid-d7d8a8aa-5291-469b-a767-0ff01ae3f333/mbid-d7d8a8aa-5291-469b-a767-0ff01ae3f333-9585787782_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6gP0O5PJsHm6qjJYXPnXhd' },
+        { title: 'Logical Progression', year: 1996, albumArt: 'https://archive.org/download/mbid-5d4113b4-6507-4ce7-aa60-39e96d43523c/mbid-5d4113b4-6507-4ce7-aa60-39e96d43523c-25607895724_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1Tm8kv0dqdP0kKHmyG2O7Q' },
       ],
       iconicSongs: [
         { title: 'Music', year: 1993 },
@@ -1901,8 +1901,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Deadmau5 (Joel Zimmerman) brought progressive house to arena audiences with his iconic mouse helmet and meticulously crafted productions. His technical perfectionism and outspoken personality made him EDM\'s most recognizable figure.',
       genres: ['edm', 'house', 'electronic'],
       essentialAlbums: [
-        { title: 'Random Album Title', year: 2008, spotifyUrl: 'https://open.spotify.com/album/6K1mBpflYwIezc3FEwjZ2a' },
-        { title: '4×4=12', year: 2010, spotifyUrl: 'https://open.spotify.com/album/5wLKEE6w8cXgPzVR1LXLg7' },
+        { title: 'Random Album Title', year: 2008, albumArt: 'https://archive.org/download/mbid-145d5c5d-2ac0-4dd3-898c-5326fd0570b8/mbid-145d5c5d-2ac0-4dd3-898c-5326fd0570b8-27055506319_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6K1mBpflYwIezc3FEwjZ2a' },
+        { title: '4×4=12', year: 2010, albumArt: 'https://archive.org/download/mbid-81447cb9-1719-4ef1-b7a1-da786bc08936/mbid-81447cb9-1719-4ef1-b7a1-da786bc08936-6173257770_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/5wLKEE6w8cXgPzVR1LXLg7' },
       ],
       iconicSongs: [
         { title: 'Strobe', year: 2009 },
@@ -1925,8 +1925,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Skrillex (Sonny Moore) brought dubstep\'s aggressive bass drops to mainstream audiences. His genre-defying productions and collaborations have kept him at electronic music\'s cutting edge for over a decade.',
       genres: ['edm', 'electronic'],
       essentialAlbums: [
-        { title: 'Scary Monsters and Nice Sprites', year: 2010, spotifyUrl: 'https://open.spotify.com/album/40EZGFRJY2R43IPiOnFelG' },
-        { title: 'Bangarang', year: 2011, spotifyUrl: 'https://open.spotify.com/album/6DVVjxZv0w6PHuhYdDwmVi' },
+        { title: 'Scary Monsters and Nice Sprites', year: 2010, albumArt: 'https://archive.org/download/mbid-e32b67d6-bbd0-42a5-bca9-9bd33e927d74/mbid-e32b67d6-bbd0-42a5-bca9-9bd33e927d74-18411884720_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/40EZGFRJY2R43IPiOnFelG' },
+        { title: 'Bangarang', year: 2011, albumArt: 'https://archive.org/download/mbid-bf1c966d-62db-431e-9223-94fd157d70f8/mbid-bf1c966d-62db-431e-9223-94fd157d70f8-5352191046_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/6DVVjxZv0w6PHuhYdDwmVi' },
       ],
       iconicSongs: [
         { title: 'Scary Monsters and Nice Sprites', year: 2010 },
@@ -1949,8 +1949,8 @@ export const genreArtists: Record<string, Artist[]> = {
       bio: 'Calvin Harris evolved from bedroom producer to the world\'s highest-paid DJ. His ability to craft massive pop-EDM crossovers with top vocalists made him the defining hitmaker of the EDM era.',
       genres: ['edm', 'house', 'disco'],
       essentialAlbums: [
-        { title: '18 Months', year: 2012, spotifyUrl: 'https://open.spotify.com/album/1GjVYsHjvHchbsrFLjyVSp' },
-        { title: 'Funk Wav Bounces Vol. 1', year: 2017, spotifyUrl: 'https://open.spotify.com/album/2HaqChIDc5go3qxVunBDK0' },
+        { title: '18 Months', year: 2012, albumArt: 'https://archive.org/download/mbid-62b7cd8d-ff04-4e8b-a615-6fab903535bd/mbid-62b7cd8d-ff04-4e8b-a615-6fab903535bd-23655914879_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/1GjVYsHjvHchbsrFLjyVSp' },
+        { title: 'Funk Wav Bounces Vol. 1', year: 2017, albumArt: 'https://archive.org/download/mbid-fcefcb1f-dd3f-475a-8c23-2a321a214de5/mbid-fcefcb1f-dd3f-475a-8c23-2a321a214de5-17121819745_thumb250.jpg', spotifyUrl: 'https://open.spotify.com/album/2HaqChIDc5go3qxVunBDK0' },
       ],
       iconicSongs: [
         { title: 'Feel So Close', year: 2011 },
