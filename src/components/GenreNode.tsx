@@ -88,7 +88,7 @@ export const GenreNode = memo(function GenreNode({
 
         {/* Main node */}
         <motion.div
-          className="relative w-16 h-16 rounded-full flex items-center justify-center"
+          className="relative w-16 h-16 2xl:w-20 2xl:h-20 rounded-full flex items-center justify-center"
           style={{
             background: `radial-gradient(circle at 30% 30%, ${genre.color}dd, ${genre.color}88)`,
             boxShadow: `
@@ -117,7 +117,7 @@ export const GenreNode = memo(function GenreNode({
 
           {/* Genre name - now inside the bubble */}
           <span
-            className="text-[11px] font-bold text-center leading-tight px-1"
+            className="text-[11px] 2xl:text-[13px] font-bold text-center leading-tight px-1"
             style={{
               color: textColor,
               textShadow: textShadow,
@@ -134,7 +134,7 @@ export const GenreNode = memo(function GenreNode({
           transition={{ duration: 0.2 }}
         >
           <span
-            className="font-mono-data text-xs font-semibold px-2 py-0.5 rounded"
+            className="font-mono-data text-xs 2xl:text-sm font-semibold px-2 py-0.5 rounded"
             style={{
               color: '#fef3c7',
               textShadow: '0 1px 4px rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.8)',

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { SonicMap } from './components/SonicMap'
 import { IntroPage } from './components/IntroPage'
 import { ErrorBoundary } from './components/ErrorBoundary'
+import { MobileWarning } from './components/MobileWarning'
 import { logValidationResults } from './utils/validateData'
 
 // Run data validation in development
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <ErrorBoundary>
+      <MobileWarning />
       <div className="w-screen h-screen bg-stone-950">
         <AnimatePresence mode="wait">
           {showIntro ? (

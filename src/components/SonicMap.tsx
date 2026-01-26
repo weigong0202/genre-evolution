@@ -390,46 +390,46 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
       </motion.div>
 
       {/* Header */}
-      <div className="absolute top-6 left-6 z-30">
-        <h1 className="text-2xl font-bold text-amber-100 tracking-wide">
+      <div className="absolute top-6 left-6 z-30 2xl:top-8 2xl:left-8">
+        <h1 className="text-2xl 2xl:text-3xl font-bold text-amber-100 tracking-wide">
           SONIC UNIVERSE
         </h1>
-        <p className="text-amber-200/80 text-sm mt-1">
+        <p className="text-amber-200/80 text-sm 2xl:text-base mt-1">
           Explore the genealogy of music
         </p>
       </div>
 
       {/* Instructions */}
-      <div className="absolute top-6 right-6 z-30 text-right">
-        <p className="text-amber-200/70 text-xs">
+      <div className="absolute top-6 right-6 z-30 text-right 2xl:top-8 2xl:right-8">
+        <p className="text-amber-200/70 text-xs 2xl:text-sm">
           Click a genre to explore
         </p>
       </div>
 
       {/* Legend */}
-      <div className="absolute top-16 right-6 z-30">
-        <div className="bg-stone-900/70 backdrop-blur-sm rounded-lg px-3 py-2 border border-amber-200/10">
-          <p className="font-mono-data text-amber-200/80 text-[9px] font-medium tracking-wider mb-2">GENRE FAMILIES</p>
-          <div className="space-y-1.5">
+      <div className="absolute top-16 right-6 z-30 2xl:top-20 2xl:right-8">
+        <div className="bg-stone-900/70 backdrop-blur-sm rounded-lg px-3 py-2 2xl:px-4 2xl:py-3 border border-amber-200/10">
+          <p className="font-mono-data text-amber-200/80 text-[9px] 2xl:text-[10px] font-medium tracking-wider mb-2 2xl:mb-3">GENRE FAMILIES</p>
+          <div className="space-y-1.5 2xl:space-y-2">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#E63946' }} />
-              <span className="text-amber-100/70 text-[10px]">Rock / Guitar</span>
+              <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#E63946' }} />
+              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Rock / Guitar</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#9C27B0' }} />
-              <span className="text-amber-100/70 text-[10px]">Soul / Funk / Hip-Hop</span>
+              <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#9C27B0' }} />
+              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Soul / Funk / Hip-Hop</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#00ACC1' }} />
-              <span className="text-amber-100/70 text-[10px]">Electronic</span>
+              <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#00ACC1' }} />
+              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Electronic</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#D4AF37' }} />
-              <span className="text-amber-100/70 text-[10px]">Jazz</span>
+              <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#D4AF37' }} />
+              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Jazz</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#2E7D32' }} />
-              <span className="text-amber-100/70 text-[10px]">Reggae</span>
+              <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#2E7D32' }} />
+              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Reggae</span>
             </div>
           </div>
         </div>
@@ -469,7 +469,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
                   }}
                 />
                 {/* Decade label */}
-                <span className="font-mono-data text-amber-200/90 text-[11px] font-medium">{decade}</span>
+                <span className="font-mono-data text-amber-200/90 text-[11px] 2xl:text-xs font-medium">{decade}</span>
               </div>
             )
           })}
@@ -479,7 +479,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
 
           {/* Axis title */}
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-3">
-            <span className="font-mono-data text-amber-200/70 text-[11px] font-semibold tracking-widest">TIMELINE</span>
+            <span className="font-mono-data text-amber-200/70 text-[11px] 2xl:text-xs font-semibold tracking-widest">TIMELINE</span>
           </div>
         </div>
       </div>
@@ -489,7 +489,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
         <div className="relative h-full flex flex-col items-center">
           {/* Top label */}
           <div className="flex flex-col items-center gap-1 pb-2">
-            <span className="font-mono-data text-orange-300/90 text-xs font-semibold whitespace-nowrap">GUITAR-DRIVEN</span>
+            <span className="font-mono-data text-orange-300/90 text-xs 2xl:text-sm font-semibold whitespace-nowrap">GUITAR-DRIVEN</span>
           </div>
           {/* Axis line - gradient from orange (top/guitar) to cyan (bottom/electronic) */}
           <div
@@ -507,7 +507,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
           </div>
           {/* Bottom label */}
           <div className="flex flex-col items-center gap-1 pt-2">
-            <span className="font-mono-data text-cyan-300/90 text-xs font-semibold whitespace-nowrap">ELECTRONIC</span>
+            <span className="font-mono-data text-cyan-300/90 text-xs 2xl:text-sm font-semibold whitespace-nowrap">ELECTRONIC</span>
           </div>
         </div>
       </div>

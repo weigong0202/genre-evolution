@@ -83,3 +83,101 @@ html, body, #root {
 .vinyl-record:hover {
   animation-play-state: running;
 }
+
+/* ===== Responsive Scaling for Different Screen Sizes ===== */
+
+/* Base: Optimized for 13" screens (default) */
+:root {
+  --scale-factor: 1;
+  --spacing-factor: 1;
+}
+
+/* 14-15" screens */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  :root {
+    --scale-factor: 1.05;
+    --spacing-factor: 1.05;
+  }
+}
+
+/* 16"+ screens */
+@media (min-width: 1600px) {
+  :root {
+    --scale-factor: 1.12;
+    --spacing-factor: 1.1;
+  }
+}
+
+/* Large desktop / 4K */
+@media (min-width: 1920px) {
+  :root {
+    --scale-factor: 1.2;
+    --spacing-factor: 1.15;
+  }
+}
+
+/* Responsive header */
+.responsive-header {
+  font-size: calc(1.5rem * var(--scale-factor));
+}
+
+.responsive-subheader {
+  font-size: calc(0.875rem * var(--scale-factor));
+}
+
+/* Responsive legend */
+@media (min-width: 1600px) {
+  .legend-text {
+    font-size: 11px;
+  }
+
+  .legend-dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Responsive axis labels */
+@media (min-width: 1600px) {
+  .axis-label {
+    font-size: 13px;
+  }
+
+  .decade-label {
+    font-size: 12px;
+  }
+}
+
+/* Responsive modal sizing */
+@media (min-width: 1600px) {
+  .modal-container {
+    padding: 2rem;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+  }
+
+  .modal-text {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
+/* Genre node responsive sizing */
+@media (min-width: 1600px) {
+  .genre-node-label {
+    font-size: 13px;
+  }
+}
+
+/* Responsive spacing for UI elements */
+@media (min-width: 1600px) {
+  .ui-padding-responsive {
+    padding: calc(1.5rem * var(--spacing-factor));
+  }
+
+  .ui-gap-responsive {
+    gap: calc(0.75rem * var(--spacing-factor));
+  }
+}
