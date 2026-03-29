@@ -49,6 +49,41 @@ html, body, #root {
   font-family: 'Space Mono', monospace;
 }
 
+/* Display font for intro headings */
+.font-display {
+  font-family: 'Syne', system-ui, sans-serif;
+}
+
+/* Serif font for intro body/accent text */
+.font-serif-accent {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+/* Intro concentric ring pulse */
+@keyframes ring-pulse {
+  0%, 100% {
+    opacity: 0.08;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+
+/* Intro gradient drift */
+@keyframes gradient-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Intro ruled line draw */
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
 /* Star twinkling animation */
 @keyframes twinkle {
   0%, 100% {

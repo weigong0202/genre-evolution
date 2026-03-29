@@ -1,9 +1,5 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HeroSection } from './intro/HeroSection'
-import { StorySection } from './intro/StorySection'
-import { EnterButton } from './intro/EnterButton'
-import { generateStars } from '../utils/particles'
 
 interface IntroPageProps {
   onEnter: () => void
@@ -11,235 +7,67 @@ interface IntroPageProps {
 }
 
 export function IntroPage({ onEnter, isTransitioning }: IntroPageProps) {
-  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
-  const [scrollY, setScrollY] = useState(0)
-  const [maxScroll, setMaxScroll] = useState(1)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  // Memoize stars to prevent regeneration (includeDepth for warp effect)
-  const staticStars = useMemo(() => generateStars({ count: 180, includeDepth: true }), [])
-
-  // Track mouse for parallax
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({
-        x: e.clientX / window.innerWidth,
-        y: e.clientY / window.innerHeight,
-      })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  // Track scroll
-  useEffect(() => {
-    const container = containerRef.current
-    if (!container) return
-
-    const handleScroll = () => {
-      setScrollY(container.scrollTop)
-      setMaxScroll(container.scrollHeight - container.clientHeight)
-    }
-    container.addEventListener('scroll', handleScroll)
-    // Initialize max scroll
-    setMaxScroll(container.scrollHeight - container.clientHeight)
-    return () => container.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Calculate scroll progress (0 to 1)
-  const scrollProgress = maxScroll > 0 ? Math.min(scrollY / maxScroll, 1) : 0
-
-  // Determine warp speed multiplier based on scroll phase (3 sections)
-  // Phase 1 (0-33%): Hero - slow drift
-  // Phase 2 (33-66%): Story - accelerating
-  // Phase 3 (66-100%): Enter - decelerate to complete stop
-  const getWarpIntensity = () => {
-    if (scrollProgress < 0.33) {
-      // Phase 1: Gentle start
-      return scrollProgress * 3 * 0.5 // 0 to 0.5
-    }
-    if (scrollProgress < 0.66) {
-      // Phase 2: Accelerating
-      const phase2Progress = (scrollProgress - 0.33) / 0.33
-      return 0.5 + phase2Progress * 1.5 // 0.5 to 2.0
-    }
-    // Phase 3: Decelerate to stop - stars settle back
-    const phase3Progress = (scrollProgress - 0.66) / 0.34
-    // Ease out to zero
-    const easeOut = 1 - Math.pow(phase3Progress, 2)
-    return 2.0 * easeOut
-  }
-
-  // Check if we're in the "hovering" phase (Phase 3, near the end)
-  const isHoveringPhase = scrollProgress > 0.8
-
-  // Calculate star position with warp effect
-  const getStarWarpPosition = (star: typeof staticStars[0]) => {
-    const warpIntensity = getWarpIntensity()
-
-    // Stars move outward from center (toward camera)
-    const centerX = 50
-    const centerY = 50
-    const dx = star.x - centerX
-    const dy = star.y - centerY
-
-    // Closer stars (higher z) move faster
-    const z = star.z ?? 0
-    const zFactor = 0.5 + z * 1.5
-    const warpX = star.x + dx * warpIntensity * zFactor * 0.3
-    const warpY = star.y + dy * warpIntensity * zFactor * 0.3
-
-    // Stars grow as they "approach", but return to normal in Phase 4
-    const sizeMultiplier = 1 + warpIntensity * z * 0.4
-
-    // In hovering phase, stars gently pulse brighter (anticipation)
-    const hoverPulse = isHoveringPhase ? 1.2 : 1
-    const opacityBoost = Math.min(1, star.opacity * (1 + warpIntensity * 0.3) * hoverPulse)
-
-    return { x: warpX, y: warpY, size: star.size * sizeMultiplier, opacity: opacityBoost }
-  }
-
-  // Calculate parallax offset for each layer
-  const getParallaxOffset = (layer: number) => {
-    const intensity = (layer + 1) * 8
-    return {
-      x: (mousePos.x - 0.5) * intensity,
-      y: (mousePos.y - 0.5) * intensity,
-    }
-  }
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
     <div
-      ref={containerRef}
-      className="w-screen h-screen overflow-y-auto overflow-x-hidden"
-      style={{
-        background: 'radial-gradient(ellipse at 50% 30%, #1c1917 0%, #0c0a09 40%, #000 100%)',
-      }}
+      className="w-screen h-screen overflow-hidden flex flex-col items-center justify-center relative"
+      style={{ background: '#0c0a09' }}
     >
-      {/* Star field - fixed background with warp effect */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {[0, 1, 2].map((layer) => {
-          const offset = getParallaxOffset(layer)
+      {/* Subtle noise texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none z-50 opacity-[0.035]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        }}
+      />
+
+      {/* Concentric rings — sound wave motif */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(8)].map((_, i) => {
+          const size = 300 + i * 160
           return (
             <div
-              key={layer}
-              className="absolute inset-0"
+              key={i}
+              className="absolute rounded-full"
               style={{
-                transform: `translate(${offset.x}px, ${offset.y}px)`,
-                transition: 'transform 0.1s ease-out',
+                width: size,
+                height: size,
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                border: `1px solid rgba(251, 191, 36, ${0.04 + (7 - i) * 0.008})`,
+                animation: `ring-pulse ${4 + i * 0.6}s ease-in-out infinite`,
+                animationDelay: `${i * 0.3}s`,
               }}
-            >
-              {staticStars
-                .filter((star) => star.layer === layer)
-                .map((star, i) => {
-                  const warp = getStarWarpPosition(star)
-                  return (
-                    <div
-                      key={i}
-                      className="absolute rounded-full star-twinkle"
-                      style={{
-                        left: `${warp.x}%`,
-                        top: `${warp.y}%`,
-                        width: warp.size,
-                        height: warp.size,
-                        background: `radial-gradient(circle, rgba(254,243,199,${warp.opacity}) 0%, rgba(254,243,199,0) 70%)`,
-                        boxShadow: `0 0 ${warp.size * 2}px rgba(254,243,199,${warp.opacity * 0.5})`,
-                        animationDelay: `${star.animationDelay}s`,
-                        animationDuration: `${star.animationDuration}s`,
-                        transition: 'left 0.05s linear, top 0.05s linear, width 0.1s, height 0.1s',
-                      }}
-                    />
-                  )
-                })}
-            </div>
+            />
           )
         })}
 
-        {/* Nebula glows - intensity increases with scroll */}
-        <motion.div
-          className="absolute w-[600px] h-[600px] rounded-full"
+        {/* Warm gradient glow behind rings */}
+        <div
+          className="absolute rounded-full"
           style={{
-            top: '10%',
-            right: '-10%',
-            background: 'radial-gradient(circle, rgba(251,191,36,0.08) 0%, transparent 70%)',
-            filter: 'blur(60px)',
-            opacity: 0.5 + scrollProgress * 0.3,
-          }}
-          animate={{
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            width: 800,
+            height: 800,
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+            background: 'radial-gradient(circle, rgba(180, 120, 60, 0.06) 0%, rgba(120, 80, 40, 0.03) 40%, transparent 70%)',
+            filter: 'blur(40px)',
           }}
         />
-        <motion.div
-          className="absolute w-[500px] h-[500px] rounded-full"
-          style={{
-            bottom: '20%',
-            left: '-5%',
-            background: 'radial-gradient(circle, rgba(147,51,234,0.08) 0%, transparent 70%)',
-            filter: 'blur(80px)',
-            opacity: 0.4 + scrollProgress * 0.4,
-          }}
-          animate={{
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 2,
-          }}
-        />
-        <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full"
-          style={{
-            bottom: '10%',
-            right: '20%',
-            background: 'radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%)',
-            filter: 'blur(70px)',
-            opacity: 0.3 + scrollProgress * 0.4,
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 4,
-          }}
-        />
-
       </div>
 
-      {/* Deep blue/purple vignette at bottom */}
+      {/* Color accent — genre-color gradients at edges */}
       <div
-        className="fixed inset-0 pointer-events-none z-10"
+        className="absolute inset-0 pointer-events-none opacity-30"
         style={{
-          background: `linear-gradient(to top,
-            rgba(30, 20, 60, ${0.4 + scrollProgress * 0.3}) 0%,
-            rgba(20, 10, 40, ${0.2 + scrollProgress * 0.2}) 30%,
-            transparent 60%
-          )`,
-        }}
-      />
-
-      {/* Side vignettes for depth */}
-      <div
-        className="fixed inset-0 pointer-events-none z-10"
-        style={{
-          background: `radial-gradient(ellipse at center, transparent 40%, rgba(10, 5, 30, 0.5) 100%)`,
-        }}
-      />
-
-      {/* Film grain overlay */}
-      <div
-        className="fixed inset-0 pointer-events-none opacity-[0.02] z-50"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          background: `
+            radial-gradient(ellipse at 15% 20%, rgba(65, 105, 225, 0.08) 0%, transparent 50%),
+            radial-gradient(ellipse at 85% 75%, rgba(230, 57, 70, 0.06) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 90%, rgba(0, 172, 193, 0.05) 0%, transparent 40%)
+          `,
         }}
       />
 
@@ -251,73 +79,171 @@ export function IntroPage({ onEnter, isTransitioning }: IntroPageProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
+            transition={{ duration: 0.15 }}
           >
-            {/* Warp speed stars - faster animation */}
-            {Array.from({ length: 40 }).map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute bg-amber-100"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  width: 2,
-                  height: 2,
-                  borderRadius: '50%',
-                }}
-                animate={{
-                  scale: [1, 50],
-                  x: [(Math.random() - 0.5) * 50, (Math.random() - 0.5) * 1500],
-                  y: [(Math.random() - 0.5) * 50, (Math.random() - 0.5) * 1500],
-                  opacity: [0.8, 0],
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: 'easeIn',
-                  delay: i * 0.005,
-                }}
-              />
-            ))}
-            {/* Quick fade to dark (matches SonicMap bg) instead of white */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background: 'radial-gradient(circle at 50% 50%, transparent 0%, #0c0a09 70%)',
+              }}
+              initial={{ opacity: 0, scale: 3 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: 'easeIn' }}
+            />
             <motion.div
               className="absolute inset-0 bg-stone-950"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Skip button - glassmorphism style */}
-      <motion.button
-        onClick={onEnter}
-        className="fixed bottom-6 right-6 z-50 px-4 py-2 text-amber-200/50 text-xs tracking-widest uppercase transition-all hover:text-amber-200/80"
-        style={{
-          background: 'rgba(10, 10, 15, 0.4)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          borderRadius: '6px',
-        }}
+      {/* Content — all in one screen */}
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Overline */}
+        <motion.div
+          className="mb-8 flex items-center gap-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="h-px w-12" style={{ background: 'rgba(254, 243, 199, 0.2)' }} />
+          <span
+            className="font-display text-[11px] tracking-[0.35em] uppercase"
+            style={{ color: 'rgba(254, 243, 199, 0.4)' }}
+          >
+            An Interactive Exploration
+          </span>
+          <div className="h-px w-12" style={{ background: 'rgba(254, 243, 199, 0.2)' }} />
+        </motion.div>
+
+        {/* SONIC */}
+        <div className="overflow-hidden">
+          <motion.h1
+            className="font-display font-800 leading-[0.85] tracking-[-0.03em] text-center"
+            style={{ fontSize: 'clamp(4rem, 14vw, 12rem)', color: '#fef3c7' }}
+            initial={{ y: '110%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            SONIC
+          </motion.h1>
+        </div>
+
+        {/* UNIVERSE */}
+        <div className="overflow-hidden -mt-1">
+          <motion.h1
+            className="font-display font-800 leading-[0.85] tracking-[-0.03em] text-center"
+            style={{ fontSize: 'clamp(4rem, 14vw, 12rem)', color: '#fef3c7' }}
+            initial={{ y: '110%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          >
+            UNIVERSE
+          </motion.h1>
+        </div>
+
+        {/* Rule */}
+        <motion.div
+          className="mt-8 mb-6 origin-center"
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.1, ease: 'easeOut' }}
+        >
+          <div
+            className="w-24 h-px"
+            style={{ background: 'linear-gradient(to right, transparent, rgba(254, 243, 199, 0.3), transparent)' }}
+          />
+        </motion.div>
+
+        {/* Tagline */}
+        <motion.p
+          className="font-serif-accent italic text-center mb-14"
+          style={{
+            fontSize: 'clamp(1.1rem, 2.5vw, 1.6rem)',
+            color: 'rgba(254, 243, 199, 0.55)',
+            letterSpacing: '0.02em',
+          }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.3 }}
+        >
+          The genealogy of sound, mapped
+        </motion.p>
+
+        {/* Enter button */}
+        <motion.button
+          onClick={onEnter}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="relative cursor-pointer"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 1.5, type: 'spring', stiffness: 120 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          {/* Outer ring */}
+          <motion.div
+            className="absolute inset-0 rounded-full"
+            style={{ border: '1px solid rgba(254, 243, 199, 0.1)', transform: 'scale(1.35)' }}
+            animate={isHovered
+              ? { borderColor: 'rgba(254, 243, 199, 0.2)', transform: 'scale(1.45)' }
+              : { borderColor: 'rgba(254, 243, 199, 0.1)', transform: 'scale(1.35)' }
+            }
+            transition={{ duration: 0.4 }}
+          />
+
+          {/* Main circle */}
+          <motion.div
+            className="w-32 h-32 sm:w-36 sm:h-36 rounded-full flex items-center justify-center relative overflow-hidden"
+            style={{
+              border: '1px solid rgba(254, 243, 199, 0.15)',
+              background: 'rgba(254, 243, 199, 0.02)',
+            }}
+            animate={isHovered
+              ? { borderColor: 'rgba(254, 243, 199, 0.35)', background: 'rgba(254, 243, 199, 0.06)' }
+              : { borderColor: 'rgba(254, 243, 199, 0.15)', background: 'rgba(254, 243, 199, 0.02)' }
+            }
+            transition={{ duration: 0.3 }}
+          >
+            {/* Inner glow on hover */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              style={{ background: 'radial-gradient(circle, rgba(254, 243, 199, 0.08) 0%, transparent 70%)' }}
+              animate={{ opacity: isHovered ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+            />
+
+            <motion.span
+              className="relative z-10 font-display font-700 text-base sm:text-lg tracking-[0.2em] uppercase"
+              style={{ color: '#fef3c7' }}
+              animate={isHovered ? { letterSpacing: '0.3em' } : { letterSpacing: '0.2em' }}
+              transition={{ duration: 0.3 }}
+            >
+              Enter
+            </motion.span>
+          </motion.div>
+        </motion.button>
+      </div>
+
+      {/* Footer */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-        whileHover={{
-          scale: 1.02,
-          background: 'rgba(10, 10, 15, 0.6)',
-          borderColor: 'rgba(255, 255, 255, 0.15)',
-        }}
+        transition={{ delay: 2, duration: 0.6 }}
       >
-        Skip intro
-      </motion.button>
-
-      {/* Content sections */}
-      <div className="relative z-10">
-        <HeroSection scrollY={scrollY} />
-        <StorySection />
-        <EnterButton onEnter={onEnter} />
-      </div>
+        <div className="w-10 h-px" style={{ background: 'rgba(254, 243, 199, 0.08)' }} />
+        <span
+          className="font-display text-[9px] tracking-[0.35em] uppercase"
+          style={{ color: 'rgba(254, 243, 199, 0.15)' }}
+        >
+          Where every beat has a story
+        </span>
+        <div className="w-10 h-px" style={{ background: 'rgba(254, 243, 199, 0.08)' }} />
+      </motion.div>
     </div>
   )
 }

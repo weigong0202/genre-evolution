@@ -1,291 +1,192 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-// Actual genre colors from the app
-const genreOrbs = [
-  { color: '#4169E1', size: 32, x: -20, y: -15 },  // Blues
-  { color: '#E63946', size: 28, x: 25, y: -25 },   // Rock
-  { color: '#D4AF37', size: 24, x: 0, y: 20 },     // Jazz
-  { color: '#9B59B6', size: 20, x: -35, y: 10 },   // Funk
-  { color: '#00ACC1', size: 22, x: 40, y: 5 },     // Electronic
+const features = [
+  {
+    number: '01',
+    title: 'Trace the Lineage',
+    description:
+      'From 1920s Delta Blues to modern electronic music — 20 genres mapped across a century of sonic evolution.',
+    accentColor: '#4169E1',
+  },
+  {
+    number: '02',
+    title: 'Meet the Artists',
+    description:
+      '90+ profiles with biographies, essential albums, and the influence chains that connect legends across eras.',
+    accentColor: '#9C27B0',
+  },
+  {
+    number: '03',
+    title: 'Hear the Sound',
+    description:
+      'Embedded players let you listen to the defining tracks and albums that shaped each genre\'s identity.',
+    accentColor: '#00ACC1',
+  },
 ]
 
 export function StorySection() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, margin: '-120px' })
 
   return (
     <section
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative"
     >
-      {/* Background constellation lines connecting the three points */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        preserveAspectRatio="xMidYMid slice"
+      {/* Section header */}
+      <motion.div
+        className="text-center mb-20"
+        initial={{ opacity: 0, y: 24 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7 }}
       >
-        <motion.path
-          d="M 20% 35% Q 35% 50% 50% 55% Q 65% 60% 80% 40%"
-          fill="none"
-          stroke="url(#constellation-gradient)"
-          strokeWidth="1"
-          strokeDasharray="4 8"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={isInView ? { pathLength: 1, opacity: 0.3 } : {}}
-          transition={{ duration: 2, delay: 0.5 }}
-        />
-        <defs>
-          <linearGradient id="constellation-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#4169E1" />
-            <stop offset="50%" stopColor="#E63946" />
-            <stop offset="100%" stopColor="#1DB954" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <div className="max-w-6xl mx-auto w-full relative">
-        {/* Section header */}
-        <motion.div
-          className="text-center mb-24"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <h2
+          className="font-display font-700 tracking-[-0.02em]"
+          style={{
+            fontSize: 'clamp(1.8rem, 4vw, 3.2rem)',
+            color: '#fff8eb',
+          }}
         >
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-amber-100 mb-4 tracking-[0.04em] sm:tracking-[0.08em]"
-            style={{
-              textShadow: '0 0 40px rgba(251,191,36,0.3)',
-            }}
-          >
-            Navigate the Genealogy of Sound
-          </h2>
-          <p className="text-amber-200/50 text-base sm:text-lg max-w-xl mx-auto tracking-wide px-4">
-            An interactive map of musical evolution
-          </p>
-        </motion.div>
+          Navigate a Century of Sound
+        </h2>
+        <p
+          className="font-serif-accent italic mt-3"
+          style={{
+            fontSize: 'clamp(0.95rem, 1.8vw, 1.15rem)',
+            color: 'rgba(255, 248, 235, 0.35)',
+          }}
+        >
+          An interactive map of musical evolution
+        </p>
+      </motion.div>
 
-        {/* Three floating feature islands */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 md:gap-8 lg:gap-16 px-4 md:px-0">
-
-          {/* Feature 1: Map the Connections - Genre Orbs */}
+      {/* Feature cards */}
+      <div className="max-w-4xl w-full mx-auto">
+        {features.map((feature, i) => (
           <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 40 }}
+            key={feature.number}
+            className="relative"
+            initial={{ opacity: 0, y: 32 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.2 + i * 0.15 }}
           >
-            {/* Floating genre orbs cluster */}
-            <div className="relative w-32 h-32 mb-8">
-              {/* Subtle glow behind */}
-              <div
-                className="absolute inset-0 rounded-full"
+            {/* Top rule */}
+            <div
+              className="w-full h-px"
+              style={{ background: 'rgba(255, 248, 235, 0.06)' }}
+            />
+
+            <div className="flex items-start gap-6 sm:gap-10 py-10 sm:py-14">
+              {/* Number */}
+              <span
+                className="font-display font-800 shrink-0 mt-1"
                 style={{
-                  background: 'radial-gradient(circle, rgba(65,105,225,0.15) 0%, transparent 70%)',
-                  transform: 'scale(1.5)',
+                  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                  color: feature.accentColor,
+                  opacity: 0.25,
+                  lineHeight: 1,
                 }}
-              />
-              {genreOrbs.map((orb, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute rounded-full"
+              >
+                {feature.number}
+              </span>
+
+              {/* Content */}
+              <div className="flex-1">
+                <h3
+                  className="font-display font-600 tracking-[-0.01em] mb-3"
                   style={{
-                    width: orb.size,
-                    height: orb.size,
-                    left: `calc(50% + ${orb.x}px)`,
-                    top: `calc(50% + ${orb.y}px)`,
-                    transform: 'translate(-50%, -50%)',
-                    background: `radial-gradient(circle at 30% 30%, ${orb.color}, ${orb.color}88)`,
-                    boxShadow: `0 0 20px ${orb.color}60, inset 0 1px 2px rgba(255,255,255,0.3)`,
+                    fontSize: 'clamp(1.15rem, 2.2vw, 1.5rem)',
+                    color: '#fff8eb',
                   }}
-                  animate={{
-                    y: [0, -3, 0],
-                    scale: [1, 1.05, 1],
+                >
+                  {feature.title}
+                </h3>
+                <p
+                  className="leading-relaxed max-w-lg"
+                  style={{
+                    fontSize: 'clamp(0.85rem, 1.4vw, 0.95rem)',
+                    color: 'rgba(255, 248, 235, 0.4)',
+                    lineHeight: 1.7,
                   }}
-                  transition={{
-                    duration: 3 + i * 0.5,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: i * 0.2,
-                  }}
-                />
-              ))}
-              {/* Connection lines between orbs */}
-              <svg className="absolute inset-0 w-full h-full" style={{ overflow: 'visible' }}>
-                <motion.line
-                  x1="30%" y1="35%" x2="70%" y2="25%"
-                  stroke="rgba(251,191,36,0.2)"
-                  strokeWidth="1"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : {}}
-                  transition={{ delay: 1 }}
-                />
-                <motion.line
-                  x1="50%" y1="70%" x2="30%" y2="35%"
-                  stroke="rgba(251,191,36,0.2)"
-                  strokeWidth="1"
-                  initial={{ opacity: 0 }}
-                  animate={isInView ? { opacity: 1 } : {}}
-                  transition={{ delay: 1.2 }}
-                />
-              </svg>
-            </div>
+                >
+                  {feature.description}
+                </p>
+              </div>
 
-            <h3 className="text-xl md:text-2xl font-semibold text-amber-100 mb-3">
-              Map the Connections
-            </h3>
-            <p className="text-amber-200/60 text-sm md:text-base leading-relaxed max-w-xs">
-              Trace the lineage from 1920s Delta Blues to modern EDM across 20 genres
-            </p>
-          </motion.div>
-
-          {/* Feature 2: Meet the Legends - Artist Portrait */}
-          <motion.div
-            className="flex flex-col items-center text-center md:mt-12"
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            {/* Floating silhouette shapes */}
-            <div className="relative w-32 h-32 mb-8">
-              {/* Subtle glow behind */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: 'radial-gradient(circle, rgba(232,121,249,0.15) 0%, transparent 70%)',
-                  transform: 'scale(1.5)',
-                }}
-              />
-              {/* Floating head */}
+              {/* Accent dot */}
               <motion.div
-                className="absolute rounded-full"
-                style={{
-                  width: 36,
-                  height: 36,
-                  left: 'calc(50% - 18px)',
-                  top: '15%',
-                  background: 'radial-gradient(circle at 30% 30%, #E879F9, #9333EA88)',
-                  boxShadow: '0 0 20px rgba(232,121,249,0.5), inset 0 1px 2px rgba(255,255,255,0.3)',
-                }}
-                animate={{
-                  y: [0, -4, 0],
-                  scale: [1, 1.05, 1],
-                }}
+                className="shrink-0 mt-2 hidden sm:block"
+                animate={isInView ? {
+                  boxShadow: [
+                    `0 0 12px ${feature.accentColor}30`,
+                    `0 0 20px ${feature.accentColor}50`,
+                    `0 0 12px ${feature.accentColor}30`,
+                  ],
+                } : {}}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: 'easeInOut',
+                  delay: i * 0.5,
                 }}
-              />
-              {/* Floating body - wider */}
-              <motion.div
-                className="absolute"
-                style={{
-                  width: 64,
-                  height: 42,
-                  left: 'calc(50% - 32px)',
-                  top: '50%',
-                  background: 'radial-gradient(ellipse at 30% 30%, #D946EF, #7C3AED88)',
-                  boxShadow: '0 0 20px rgba(217,70,239,0.5), inset 0 1px 2px rgba(255,255,255,0.3)',
-                  borderRadius: '50%',
-                }}
-                animate={{
-                  y: [0, -3, 0],
-                  scale: [1, 1.03, 1],
-                }}
-                transition={{
-                  duration: 3.5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: 0.2,
-                }}
-              />
-              {/* Floating music notes */}
-              {[0, 1, 2].map((i) => (
-                <motion.div
-                  key={i}
-                  className="absolute text-purple-300/50 text-base"
+              >
+                <div
+                  className="w-2.5 h-2.5 rounded-full"
                   style={{
-                    left: `${15 + i * 32}%`,
-                    top: `${5 + i * 25}%`,
+                    background: feature.accentColor,
+                    opacity: 0.6,
                   }}
-                  animate={{
-                    y: [0, -8, 0],
-                    opacity: [0.3, 0.6, 0.3],
-                  }}
-                  transition={{
-                    duration: 2 + i,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: i * 0.5,
-                  }}
-                >
-                  ♪
-                </motion.div>
-              ))}
+                />
+              </motion.div>
             </div>
-
-            <h3 className="text-xl md:text-2xl font-semibold text-amber-100 mb-3">
-              Meet the Legends
-            </h3>
-            <p className="text-amber-200/60 text-sm md:text-base leading-relaxed max-w-xs">
-              90+ artist profiles with bios, essential albums, and influence connections
-            </p>
           </motion.div>
+        ))}
 
-          {/* Feature 3: Hear the Evolution - Audio Waveform */}
-          <motion.div
-            className="flex flex-col items-center text-center"
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
-            {/* Animated waveform */}
-            <div className="relative w-32 h-32 mb-8 flex items-center justify-center">
-              {/* Glow behind */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: 'radial-gradient(circle, rgba(29,185,84,0.15) 0%, transparent 70%)',
-                  transform: 'scale(1.5)',
-                }}
-              />
-              {/* Waveform bars */}
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="w-2 rounded-full"
-                    style={{
-                      background: 'linear-gradient(to top, #1DB954, #1ed760)',
-                      boxShadow: '0 0 10px rgba(29,185,84,0.5)',
-                    }}
-                    animate={{
-                      height: [
-                        12 + Math.sin(i * 0.8) * 8,
-                        24 + Math.sin(i * 0.8 + 1) * 16,
-                        12 + Math.sin(i * 0.8) * 8,
-                      ],
-                    }}
-                    transition={{
-                      duration: 0.8 + i * 0.1,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: i * 0.05,
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <h3 className="text-xl md:text-2xl font-semibold text-amber-100 mb-3">
-              Hear the Evolution
-            </h3>
-            <p className="text-amber-200/60 text-sm md:text-base leading-relaxed max-w-xs">
-              Embedded Spotify players let you listen to the sounds that defined each era
-            </p>
-          </motion.div>
-        </div>
+        {/* Bottom rule */}
+        <div
+          className="w-full h-px"
+          style={{ background: 'rgba(255, 248, 235, 0.06)' }}
+        />
       </div>
+
+      {/* Stats row */}
+      <motion.div
+        className="flex justify-center gap-12 sm:gap-20 mt-16"
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8, delay: 0.8 }}
+      >
+        {[
+          { value: '20', label: 'Genres' },
+          { value: '90+', label: 'Artists' },
+          { value: '100+', label: 'Years' },
+        ].map((stat, i) => (
+          <motion.div
+            key={stat.label}
+            className="text-center"
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 1 + i * 0.1 }}
+          >
+            <span
+              className="font-display font-700 block"
+              style={{
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+                color: '#fff8eb',
+              }}
+            >
+              {stat.value}
+            </span>
+            <span
+              className="font-display text-[10px] tracking-[0.25em] uppercase"
+              style={{ color: 'rgba(255, 248, 235, 0.3)' }}
+            >
+              {stat.label}
+            </span>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   )
 }

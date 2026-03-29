@@ -1,204 +1,123 @@
-import { useRef, useState, useMemo } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 interface EnterButtonProps {
   onEnter: () => void
 }
 
-// Generate orbital particles
-function generateParticles(count: number) {
-  return Array.from({ length: count }, (_, i) => ({
-    id: i,
-    angle: (i / count) * 360,
-    distance: 120 + Math.random() * 80,
-    size: Math.random() * 3 + 1,
-    speed: 0.5 + Math.random() * 0.5,
-    delay: Math.random() * 2,
-  }))
-}
-
 export function EnterButton({ onEnter }: EnterButtonProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
   const [isHovered, setIsHovered] = useState(false)
-
-  const particles = useMemo(() => generateParticles(40), [])
 
   return (
     <section
       ref={ref}
-      className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:py-16 md:py-24 relative"
+      className="min-h-screen flex flex-col items-center justify-center px-6 relative"
     >
-      {/* Portal Container */}
-      <motion.div
-        className="relative cursor-pointer"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.8, type: 'spring' }}
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-        onClick={onEnter}
+      {/* Contextual message */}
+      <motion.p
+        className="font-serif-accent italic text-center mb-12"
+        style={{
+          fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+          color: 'rgba(255, 248, 235, 0.3)',
+        }}
+        initial={{ opacity: 0, y: 16 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7, delay: 0.1 }}
       >
-        {/* Outer particle field */}
-        <svg
-          className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[400px] md:h-[400px]"
-          viewBox="-200 -200 400 400"
-          style={{
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            overflow: 'visible',
-          }}
-        >
-          <defs>
-            <filter id="particle-glow" x="-100%" y="-100%" width="300%" height="300%">
-              <feGaussianBlur stdDeviation="2" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
+        Every genre began as something unheard
+      </motion.p>
 
-          {particles.map((particle) => {
-            const baseX = Math.cos((particle.angle * Math.PI) / 180) * particle.distance
-            const baseY = Math.sin((particle.angle * Math.PI) / 180) * particle.distance
-
-            return (
-              <motion.circle
-                key={particle.id}
-                r={particle.size}
-                fill="rgba(251, 191, 36, 0.8)"
-                filter="url(#particle-glow)"
-                initial={{
-                  cx: baseX,
-                  cy: baseY,
-                  opacity: 0.6,
-                }}
-                animate={isHovered ? {
-                  cx: 0,
-                  cy: 0,
-                  opacity: [0.8, 1, 0],
-                  scale: [1, 0.5, 0],
-                } : {
-                  cx: baseX,
-                  cy: baseY,
-                  opacity: [0.4, 0.8, 0.4],
-                }}
-                transition={isHovered ? {
-                  duration: 0.6 + particle.speed * 0.3,
-                  delay: particle.delay * 0.1,
-                  ease: 'easeIn',
-                  repeat: Infinity,
-                } : {
-                  duration: 2 + particle.speed,
-                  delay: particle.delay,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-            )
-          })}
-        </svg>
-
-        {/* Central portal / wormhole */}
+      {/* The button */}
+      <motion.button
+        onClick={onEnter}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className="relative group cursor-pointer"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.6, delay: 0.3, type: 'spring', stiffness: 120 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        {/* Outer ring */}
         <motion.div
-          className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full flex items-center justify-center"
+          className="absolute inset-0 rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(12,10,9,0.95) 50%, transparent 100%)',
+            border: '1px solid rgba(255, 248, 235, 0.1)',
+            transform: 'scale(1.35)',
           }}
           animate={isHovered ? {
-            boxShadow: [
-              '0 0 60px rgba(251,191,36,0.4), inset 0 0 60px rgba(251,191,36,0.2)',
-              '0 0 80px rgba(251,191,36,0.6), inset 0 0 80px rgba(251,191,36,0.3)',
-              '0 0 60px rgba(251,191,36,0.4), inset 0 0 60px rgba(251,191,36,0.2)',
-            ],
+            borderColor: 'rgba(255, 248, 235, 0.2)',
+            transform: 'scale(1.45)',
           } : {
-            boxShadow: [
-              '0 0 40px rgba(251,191,36,0.2), inset 0 0 40px rgba(251,191,36,0.1)',
-              '0 0 50px rgba(251,191,36,0.3), inset 0 0 50px rgba(251,191,36,0.15)',
-              '0 0 40px rgba(251,191,36,0.2), inset 0 0 40px rgba(251,191,36,0.1)',
-            ],
+            borderColor: 'rgba(255, 248, 235, 0.1)',
+            transform: 'scale(1.35)',
           }}
-          transition={{
-            duration: isHovered ? 0.5 : 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
+          transition={{ duration: 0.4 }}
+        />
+
+        {/* Main circle */}
+        <motion.div
+          className="w-40 h-40 sm:w-48 sm:h-48 rounded-full flex items-center justify-center relative overflow-hidden"
+          style={{
+            border: '1px solid rgba(255, 248, 235, 0.15)',
+            background: 'rgba(255, 248, 235, 0.02)',
           }}
-          whileTap={{ scale: 0.95 }}
+          animate={isHovered ? {
+            borderColor: 'rgba(255, 248, 235, 0.35)',
+            background: 'rgba(255, 248, 235, 0.06)',
+          } : {
+            borderColor: 'rgba(255, 248, 235, 0.15)',
+            background: 'rgba(255, 248, 235, 0.02)',
+          }}
+          transition={{ duration: 0.3 }}
         >
-          {/* Inner swirl effect */}
+          {/* Subtle inner glow on hover */}
           <motion.div
-            className="absolute inset-4 rounded-full"
+            className="absolute inset-0 rounded-full"
             style={{
-              background: 'conic-gradient(from 0deg, transparent, rgba(251,191,36,0.1), transparent, rgba(147,51,234,0.1), transparent)',
+              background: 'radial-gradient(circle, rgba(255, 248, 235, 0.08) 0%, transparent 70%)',
             }}
-            animate={{
-              rotate: isHovered ? 720 : 360,
-            }}
-            transition={{
-              duration: isHovered ? 2 : 8,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-          />
-
-          {/* Center glow */}
-          <motion.div
-            className="absolute w-8 h-8 rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(251,191,36,0.8) 0%, transparent 70%)',
-            }}
-            animate={isHovered ? {
-              scale: [1, 2, 1],
-              opacity: [0.8, 1, 0.8],
-            } : {
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0.7, 0.5],
-            }}
-            transition={{
-              duration: isHovered ? 0.5 : 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-
-          {/* Portal text */}
-          <motion.div
-            className="relative z-10 text-center"
-            animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
             transition={{ duration: 0.3 }}
-          >
+          />
+
+          {/* Text */}
+          <div className="relative z-10 text-center">
             <motion.span
-              className="text-amber-100 text-base sm:text-lg font-bold tracking-widest uppercase block"
-              style={{
-                textShadow: '0 0 20px rgba(251,191,36,0.5)',
-              }}
+              className="font-display font-700 text-lg sm:text-xl tracking-[0.2em] uppercase block"
+              style={{ color: '#fff8eb' }}
+              animate={isHovered ? { letterSpacing: '0.3em' } : { letterSpacing: '0.2em' }}
+              transition={{ duration: 0.3 }}
             >
               Enter
             </motion.span>
-            <motion.span
-              className="text-amber-200/60 text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.5 }}
-            >
-              the universe
-            </motion.span>
-          </motion.div>
+          </div>
         </motion.div>
-      </motion.div>
+      </motion.button>
 
-      {/* Decorative bottom elements */}
+      {/* Footer line */}
       <motion.div
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-4"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-3"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
-        transition={{ delay: 1, duration: 0.6 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
       >
-        <div className="w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-amber-400/30" />
-        <span className="text-amber-200/30 text-[10px] sm:text-xs font-mono">SONIC UNIVERSE</span>
-        <div className="w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-amber-400/30" />
+        <div
+          className="w-10 h-px"
+          style={{ background: 'rgba(255, 248, 235, 0.08)' }}
+        />
+        <span
+          className="font-display text-[9px] tracking-[0.35em] uppercase"
+          style={{ color: 'rgba(255, 248, 235, 0.15)' }}
+        >
+          Sonic Universe
+        </span>
+        <div
+          className="w-10 h-px"
+          style={{ background: 'rgba(255, 248, 235, 0.08)' }}
+        />
       </motion.div>
     </section>
   )

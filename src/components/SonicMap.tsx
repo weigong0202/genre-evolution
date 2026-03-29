@@ -12,7 +12,7 @@ import { useAudioEngine } from '../hooks/useAudioEngine'
 import { generateStars } from '../utils/particles'
 import type { Genre, Artist } from '../types'
 
-const staticStars = generateStars(100)
+const staticStars = generateStars(60)
 
 interface SonicMapProps {
   onReplayIntro?: () => void
@@ -204,42 +204,42 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
       >
         {/* Warm nebula - top right */}
         <div
-          className="absolute w-[700px] h-[700px] rounded-full opacity-40"
+          className="absolute w-[700px] h-[700px] rounded-full opacity-20"
           style={{
             top: '-15%',
             right: '-10%',
-            background: 'radial-gradient(circle, rgba(251, 146, 60, 0.5) 0%, rgba(217, 119, 6, 0.2) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(251, 146, 60, 0.35) 0%, rgba(217, 119, 6, 0.12) 40%, transparent 70%)',
             filter: 'blur(80px)',
           }}
         />
         {/* Cool nebula - bottom left */}
         <div
-          className="absolute w-[600px] h-[600px] rounded-full opacity-30"
+          className="absolute w-[600px] h-[600px] rounded-full opacity-15"
           style={{
             bottom: '-10%',
             left: '-15%',
-            background: 'radial-gradient(circle, rgba(120, 113, 108, 0.6) 0%, rgba(68, 64, 60, 0.3) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(120, 113, 108, 0.4) 0%, rgba(68, 64, 60, 0.2) 40%, transparent 70%)',
             filter: 'blur(60px)',
           }}
         />
         {/* Accent nebula - center */}
         <div
-          className="absolute w-[500px] h-[500px] rounded-full opacity-25"
+          className="absolute w-[500px] h-[500px] rounded-full opacity-12"
           style={{
             top: '40%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            background: 'radial-gradient(circle, rgba(253, 224, 71, 0.4) 0%, transparent 60%)',
+            background: 'radial-gradient(circle, rgba(253, 224, 71, 0.25) 0%, transparent 60%)',
             filter: 'blur(100px)',
           }}
         />
         {/* Additional purple/blue nebula - bottom right */}
         <div
-          className="absolute w-[450px] h-[450px] rounded-full opacity-20"
+          className="absolute w-[450px] h-[450px] rounded-full opacity-10"
           style={{
             bottom: '10%',
             right: '20%',
-            background: 'radial-gradient(circle, rgba(147, 112, 219, 0.4) 0%, rgba(99, 102, 241, 0.15) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(147, 112, 219, 0.25) 0%, rgba(99, 102, 241, 0.1) 40%, transparent 70%)',
             filter: 'blur(70px)',
           }}
         />
@@ -270,9 +270,8 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
                     height: star.size,
                     backgroundColor: star.size > 3 ? '#fef3c7' : '#fbbf24',
                     boxShadow: `
-                      0 0 ${star.size * 2}px rgba(251, 191, 36, 0.6),
-                      0 0 ${star.size * 4}px rgba(251, 191, 36, 0.3),
-                      0 0 ${star.size * 6}px rgba(251, 191, 36, 0.1)
+                      0 0 ${star.size * 2}px rgba(251, 191, 36, 0.35),
+                      0 0 ${star.size * 4}px rgba(251, 191, 36, 0.15)
                     `,
                     animationDelay: `${star.animationDelay}s`,
                     animationDuration: `${star.animationDuration}s`,
@@ -287,7 +286,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
       <div className="absolute inset-0 pointer-events-none">
         {/* Warm grid lines (top half - guitar-driven) */}
         <div
-          className="absolute inset-x-0 top-0 h-1/2 opacity-[0.06]"
+          className="absolute inset-x-0 top-0 h-1/2 opacity-[0.035]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(239, 68, 68, 0.6) 1px, transparent 1px),
@@ -300,7 +299,7 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
         />
         {/* Cool grid lines (bottom half - electronic) */}
         <div
-          className="absolute inset-x-0 bottom-0 h-1/2 opacity-[0.06]"
+          className="absolute inset-x-0 bottom-0 h-1/2 opacity-[0.035]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(6, 182, 212, 0.6) 1px, transparent 1px),
@@ -391,45 +390,45 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
 
       {/* Header */}
       <div className="absolute top-6 left-6 z-30 2xl:top-8 2xl:left-8">
-        <h1 className="text-2xl 2xl:text-3xl font-bold text-amber-100 tracking-wide">
+        <h1 className="font-display text-2xl 2xl:text-3xl font-800 text-amber-100 tracking-[0.08em]">
           SONIC UNIVERSE
         </h1>
-        <p className="text-amber-200/80 text-sm 2xl:text-base mt-1">
-          Explore the genealogy of music
+        <p className="font-serif-accent italic text-amber-200/70 text-sm 2xl:text-base mt-1">
+          The genealogy of sound
         </p>
       </div>
 
       {/* Instructions */}
       <div className="absolute top-6 right-6 z-30 text-right 2xl:top-8 2xl:right-8">
-        <p className="text-amber-200/70 text-xs 2xl:text-sm">
+        <p className="font-display text-amber-200/60 text-[11px] 2xl:text-xs tracking-[0.15em] uppercase">
           Click a genre to explore
         </p>
       </div>
 
       {/* Legend */}
       <div className="absolute top-16 right-6 z-30 2xl:top-20 2xl:right-8">
-        <div className="bg-stone-900/70 backdrop-blur-sm rounded-lg px-3 py-2 2xl:px-4 2xl:py-3 border border-amber-200/10">
-          <p className="font-mono-data text-amber-200/80 text-[9px] 2xl:text-[10px] font-medium tracking-wider mb-2 2xl:mb-3">GENRE FAMILIES</p>
+        <div className="bg-stone-900/70 backdrop-blur-sm rounded-lg px-3 py-2 2xl:px-4 2xl:py-3 border border-amber-100/8">
+          <p className="font-display text-amber-200/70 text-[9px] 2xl:text-[10px] font-600 tracking-[0.2em] mb-2 2xl:mb-3">GENRE FAMILIES</p>
           <div className="space-y-1.5 2xl:space-y-2">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#E63946' }} />
-              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Rock / Guitar</span>
+              <span className="font-display text-amber-100/60 text-[10px] 2xl:text-[11px]">Rock / Guitar</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#9C27B0' }} />
-              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Soul / Funk / Hip-Hop</span>
+              <span className="font-display text-amber-100/60 text-[10px] 2xl:text-[11px]">Soul / Funk / Hip-Hop</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#00ACC1' }} />
-              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Electronic</span>
+              <span className="font-display text-amber-100/60 text-[10px] 2xl:text-[11px]">Electronic</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#D4AF37' }} />
-              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Jazz</span>
+              <span className="font-display text-amber-100/60 text-[10px] 2xl:text-[11px]">Jazz</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 2xl:w-3.5 2xl:h-3.5 rounded-full" style={{ backgroundColor: '#2E7D32' }} />
-              <span className="text-amber-100/70 text-[10px] 2xl:text-[11px]">Reggae</span>
+              <span className="font-display text-amber-100/60 text-[10px] 2xl:text-[11px]">Reggae</span>
             </div>
           </div>
         </div>
@@ -521,10 +520,10 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
           className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
         >
           <div
-            className="text-amber-100 text-base font-medium px-6 py-3 rounded-full backdrop-blur-md"
+            className="font-display text-amber-100 text-sm tracking-wide px-6 py-3 rounded-full backdrop-blur-md"
             style={{
               background: 'rgba(0, 0, 0, 0.7)',
-              border: '1px solid rgba(251, 191, 36, 0.3)',
+              border: '1px solid rgba(254, 243, 199, 0.12)',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
             }}
           >
@@ -538,34 +537,34 @@ export function SonicMap({ onReplayIntro }: SonicMapProps) {
         {onReplayIntro && (
           <button
             onClick={onReplayIntro}
-            className="px-4 py-2 text-amber-200/80 text-sm font-medium tracking-wide
-                       hover:text-amber-100 hover:border-amber-500/40 transition-all duration-200"
+            className="font-display px-4 py-2 text-amber-200/70 text-[11px] tracking-[0.2em] uppercase
+                       hover:text-amber-100 hover:border-amber-400/30 transition-all duration-200"
             style={{
               background: 'rgba(10, 10, 15, 0.7)',
               backdropFilter: 'blur(12px)',
               WebkitBackdropFilter: 'blur(12px)',
-              border: '1px solid rgba(251, 191, 36, 0.25)',
-              borderRadius: '8px',
+              border: '1px solid rgba(254, 243, 199, 0.1)',
+              borderRadius: '6px',
             }}
             title="Replay the intro experience"
           >
-            ✦ Intro
+            Intro
           </button>
         )}
         <button
           onClick={() => setShowAbout(true)}
-          className="px-4 py-2 text-amber-200/80 text-sm font-medium tracking-wide
-                     hover:text-amber-100 hover:border-amber-500/40 transition-all duration-200"
+          className="font-display px-4 py-2 text-amber-200/70 text-[11px] tracking-[0.2em] uppercase
+                     hover:text-amber-100 hover:border-amber-400/30 transition-all duration-200"
           style={{
             background: 'rgba(10, 10, 15, 0.7)',
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
-            border: '1px solid rgba(251, 191, 36, 0.25)',
-            borderRadius: '8px',
+            border: '1px solid rgba(254, 243, 199, 0.1)',
+            borderRadius: '6px',
           }}
           title="About Sonic Universe"
         >
-          ✦ About
+          About
         </button>
       </div>
 
